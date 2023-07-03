@@ -1,0 +1,336 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.wrapper {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+}
+
+/* ---------------HEADER-COOFEEMACHINE-------- */
+.header {
+	position: absolute;
+	top: 15%;
+	left: 50%;
+	width: 30vw;
+	height: 13vh;
+	border-radius: 10px;
+	background-color: rgb(243, 184, 149);
+	transform: translateX(-50%);
+	z-index: 3;
+}
+
+.black {
+	position: absolute;
+	top: 50%;
+	left: 5%;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background-color: black;
+	transform: translateY(-50%);
+}
+
+.black:nth-child(2) {
+	transform: translate(40px, -50%) ;
+}
+
+.black::after {
+	content: " ";
+	position: absolute;
+	top: 100%;
+	left: 39%;
+	width: 6px;
+	height: 8px;
+	background-color: rgb(119, 97, 82);
+}
+
+.cyan {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background: radial-gradient(circle,rgb(15, 138, 87) 60%, rgb(15, 202, 87) 60%);
+	transform: translate(-50%,-50%);
+}
+
+.grey {
+	position: absolute;
+	top: 14%;
+	right: 3%;
+	width: 50px;
+	height: 30px;
+	background: linear-gradient(to right, grey 25%,transparent 25%,transparent 37.5%, grey 37.5%, grey 62.5%,transparent 62.5%, transparent 75%,
+	grey 75%);
+}
+/* -----------header-coffeemachine--------------  */
+/* ----------MIDDLE-START----------------------------------- */
+.middle {
+	position: relative;
+	top: 28%;
+	left: 50%;
+	width: 25vw;
+	height: 30vh;
+	background-color: rgb(80, 61, 61);
+	transform: translateX(-50%);
+}
+
+.handle1 {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 20%;
+	height: 15%;
+	background-color: black;
+	transform: translateX(-50%);
+	z-index: 3;
+}
+
+.handle2 {
+	position: relative;
+	top: 9.5%;
+	left: 50%;
+	width: 16%;
+	height: 17%;
+	background-color: black;
+	border-radius: 40%;
+	transform: translateX(-50%);
+	z-index: 3;
+}
+
+.handle2::after {
+	content: " ";
+	position: absolute;
+	top: 45%;
+	left: 100%;
+	width: 33%;
+	height: 15%;
+	background-color: wheat;
+}
+
+.handle2::before {
+	content: " ";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	width: 15%;
+	height: 33%;
+	background-color: black;
+	transform: translateX(-50%);
+}
+
+.handle3 {
+	position: absolute;
+	top: 12%;
+	right: 11.8%;
+	width: 25%;
+	height: 13%;
+	background-color: black;
+}
+
+.cup {
+	position: absolute;
+	bottom: 7%;
+	left: 50%;
+	width: 25%;
+	height: 45%;
+	background: linear-gradient(to top, white 55%,transparent 55%);
+	border-radius: 46%;
+	transform: translateX(-50%);
+	z-index: 2;
+}
+
+.cup::after {
+	content: " ";
+	position: absolute;
+	top: 54%;
+	left: 85%;
+	width: 35%;
+	height: 35%;
+	border-radius: 50%;
+	background: radial-gradient(circle, transparent 50%, white 50%, white 70% 
+	, transparent 70%);
+	z-index: 2;
+}
+
+.coffee {
+	position: absolute;
+	top: -15%;
+	left: 48.9%;
+	width: .6vw;
+	height: 14vh;
+	background-color: rgb(46, 7, 7);
+	z-index: 2;
+	animation-name: coffee;
+	animation-delay: 1s;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes coffee {
+	0% {
+		transform: translateY(10%);
+	}
+	10% {
+		transform: translateY(20%);
+	}
+	20% {
+		transform: translateY(30%);
+	}
+	30% {
+		transform: translateY(50%);
+	}
+	40% {
+		transform: translateY(60%);
+	}
+	50% {
+		transform: translateY(70%);
+	}
+	60% {
+		transform: translateY(80%);
+	}
+	70% {
+		transform: translateY(100%);
+	}
+	80% {
+		transform: translateY(130%);
+	}
+	90% {
+		transform: translateY(160%);
+	}
+	100% {
+		transform: translateY(200%);
+	}
+}
+
+.smoke1 {
+	position: absolute;
+	top: 54%;
+	left: 40%;
+	width: .7vw;
+	height: 3vh;
+	background-color: grey;
+	border-radius: 5px;
+	z-index: 13;
+	animation: smoke;
+	animation-duration: 1.7s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.smoke2 {
+	position: absolute;
+	top: 50%;
+	left: 45%;
+	width: .7vw;
+	height: 3vh;
+	background-color: grey;
+	border-radius: 5px;
+	z-index: 13;
+	animation: smoke;
+	animation-duration: 1.7s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-delay: 0.3s;
+}
+
+.smoke3 {
+	position: absolute;
+	top: 56%;
+	left: 53%;
+	width: .7vw;
+	height: 3vh;
+	background-color: grey;
+	border-radius: 5px;
+	z-index: 13;
+	animation: smoke;
+	animation-duration: 1.7s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-delay: 0.4s;
+}
+
+.smoke4 {
+	position: absolute;
+	top: 48%;
+	left: 57%;
+	width: .7vw;
+	height: 3vh;
+	background-color: grey;
+	border-radius: 5px;
+	z-index: 13;
+	animation: smoke;
+	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-delay: 0.5s;
+}
+
+
+@keyframes smoke {
+	0%{
+		background-color: rgba(128, 128, 128, 0.9);
+	}
+	20%{
+		transform: translateY(-1vh);
+		background-color: rgba(128, 128, 128, 0.7);
+	}
+	40%{
+		transform: translateY(-3vh);
+		background-color: rgba(128, 128, 128, 0.5);
+	}
+	60%{
+		transform: translateY(-5vh);
+		background-color: rgba(128, 128, 128, 0.3);
+	}
+	80%{
+		transform: translateY(-7vh);
+		background-color: rgba(128, 128, 128, 0.2);
+	}
+	100%{
+		transform: translateY(-9vh);
+		background-color: transparent;
+	}
+}
+
+.brown {
+	position: absolute;
+	top: 35%;
+	left: 50%;
+	width: 90%;
+	height: 65%;
+	background-color: brown;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	transform: translateX(-50%);
+	z-index: 1;
+}
+/* ----------MIDDLE-END----------------------------------- */
+/* ----------FLOOR-END----------------------------------- */
+.cyan-floor {
+	position: relative;
+	top: 26%;
+	left: 50%;
+	width: 28vw;
+	height: 5vh;
+	background-color: cyan;
+	transform: translateX(-50%);
+	border-radius: 30px;
+}
+
+.floor-black {
+	position: relative;
+	top: 26%;
+	left: 50%;
+	width: 30vw;
+	height: 7vh;
+	background-color: black;
+	transform: translateX(-50%);
+}
+/* ----------FLOOR-END----------------------------------- */

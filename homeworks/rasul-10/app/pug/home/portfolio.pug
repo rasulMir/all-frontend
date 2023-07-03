@@ -1,0 +1,33 @@
+include ../mixines.pug
+section.portfolio
+	.container
+		+mainTitle('Our portfolio','portfolio__title','portfolio__title-txt','portfolio__title-wrap')
+			p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt repudiandae iste sapiente neque eum suscipit recusandae quam, laborum ducimus sunt?
+	- var c = 1;
+	section.portfolio-body
+	while c < 8
+		ul.portfolio-body__item
+			li
+				label.portfolio-body__title.portfolio-body__title_active(for='key-' + c++) All
+			li
+				label.portfolio-body__title(for='key-' + c++) Websites
+			li
+				label.portfolio-body__title(for='key-' + c++) Logo
+			li
+				label.portfolio-body__title(for='key-' + c++) Graphic Design
+			li
+				label.portfolio-body__title(for='key-' + c++) Development
+			li
+				label.portfolio-body__title(for='key-' + c++) Video
+			li
+				label.portfolio-body__title(for='key-' + c++) Photography
+		+img('portfolio-body__','20','1','checked')
+			span.portfolio-body__btn.gallery__btn load more works
+		+img('portfolio-body__','7','2')
+		+img('portfolio-body__','9','3')
+		+img('portfolio-body__','13','4')
+			span.portfolio-body__btn.gallery__btn load more works
+		+img('portfolio-body__','16','5')
+			span.portfolio-body__btn.gallery__btn load more works
+		+img('portfolio-body__','11','6')
+		+img('portfolio-body__','10','7')

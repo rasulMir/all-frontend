@@ -1,0 +1,32 @@
+@import '../general/variables';
+@import '../general/mixixines';
+
+@media only screen and (min-width: 480px) {
+	// .footer-wrap
+	.footer-wrap {
+		padding: 20px 0;
+		@include flex(space-between,center,row-reverse);
+
+		// .footer-wrap__confid
+		&__confid {
+			margin: 0;
+		}
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	// .footer-wrap
+	.footer-wrap {
+		@include flex(space-between,center,row);
+
+		// .footer-wrap__confid
+		&__confid {
+			margin: 0;
+		}
+
+		// .footer-wrap__designed
+		&__designed {
+			display: block;
+		}
+	}
+}

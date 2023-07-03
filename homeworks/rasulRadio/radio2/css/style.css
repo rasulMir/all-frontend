@@ -1,0 +1,401 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, :active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  widows: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a::visited {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background: -webkit-linear-gradient(135deg, black 10%, transparent 10%, transparent 90%, black 90%), -webkit-linear-gradient(325deg, rgba(255, 241, 241, 0.692) 11%, rgba(255, 241, 241, 0.692) 11%, transparent 0), -webkit-linear-gradient(225deg, black 10%, transparent 10%, transparent 90%, black 90%), -webkit-linear-gradient(215deg, rgba(255, 241, 241, 0.692) 10%, rgba(255, 241, 241, 0.692) 10%, transparent 0);
+  background: -o-linear-gradient(135deg, black 10%, transparent 10%, transparent 90%, black 90%), -o-linear-gradient(325deg, rgba(255, 241, 241, 0.692) 11%, rgba(255, 241, 241, 0.692) 11%, transparent 0), -o-linear-gradient(225deg, black 10%, transparent 10%, transparent 90%, black 90%), -o-linear-gradient(215deg, rgba(255, 241, 241, 0.692) 10%, rgba(255, 241, 241, 0.692) 10%, transparent 0);
+  background: linear-gradient(315deg, black 10%, transparent 10%, transparent 90%, black 90%), linear-gradient(125deg, rgba(255, 241, 241, 0.692) 11%, rgba(255, 241, 241, 0.692) 11%, transparent 0), linear-gradient(225deg, black 10%, transparent 10%, transparent 90%, black 90%), linear-gradient(235deg, rgba(255, 241, 241, 0.692) 10%, rgba(255, 241, 241, 0.692) 10%, transparent 0);
+  background-size: 10px 10px;
+  background-color: rgba(19, 18, 18, 0.678);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: sans-serif;
+}
+
+.center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  width: 300px;
+  height: auto;
+  background-color: black;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.settings {
+  position: relative;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.settings > span {
+  display: inline-block;
+  color: white;
+  padding: 5px 10px;
+  margin-right: 10px;
+  -webkit-transform-origin: right;
+      -ms-transform-origin: right;
+          transform-origin: right;
+  -webkit-transform: scale(0, 0);
+      -ms-transform: scale(0, 0);
+          transform: scale(0, 0);
+  -webkit-transition: all 1s ease-in;
+  -o-transition: all 1s ease-in;
+  transition: all 1s ease-in;
+}
+
+.settings::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  right: 0;
+  width: 1em;
+  height: 1em;
+  background: -webkit-radial-gradient(center, black 25%, transparent 0), -webkit-radial-gradient(top left, black 25%, transparent 0), -webkit-radial-gradient(top right, black 25%, transparent 0), -webkit-radial-gradient(left bottom, black 25%, transparent 0), -webkit-radial-gradient(right bottom, black 25%, transparent 0), grey;
+  background: -o-radial-gradient(center, black 25%, transparent 0), -o-radial-gradient(top left, black 25%, transparent 0), -o-radial-gradient(top right, black 25%, transparent 0), -o-radial-gradient(left bottom, black 25%, transparent 0), -o-radial-gradient(right bottom, black 25%, transparent 0), grey;
+  background: radial-gradient(center, black 25%, transparent 0), radial-gradient(top left, black 25%, transparent 0), radial-gradient(top right, black 25%, transparent 0), radial-gradient(left bottom, black 25%, transparent 0), radial-gradient(right bottom, black 25%, transparent 0), grey;
+  border-radius: 50%;
+}
+
+.settings:hover span {
+  -webkit-transition: all 1s ease-in;
+  -o-transition: all 1s ease-in;
+  transition: all 1s ease-in;
+  -webkit-transform: scale(1, 1);
+      -ms-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+
+.menu {
+  list-style: none;
+}
+
+li .label {
+  position: relative;
+  display: block;
+  padding: 5px 25px;
+  cursor: pointer;
+  color: gray;
+}
+
+.inner-label {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 1em;
+  height: 1em;
+  border: 1px solid grey;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+}
+
+.inner-label::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 0;
+  height: 0;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  -webkit-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+}
+
+.inner-label::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  width: 0;
+  height: 0;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  -webkit-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+}
+
+.inner-label .span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+      -ms-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+  width: 6px;
+  height: 6px;
+  background-color: red;
+  border-radius: 50%;
+  -webkit-tap-highlight-color: transparent;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+}
+
+.radio {
+  display: none;
+}
+
+.radio:checked + .inner-label::before {
+  -webkit-animation: border1 .2s linear forwards;
+          animation: border1 .2s linear forwards;
+  border-color: red;
+}
+
+.radio:checked + .inner-label::after {
+  -webkit-animation: border2 .2s linear .2s forwards;
+          animation: border2 .2s linear .2s forwards;
+  border-color: red;
+}
+
+.radio:checked + .inner-label > .span {
+  -webkit-animation: span1 .5s linear .4s forwards;
+          animation: span1 .5s linear .4s forwards;
+}
+
+@-webkit-keyframes border1 {
+  0% {
+    width: 0;
+    height: 0;
+    border-top-color: red;
+    border-left-color: transparent;
+    border-right-color: red;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+  }
+  50% {
+    width: 1em;
+    height: 0;
+    border-top-color: red;
+    border-left-color: transparent;
+    border-right-color: red;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+  }
+  100% {
+    width: 1em;
+    height: 1em;
+    border-top-color: red;
+    border-left-color: transparent;
+    border-right-color: red;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+  }
+}
+
+@keyframes border1 {
+  0% {
+    width: 0;
+    height: 0;
+    border-top-color: red;
+    border-left-color: transparent;
+    border-right-color: red;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+  }
+  50% {
+    width: 1em;
+    height: 0;
+    border-top-color: red;
+    border-left-color: transparent;
+    border-right-color: red;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+  }
+  100% {
+    width: 1em;
+    height: 1em;
+    border-top-color: red;
+    border-left-color: transparent;
+    border-right-color: red;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+  }
+}
+
+@-webkit-keyframes border2 {
+  0% {
+    width: 0;
+    height: 0;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: red;
+    border-radius: 50%;
+  }
+  50% {
+    width: 1em;
+    height: 0;
+    border-top-color: transparent;
+    border-left-color: red;
+    border-right-color: transparent;
+    border-bottom-color: red;
+    border-radius: 50%;
+  }
+  100% {
+    width: 1em;
+    height: 1em;
+    border-top-color: transparent;
+    border-left-color: red;
+    border-right-color: transparent;
+    border-bottom-color: red;
+    border-radius: 50%;
+  }
+}
+
+@keyframes border2 {
+  0% {
+    width: 0;
+    height: 0;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: red;
+    border-radius: 50%;
+  }
+  50% {
+    width: 1em;
+    height: 0;
+    border-top-color: transparent;
+    border-left-color: red;
+    border-right-color: transparent;
+    border-bottom-color: red;
+    border-radius: 50%;
+  }
+  100% {
+    width: 1em;
+    height: 1em;
+    border-top-color: transparent;
+    border-left-color: red;
+    border-right-color: transparent;
+    border-bottom-color: red;
+    border-radius: 50%;
+  }
+}
+
+@-webkit-keyframes span1 {
+  0% {
+    -webkit-transform: translate(-50%, -50%) scale(1.5);
+            transform: translate(-50%, -50%) scale(1.5);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: translate(-50%, -50%) scale(0.5);
+            transform: translate(-50%, -50%) scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes span1 {
+  0% {
+    -webkit-transform: translate(-50%, -50%) scale(1.5);
+            transform: translate(-50%, -50%) scale(1.5);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: translate(-50%, -50%) scale(0.5);
+            transform: translate(-50%, -50%) scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=style.css.map */

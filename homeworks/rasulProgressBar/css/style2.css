@@ -1,0 +1,114 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  widows: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 20px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a::visited {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+.progressbar {
+  position: relative;
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(10%, red), color-stop(20%, cyan), color-stop(30%, green), color-stop(40%, grey), color-stop(50%, brown), color-stop(50%, white), color-stop(0, white));
+  background: -webkit-linear-gradient(bottom left, red 10%, cyan 20%, green 30%, grey 40%, brown 50%, white 50%, white 0);
+  background: -o-linear-gradient(bottom left, red 10%, cyan 20%, green 30%, grey 40%, brown 50%, white 50%, white 0);
+  background: linear-gradient(to top right, red 10%, cyan 20%, green 30%, grey 40%, brown 50%, white 50%, white 0);
+  background-size: 100vw calc(100% + 100vh - 1200px);
+  background-repeat: no-repeat;
+  height: auto;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.progressbar > .line {
+  position: fixed;
+  top: 10px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  z-index: -1;
+}
+
+.progressbar__content {
+  padding: 50px 200px;
+  width: 100%;
+}
+
+.progressbar__title {
+  font-size: 3em;
+  font-family: sans-serif;
+  text-align: center;
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+
+.progressbar__txt {
+  font-family: sans-serif;
+  text-align: justify;
+  line-height: 1.2em;
+}
+
+.progressbar__txt > p:not(:last-child) {
+  margin-bottom: 10px;
+}
+/*# sourceMappingURL=style2.css.map */

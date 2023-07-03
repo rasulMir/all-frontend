@@ -1,0 +1,41 @@
+@import '../general/variables';
+@import '../general/mixixines';
+
+// .print
+.print {
+	background: url(../images/print/print-sofa-320.png) 100% 88%/87.8725% auto no-repeat;
+}
+
+// .print-wrap
+.print-wrap {
+	position: relative;
+	padding: 70px 0 250px;
+
+	// .print-wrap__col
+	&__col {
+	}
+
+	// .print-wrap__subtitle
+	&__subtitle {
+		padding: 0 0 30px 0;
+	}
+
+	// .print-wrap__txt
+	&__txt {
+		padding: 0 0 30px 0;
+	}
+
+	// .print-wrap__btn
+	&__btn {
+		display: block;
+		padding: .8em;
+		font-family: $openSans;
+		font-size: 16px;
+		font-weight: bold;
+		color: $printBtnFontColor;
+		background-color: $printBtnBgColor;
+		text-transform: uppercase;
+		text-align: center;
+		border-radius: 2em;
+	}
+}

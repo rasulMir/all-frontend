@@ -1,0 +1,49 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.top_olist {
+	counter-reset: li;
+	margin: 100px auto;
+	padding: 10px;
+	width: 400px;
+	list-style: none;
+}
+
+.top_olist li {
+	position: relative;
+	margin: 15px;
+	padding: 7px;
+	border: 3px solid greenyellow;
+	border-radius: 5px;
+	font-size: 18px;
+	font-family: sans-serif;
+}
+
+.top_olist li:before {
+	content: counter(li);
+	counter-increment: li;
+	position: absolute;
+	top: -12px;
+	left: 15px;
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 18px;
+	color: orange;
+	background-color: #fff;
+}
+
+.top_olist li:hover:before {
+	left: -55px;
+	top: -8px;
+	width: 27px;
+	height: 27px;
+	border-radius: 50%;
+	padding: 10px;
+	line-height: 27px;
+	border: 1px dotted blueviolet;
+}

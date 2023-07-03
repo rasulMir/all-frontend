@@ -1,0 +1,31 @@
+header.header
+	.custom-shape-divider-bottom-1630013412
+		svg(data-name="mLayer 1" xlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none")
+			path(d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill")
+	.container
+		section.head-top|
+			|
+			a.head-top__logo(href="#")|
+				|
+				img(src="./images/header/logo.png", alt="Volopas Logo")|
+				|
+				span.head-top__logo-txt Волопас
+					span Артель
+			nav.head-top__nav
+				ul.head-top__menu
+					each val in ['Продукция', 'Процесс', 'Дорожная карта', 'Блокчейн', 'Команда', 'FAQ', 'Whitepaper']
+						li.head-top__item
+							a.head-top__link(href='#')= val
+			|
+			|
+			a.head-top__btn.main__btn(href="#") Участвовать
+		section.head-bttm.head-bttm
+			.head-bttm__col
+				h1.head-bttm__title Вкладывайте <span>RUBIC</span> в молочное производство полного цикла
+				.head-bttm__txt
+					p Молочная ферма с современным производственным комплексом и сетью сбыта благодаря технологиям распределенного реестра гарантирует высокий уровень автоматизаций, контроля и учета.
+				
+				a.head-bttm__btn.main__btn(href='#') Подробнее
+			.head-bttm__col
+				.head-bttm__img
+					img(src="./images/header/bag.png", alt="promo coins bag")

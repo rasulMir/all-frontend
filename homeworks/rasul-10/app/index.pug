@@ -1,0 +1,11 @@
+extends ./pug/layouts/head
+
+block vars
+	-	var title = 'Contacts Us'
+	-	var currjs = 'contacts'
+block content
+	main.main
+		include ./pug/contacts-us/contacts-promo.pug
+		include ./pug/contacts-us/contacts-form.pug
+		include ./pug/contacts-us/contacts-map.pug
+	include ./pug/layouts/footer.pug

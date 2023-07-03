@@ -1,0 +1,48 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.circles {
+	margin: 100px auto;
+	padding: 10px;
+	width: 300px;
+	list-style: none;
+	border: 1px solid black;
+}
+
+.circles li {
+	position: relative;
+	text-align: end;
+	padding: 10px 0 10px;
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.circles li .black {
+	position: relative;
+	position: absolute;
+	top: 7px;
+	left: 0;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: black;
+}
+
+.circles li .orange {
+	position: relative;
+	position: absolute;
+	top: 5px;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: orangered;
+}
+
+.circles li .black:hover {
+	background-color: orangered;
+	transition-duration: 1s;
+}

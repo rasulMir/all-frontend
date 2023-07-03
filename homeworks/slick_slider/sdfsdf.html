@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        img{
+            margin: 0 auto;
+            width: 330px;
+            height: 450px;
+        }
+
+        .wrap{
+            max-width: 1140px;
+            margin: 100px auto;
+        }
+
+        .my-slider{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .slider_item{
+            flex-basis: 340px;
+            padding: 20px;
+        }
+
+        .dots-style{
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        .dots-style button{
+            background-color: #eee;
+            border: none;
+            border-radius: 50%;
+            font-size: 0;
+            height: 15px;
+            width: 15px;
+            margin: 5px;
+            outline: none;
+        }
+
+        .dots-style li[class="slick-active"] button{
+            background-color: orange;
+        }
+
+        .fa-angle-left{
+            position: absolute;
+            top: 35%;
+            left: -30px;
+            font-size: 50px;
+        }
+        .fa-angle-right{
+            position: absolute;
+            top: 35%;
+            right: -30px;
+            font-size: 50px;
+        }
+        .fa-angle-left:hover,
+        .fa-angle-right:hover{
+            color:orange;
+            cursor: pointer;
+        }
+        
+        .slick-slide{
+            height: 300px;
+            width: 300px;
+        }
+
+    </style>
+
+
+    <div class="wrap">
+        <div class="my-slider">
+            <div class="slider_item"><img src="marvel/1.jpg" alt=""></div>
+            <div class="slider_item"><img src="marvel/2.jpg" alt=""></div>
+            <div class="slider_item"><img src="marvel/3.jpg" alt=""></div>
+            <div class="slider_item"><img src="marvel/4.jpg" alt=""></div>
+            <div class="slider_item"><img src="marvel/5.jpg" alt=""></div>
+            <div class="slider_item"><img src="marvel/6.jpg" alt=""></div>
+            <div class="slider_item"><img src="marvel/7.jpg" alt=""></div>
+            <div class="slider_item"><img src="marvel/8.jpg" alt=""></div>
+        </div>    
+    </div>
+
+
+<script src="slick/js/jquery-3.3.1.js"></script>
+<script src="slick/js/jquery-migrate-3.1.0.js"></script>
+<script src="slick/js/slick.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>

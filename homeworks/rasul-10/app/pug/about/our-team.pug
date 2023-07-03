@@ -1,0 +1,26 @@
+include ../mixines.pug
+
+mixin ourTeamCard(pro,name,position)
+	.our-team-wrap__card
+		.our-team-wrap__top
+			img(src="./images/our-team-" + pro + '.jpg', alt="our team")
+			ul.our-team-wrap__hover
+				+socials('our-team-wrap__hover-socials','facebook')
+				+socials('our-team-wrap__hover-socials','twitter')
+				+socials('our-team-wrap__hover-socials','tumblr')
+				+socials('our-team-wrap__hover-socials','linkedin')
+				+socials('our-team-wrap__hover-socials','google')
+		.our-team-wrap__bttm
+			.our-team-wrap__bttm-name= name
+			.our-team-wrap__bttm-position= position
+section.our-team
+	.container
+		+mainTitle('Meet Our Team','our-team__title','our-team__title-txt','our-team__title-wrap')
+			p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic vitae ullam explicabo pariatur eius soluta vero omnis, unde, officia voluptatum totam.
+		.our-team-wrap
+			+ourTeamCard('1','Jonathan Doe','Founder of Example.com')
+			+ourTeamCard('2','Britney Doe','Designer at Example.com')
+			+ourTeamCard('3','Frank Doe','Marketing Manger')
+			+ourTeamCard('4','Lisa Doe','Co-Founder of Example.com')
+			+ourTeamCard('5','David Doe','Developer at Example.com')
+			+ourTeamCard('6','Jessica Doe','Ceo of Example.com')

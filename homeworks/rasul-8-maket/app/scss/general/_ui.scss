@@ -1,0 +1,276 @@
+@import './variables';
+@import './mixixines';
+
+// body.block
+.block {
+	overflow: hidden;
+}
+
+// .wrapper
+.wrapper {
+	position: relative;
+	overflow: hidden;
+}
+// .wrapper
+
+// decor
+.decor {
+	@include position(0,0,0,0);
+	pointer-events: none;
+	z-index: -1;
+	&::before,
+	&::after,
+	&__inner {
+		content: '';
+		@include position(0,auto);
+		width: 32%;
+		height: 100%;
+		border-width: 0 1px;
+		border-style: solid;
+		border-color: transparent $decorBorderColor;
+	}
+	&::before {
+		display: none;
+	}
+	&__inner {
+		left: 18%;
+	}
+	&::after {
+		left: 50%;
+		border-left-color: transparent;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	// decor
+	.decor {
+		&::after,
+		&::before,
+		&__inner {
+			content: '';
+			@include position(0,auto);
+			width: 373px / 760px * 100%;
+		}
+		&__inner {
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		&::before {
+			display: block;
+			left: 15px;
+		}
+		&::after {
+			right: 15px;
+		}
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	// .decor
+	.decor {
+		@include position(0,50%);
+		transform: translateX(-50%);
+		height: 100%;
+		width: 1170px;
+		&__inner,
+		&::before,
+		&::after {
+			width: 50%;
+		}
+		&::before {
+			left: 0;
+		}
+		&::after{
+			right: 0;
+		}
+	}
+}
+
+// decor
+
+// .main
+.main {
+	// .main__title
+	&__title {
+		font-size: 30px;
+		font-family: $muller;
+		font-weight: 600;
+		color: $mainTitleFontColor;
+		position: relative;
+		z-index: 4;
+	}
+
+	// .main__subtitle
+	&__subtitle {
+		font-size: 24px;
+		font-family: $muller;
+		color: $mainSubtileFontColor;
+		line-height: 1.2;
+		position: relative;
+		& > span:not(:first-child) {
+			position: relative;
+			z-index: 4;
+		}
+	}
+
+	// .main__txt
+	&__txt {
+		color: $mainTxtFontColor;
+		font-size: 14px;
+		font-family: $openSans;
+		line-height: 1.714;
+	}
+
+	// main__line
+	&__line {
+		display: none;
+	}
+
+	// main__number
+	&__number {
+		@include position(50%,30px);
+		transform: translateY(-50%);
+		font-size: 200px;
+		font-family: $muller;
+		font-weight: 800;
+		line-height: 1em;
+		color: $mainNumberFontColor;
+		text-shadow: 0px 0px 21px rgba($mainNumberTextShadowColor, 0.1);
+		z-index: 3;
+	}
+
+	// .main__qa
+	&__qa {
+		margin-bottom: 10px;
+		font-size: 16px;
+		font-family: $openSans;
+		font-style: italic;
+		color: $polygraphQaConsultFontColor;
+	}
+
+	// .main__consult
+	&__consult {
+		margin-bottom: 20px;
+		font-size: 20px;
+		font-family: $openSans;
+		font-weight: bold;
+		line-height: 1.505;
+		color: $polygraphQaConsultFontColor;
+	}
+
+	// main__form
+	&__form {
+
+	}
+	
+	// main__form-input
+	&__form-input {
+		margin: 0 0 1em 0;
+		width: 100%;
+		padding: .8em;
+		background-color: transparent;
+		outline: 1px solid transparent;
+		border: none;
+		border-bottom: 1px solid $polygraphInputPlaceholderFontColor;
+
+		&:last-of-type {
+			margin: 0 0 2.2em 0;
+		}
+
+		&::placeholder {
+			text-transform: capitalize;
+			font-size: 14px;
+			font-family: $openSans;
+			font-style: italic;
+			color: $polygraphInputPlaceholderFontColor;
+		}
+
+		&:focus {
+			outline: 1px solid $polygraphInputPlaceholderFontColor;
+			box-shadow: 2px 2px 10px rgba($polygraphInputPlaceholderFontColor, .5);
+		}
+	}
+	// main__form-btn
+	&__form-btn {
+		display: inline-block;
+		width: 100%;
+		padding: .8em;
+		font-size: 16px;
+		font-family: $openSans;
+		font-weight: bold;
+		text-transform: uppercase;
+		text-align: center;
+		background-color: $polygraphBtnBgColor;
+		color: $polygraphBtnFontColor;
+		border: none;
+		outline: none;
+		border-radius: 2em;
+		cursor: pointer;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	// .main
+	.main {
+		// .main__subtitle
+		&__subtitle {
+			font-size: 32px;
+		}
+
+		// main__line
+		&__line {
+			display: block;
+			@include position(auto,50%,0);
+			transform: translateX(-7px);
+			width: 7px;
+			height: 83px;
+			z-index: 5;
+			&::before,
+			&::after {
+				content: '';
+				width: 2px;
+				height: 100%;
+				@include position(0,auto);
+				background-color: $mainLineBorderColor;
+			}
+			&::before {
+				transform: translateY(12px);
+				right: 100%;
+			}
+			&::after {
+				transform: translateY(58px);
+				left: 100%;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	
+	// .main
+	.main {
+		// main__line
+		&__line {
+			transform: translateX(0);
+		}
+
+		// main__number
+		&__number {
+			@include position(50%,0);
+		}
+	}
+}
+
+@media only screen and (min-width: 1270px) {
+	
+	// .main
+	.main {
+
+		// main__number
+		&__number {
+			@include position(50%,-70px);
+		}
+	}
+}
+// .main

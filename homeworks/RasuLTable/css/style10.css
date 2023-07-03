@@ -1,0 +1,30 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+table {
+	border-collapse: collapse;
+	width: 70%;
+	margin: 50px;
+	text-transform: capitalize;
+	text-align-last: left;
+	border: 2px solid rgb(36, 180, 190);
+}
+
+th {
+	padding: 20px;
+	color: royalblue;
+	border: 2px solid blue;
+	border-bottom: none;
+}
+
+td {
+	padding: 20px;
+	color: teal;
+}
+
+td {
+	border-right: 2px dashed rgb(36, 180, 190);
+}

@@ -1,0 +1,61 @@
+@import '../general/variables';
+@import '../general/mixixines';
+
+// .polygraph
+.polygraph {
+	background-color: $polygraphBgColor;
+}
+
+// .poly-wrap
+.poly-wrap {
+	padding: 75px 0 60px;
+
+	// .poly-wrap__col
+	&__col {
+	}
+
+	// .poly-wrap__subtitle
+	&__subtitle {
+		padding: 0 0 45px 0;
+	}
+
+	// .poly-wrap__txt
+	&__txt {
+		& > p:nth-child(odd) {
+			margin-bottom: 2em;
+		}
+	}
+
+	// .poly-wrap__img
+	&__img {
+		& > img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	// .poly-wrap__qa
+	&__qa {
+		margin: 40px 0 10px 0;
+	}
+
+	// .poly-wrap__consult
+	&__consult {
+		margin: 0 0 20px 0;
+	}
+
+	// .poly-wrap__form
+	&__form {
+		
+	}
+
+	// .poly-wrap__input
+	&__input {
+		
+	}
+
+	// .poly-wrap__btn
+	&__btn {
+		
+	}
+}

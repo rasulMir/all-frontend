@@ -1,0 +1,56 @@
+doctype html
+html(lang="ru-RU")
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		link(rel="stylesheet", href="icomoon/style.css")
+		link(rel="stylesheet", href="css/normalize.css")
+		link(rel="stylesheet", href="css/style.min.css")
+		title Artactive
+	body|
+		|
+		.wrapper
+			|
+			|
+			span.decor
+				span.decor__inner
+			|
+			|
+			include ./header/header.pug
+			|
+			|
+
+			.main|
+				|
+				include about-us/about-us.pug
+				|
+				|
+				include services/services.pug
+				|
+				|
+				include print/print.pug
+				|
+				|
+				include polygraph/polygraph.pug
+				|
+				|
+				include reviews/reviews.pug
+				|
+				|
+				include faq/faq.pug
+				|
+				|
+				include map/map.pug
+				|
+				|
+			include footer/footer.pug
+			|
+			|
+			include pop-up/popup.pug
+			|
+			|
+		|
+		|
+		script(src="js/libs.js")
+		script(src="js/script.min.js")

@@ -1,0 +1,237 @@
+@import '../general/variables';
+@import '../general/mixixines';
+
+
+@media only screen and (min-width: 768px) {
+	// .head-top
+	.head-top {
+		// .head-top__nav
+		&__nav {
+			width: 305px / 768px * 100%;
+		}
+
+		// .head-top__link
+		&__link {
+			position: relative;
+			&::before {
+				content: '';
+				@include position(0,0,0,0);
+				transform-origin: left;
+				transform: scaleX(0);
+				border: 1px solid transparent;
+				border-bottom-color: $headNavPrimaryFontColor;
+				transition: transform .3s linear;
+			}
+			&:hover::before {
+				transform: scaleX(1);
+			}
+		}
+
+			// .head-top__btn
+			&__btn {
+				transition: opacity .4s linear;
+				&:hover {
+					opacity: .7;
+				}
+			}
+	}
+
+	// .head-bottom
+	.head-bottom {
+		position: relative;
+		padding: 5px 0 90px 0;
+		@include flex(space-between,stretch);
+
+		// .head-bottom__column
+		&__column {
+			flex: 0 0 280px / 768px * 100%;
+		}
+
+		// .head-bottom__column-img
+		&__column-img {
+			flex: 1 0;
+			overflow: visible;
+			padding: 0 0 65% 0;
+			& > img {
+				@include position(0,-28%);
+				width: 124%;
+			}
+		}
+
+		// .head-bottom__column-title
+		&__column-title {
+			margin: 45px 0;
+			font-size: 45px;
+		}
+
+		// .head-bottom__column-txt
+		&__column-txt {
+			margin: 0 0 35px 0;
+			font-size: 21px;
+		}
+
+		// .head-bottom__column-footer
+		&__column-footer {
+			@include flex(stretch,flex-start,column);
+		}
+
+		// .head-bottom__column-footer-btn
+		&__column-footer-btn {
+			width: 250px / 280px * 100%;
+			transition: opacity .3s linear;
+			&:hover {
+				opacity: .8;
+			}
+		}
+
+		// .head-bottom__arrow
+		&__arrow {
+			display: block;
+			@include position(auto,50%,7%,auto);
+			transform: translateX(-50%);
+			width: 20px;
+			height: 30px;
+			border: 2px solid $headBottomArrowPrimaryColor;
+			border-radius: 15px;
+			& > span {
+				@include position(15%,50%);
+				transform: translateX(-50%);
+				width: 1px;
+				height: 5px;
+				background-color: $headBottomArrowPrimaryColor;
+				animation: arrow 1s infinite forwards;
+			}
+		}
+
+		@keyframes arrow {
+			0% {
+			}
+			50% {
+				transform: translate(-50%,150%);
+			}
+			100% {
+				transform: translate(-50%,0);
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	// .head-top
+	.head-top {
+		padding: 60px 0 85px 0;
+		// .head-top__nav
+		&__nav {
+			margin: 0 0 0 70px;
+			padding: 0;
+			position: static;
+			@include flex(space-between,center);
+			height: max-content;
+			flex: 1 0;
+			background-color: transparent;
+			color: inherit;
+		}
+
+		// .head-top__menu
+		&__menu {
+			margin: 0;
+			@include flex(space-between,center);
+		}
+
+		// .head-top__call
+		&__call {
+			@include flex(space-between,center);
+			& > a:not(:last-child) {
+				margin: 0 32px 0 0;
+			}
+		}
+
+		// .head-top__num
+		&__num {
+			margin: 0;
+		}
+
+		// .head-top__link
+		&__link {
+			margin: 0 25px;
+			padding: 0;
+			&::before {
+				border-bottom-color: $headerPrimaryFontColor;
+			}
+		}
+
+		// .head-top__btn
+		&__btn {
+			color: $headerPrimaryFontColor;
+			border-color: $headerPrimaryFontColor;
+		}
+
+		// .head-top__click
+		&__click {
+			display: none;
+		}
+	}
+
+	// .head-bottom
+	.head-bottom {
+		padding: 0 0 90px 0;
+		@include flex(space-between,center);
+
+		// .head-bottom__column
+		&__column {
+			flex: 0 0 515px / 1170px * 100%;
+		}
+
+		// .head-bottom__column-img
+		&__column-img {
+			flex: 1 0;
+			padding: 0 0 55% 0;
+			& > img {
+				@include position(0,-19%);
+				width: 116%;
+			}
+		}
+
+		// .head-bottom__column-title
+		&__column-title {
+			margin: 50px 0;
+			@include adaptiv-font(60,33);
+		}
+
+		// .head-bottom__column-txt
+		&__column-txt {
+			margin: 0 0 75px 0;
+			@include adaptiv-font(32,21);
+		}
+
+		// .head-bottom__column-footer
+		&__column-footer {
+			@include flex(space-between,center,row);
+		}
+
+		// .head-bottom__column-footer-btn
+		&__column-footer-btn {
+			margin: 0;
+			width: 250px / 515px * 100%;
+		}
+
+		// .head-bottom__column-footer-txt
+		&__column-footer-txt {
+			flex: 0 0 245px / 515px * 100%;
+		}
+	}
+}
+
+@media only screen and (min-width: 1100px) {
+	// .head-top
+	.head-top {
+		// .head-top__nav
+		&__nav {
+			margin: 0 0 0 110px;
+		}
+		// .head-top__btn
+		&__btn {
+			padding: .8em 2em;
+		}
+	}
+}

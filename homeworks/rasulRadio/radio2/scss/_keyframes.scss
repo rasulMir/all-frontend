@@ -1,0 +1,73 @@
+@keyframes border1 {
+	0% {
+		width: 0;
+		height: 0;
+		border-top-color: red;
+		border-left-color: transparent;
+		border-right-color: red;
+		border-bottom-color: transparent;
+		border-radius: 50%;
+	}
+	50% {
+		width: 1em;
+		height: 0;
+		border-top-color: red;
+		border-left-color: transparent;
+		border-right-color: red;
+		border-bottom-color: transparent;
+		border-radius: 50%;
+	}
+	100% {
+		width: 1em;
+		height: 1em;
+		border-top-color: red;
+		border-left-color: transparent;
+		border-right-color: red;
+		border-bottom-color: transparent;
+		border-radius: 50%;
+	}
+}
+@keyframes border2 {
+	0% {
+		width: 0;
+		height: 0;
+		border-top-color: transparent;
+		border-left-color: transparent;
+		border-right-color: transparent;
+		border-bottom-color: red;
+		border-radius: 50%;
+	}
+	50% {
+		width: 1em;
+		height: 0;
+		border-top-color: transparent;
+		border-left-color: red;
+		border-right-color: transparent;
+		border-bottom-color: red;
+		border-radius: 50%;
+	}
+	100% {
+		width: 1em;
+		height: 1em;
+		border-top-color: transparent;
+		border-left-color: red;
+		border-right-color: transparent;
+		border-bottom-color: red;
+		border-radius: 50%;
+	}
+}
+
+@keyframes span1 {
+	0% {
+		transform: translate(-50%,-50%) scale(1.5);
+		opacity: 1;
+	}
+	50% {
+		transform: translate(-50%,-50%) scale(.5);
+		opacity: 1;
+	}
+	100% {
+		transform: translate(-50%,-50%) scale(1);
+		opacity: 1;
+	}
+}

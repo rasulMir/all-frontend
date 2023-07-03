@@ -1,0 +1,162 @@
+@import '../variables';
+@import '../mixines';
+
+// .header
+.header {
+	color: $headerPrimaryFontColor;
+	background: url(../images/header/header_bg.jpg) 0/cover no-repeat;
+	position: relative;
+
+	.custom-shape-divider-bottom-1630013412 {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		overflow: hidden;
+		line-height: 0;
+		transform: rotate(180deg);
+		pointer-events: none;
+  }
+  
+  .custom-shape-divider-bottom-1630013412 svg {
+		position: relative;
+		display: block;
+		width: calc(190% + 1.3px);
+		height: 260px;
+  }
+  
+  .custom-shape-divider-bottom-1630013412 .shape-fill {
+		fill: #FFFFFF;
+  }
+}
+
+// .head-top
+.head-top {
+	padding: 25px 0;
+	@include flex(space-between,center);
+
+	// .head-top__logo
+	&__logo {
+		@include flex(stretch,center);
+		& > img {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+
+	// .head-top__logo-txt
+	&__logo-txt {
+		padding: 0 0 0 .5rem;
+		font-size: 2.5rem;
+		font-family: $proxima;
+		color: $headTopLogoTxtFontColor;
+		& > span {
+			display: block;
+			color: $headerPrimaryFontColor;
+			font-size: 1.3rem;
+		}
+	}
+
+	// .head-top__nav
+	&__nav {
+		flex: 0 0 670px / 1170px * 100%;
+	}
+
+	// .head-top__menu
+	&__menu {
+		@include flex(space-around,center);
+	}
+
+	// .head-top__item
+	&__item {
+	}
+
+	// .head-top__link
+	&__link {
+		display: block;
+		padding: 0 1em;
+		font-size: 1.5rem;
+		font-family: $seravek;
+		text-align: center;
+	}
+
+	// .head-top__btn
+	&__btn {
+		flex: 0 0 185px / 1170px * 100%;
+		border: 2px solid $headTopBtnCorderColor;
+	}
+}
+
+// .head-bttm
+.head-bttm {
+	padding: 20px 0 0 0;
+	@include flex(stretch,center);
+
+	// .head-bttm__col
+	&__col {
+		flex: 0 0 685px / 1170px * 100%;
+		margin: 20px 0;
+		&:nth-child(2) {
+			flex: 0 0 445px / 1170px * 100%;
+		}
+	}
+
+	// .head-bttm__title
+	&__title {
+		position: relative;
+		margin: 0 0 1.333em 0;
+		font-size: 4.5rem;
+		font-family: $seravek;
+		font-weight: bold;
+		word-spacing: .2em;
+		line-height: 1.2;
+		text-transform: uppercase;
+		& > span {
+			color: $headBttmTitleSpanFontColor;
+		}
+		&::after {
+			content: '';
+			@include position(auto,0,-26px);
+			width: 72px / 445px * 100%;
+			height: 1px;
+			background-color: $headerPrimaryFontColor;
+		}
+	}
+
+	// .head-bttm__txt
+	&__txt {
+		margin: 0 0 2.333em 0;
+		font-size: 1.5rem;
+		font-family: $gilroy;
+		line-height: 1.6;
+		text-align: left;
+		& > p {
+			margin: 0;
+		}
+	}
+
+	// .head-bttm__btn
+	&__btn {
+		display: inline-block;
+		width: 185px / 685px * 100%;
+		background: linear-gradient( 142deg, rgb(254,132,72) 0%, rgb(238,62,111) 100%);
+	}
+
+	// .head-bttm__img
+	&__img {
+		padding: 0 0 150% 0;
+		position: relative;
+		& > img {
+			@include position(0, -53%);
+			width: 193%;
+			height: 100%;
+		}
+		&::after {
+			content: '';
+			@include position(auto,-3%,0);
+			width: 100%;
+			height: 50%;
+			background: url(../images/header/bags-hand.png) 0/cover no-repeat;
+		}
+	}
+}

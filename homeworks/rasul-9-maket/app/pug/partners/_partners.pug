@@ -1,0 +1,9 @@
+section.partners
+	.container
+		article.partners-wrap
+			h3.partners-wrap__title Партнеры:
+			.partners-wrap__body
+				each image in ['1','2','3','4','5','6','7']
+					.partners-wrap__img
+						a.partners-wrap__link(href="#")
+							img(src='./images/partners/' + image + "-partners" + ".png", alt="логотипы компании партнеров")

@@ -1,0 +1,34 @@
+/*Обнуление*/
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.slick-wrapper {
+  width: 80%;
+  background-color: aqua;
+}
+
+.slide-item {
+  background-color: rebeccapurple;
+  color: aqua;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 200px;
+  border: 1px solid white;
+}
+.slide-item h3 {
+  font-family: Lato, sans-serif;
+  font-size: 40px;
+}

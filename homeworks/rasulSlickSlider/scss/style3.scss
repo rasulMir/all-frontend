@@ -1,0 +1,50 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+.wrapper {
+	height: 100vh;
+}
+.slider {
+	width: 100vw;
+	padding: 50px 0;
+	position: relative;
+	background-color: rgb(66, 65, 65);
+	// .slider__item
+	&__item {
+		background-color: white;
+		margin: 10px 40px;
+		user-select: none;
+	}
+	// .slider__inner-item
+	&__inner-item {
+		text-align: center;
+		line-height: 200px;
+		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	}
+	.slick-list {
+		overflow: hidden;
+	}
+	.slick-track {
+		display: flex;
+	}
+	/* Стрелка */
+	.slick-arrow{
+		display: block;
+		position: absolute;
+		bottom: 1.5em;
+		background-color: rgb(56, 48, 48);
+		color: white;
+		padding: 3px 5px;
+	}
+	/* Стрелка влево */
+	.slick-arrow.fa-chevron-left{
+		left: 4em;
+	}
+	/* Стрелка вправо */
+	.slick-arrow.fa-chevron-right{
+		right: 4em;
+	}
+}

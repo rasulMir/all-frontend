@@ -1,0 +1,203 @@
+/* -----------------------settings-start------------------- */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+/* -----------------------settings-end------------------- */
+/* -----------------------container-start------------------- */
+.container {
+	max-width: 1100px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+/* -----------------------container-end------------------- */
+/* -----------------------head-row-start------------------- */
+.head-row {
+	display: flex;
+}
+/* -----------------------head-row-end------------------- */
+/* -----------------------left-grow-start------------------ */
+.left-grow {
+	display: flex;
+	flex-flow: column;
+	flex: 1 0;
+}
+/* -----------------------left-grow-start------------------ */
+/* -----------------------title-start----------------------- */
+.title {
+	flex: 1 1 auto;
+	padding: 10px;
+}
+/* -----------------------title-end----------------------- */
+/* ------------------------right-shrink-start--------------- */
+.right-shrink {
+	flex: 0 1 25%;
+}
+/* ----------------------------right-shrink-end-------------------- */
+/* ---------------------------inner-right-start----------------------- */
+.inner-right {
+	display: flex;
+	justify-content: center;
+	flex-flow: wrap;
+}
+/* ---------------------------inner-right-end-------------------------- */
+/* ---------------------------inner-right-form-inner-start------------- */
+.inner-right * {
+	margin: 5px;
+}
+/* ---------------------------inner-right-form-inner-end---------------- */
+/* ---------------------------content-start----------------------------- */
+.content {
+	display: flex;
+	flex: 1 1;
+}
+/* ---------------------------content-start----------------------------- */
+/* ---------------------------main-start---------------------------------- */
+.main {
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+	padding: 20px;
+}
+/* ---------------------------main-start---------------------------------- */
+/* ----------------------------top-block-start---------------------------- */
+.top-block {
+	flex: 0 1 40%;
+	display: flex;
+	padding: 10px;
+}
+/* -----------------------------top-block-end----------------------------- */
+/* -----------------------------photo-start---------------------------------- */
+.photo {
+	flex: 0 1 25%;
+	display: flex;
+	flex-flow: column;
+	margin-right: 10px;
+}
+/* -----------------------------photo-end------------------------------------ */
+/* -----------------------------image-start---------------------------------- */
+.image {
+	flex: 1;
+	max-width: 100%;
+}
+/* -----------------------------image-end---------------------------------- */
+/* ----------------------------photo-txt-start------------------------------------- */
+.photo-txt {
+	flex: 1;
+	text-align: center;
+}
+/* ----------------------------photo-txt-end------------------------------------- */
+/* -----------------------------top-block-text-start------------------------- */
+.top-block-text {
+	flex: 0 1 25%;
+	margin-right: 10px;
+}
+/* -----------------------------top-block-text-end------------------------- */
+/* -----------------------------bottom-block-start------------------------- */
+.bottom-block {
+	flex: 0 1 60%;
+	display: flex;
+	padding: 10px;
+}
+/* -----------------------------bottom-block-start------------------------- */
+/* -----------------------------bg-image-start----------------------------- */
+.bg-image {
+	background: url(../images/valley-sa.jpg) center center/cover no-repeat;
+	flex: 1 0;
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+	padding: 10px;
+	margin-right: 10px;
+}
+/* -----------------------------bg-image-end----------------------------- */
+/* ------------------------------top-start-------------------------------- */
+.top {
+	display: flex;
+	justify-content: space-between;
+}
+/* ------------------------------top-end-------------------------------- */
+/* -----------------------------photo2-start------------------------------ */
+.photo2 {
+	flex: 0 1 20%;
+	display: flex;
+	flex-flow: column;
+}
+/* -----------------------------photo2-start------------------------------ */
+/* ----------------------------slider-start--------------------------------- */
+.slider {
+	flex: 1 0;
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+	margin-left: 10px;
+}
+/* ----------------------------slider-end--------------------------------- */
+/* -----------------------------slider-inner-top-start--------------------------- */
+.inner-slider-top {
+	flex: 0 1 70%;
+}
+/* -----------------------------slider-inner-top-end--------------------------- */
+/* -----------------------------photo3-start------------------------------ */
+.photo3 {
+	flex: 0 1;
+	display: flex;
+	flex-flow: column;
+}
+/* -----------------------------photo3-end------------------------------ */
+/* -----------------------------slider-inner-bottom-start--------------------------- */
+.slider-inner-bottom {
+	flex: 0 1 30%;
+	display: flex;
+	margin-top: 10px;
+}
+/* -----------------------------slider-inner-bottom-end--------------------------- */
+/* -----------------------------photo4-start------------------------------ */
+.photo4 {
+	flex: 1 1;
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+	margin-right: 10px;
+}
+
+.photo4:last-child {
+	margin-right: 0;
+}
+/* -----------------------------photo4-end------------------------------ */
+/* ------------------------right-sidebar-start--------------- */
+.right-sidebar {
+	flex: 1 0 25%;
+	display: flex;
+	justify-content: flex-end;
+}
+/* ----------------------------right-sidebar-end-------------------- */
+/* ----------------------------block-start-------------------------- */
+.block {
+	flex: 0 1 50%;
+	display: flex;
+	flex-flow: column;
+}
+/* ----------------------------block-end-------------------------- */
+/* ----------------------------photo5-start------------------------------ */
+.photo5 {
+	flex: 1 1;
+	display: flex;
+	flex-flow: column;
+	padding: 10px;
+}
+/* ----------------------------photo5-start------------------------------ */
+/* ----------------------------image5-start------------------------------- */
+.image5 {
+	flex: 1 1;
+	max-width: 100%;
+}
+/* ----------------------------image5-start------------------------------- */
+/* -------------------------------photo5-txt-start------------------------ */
+.photo5-txt {
+	flex: 1 1;
+	text-align: center;
+}
+/* -------------------------------photo5-txt-start------------------------ */

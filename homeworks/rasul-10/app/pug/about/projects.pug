@@ -1,0 +1,50 @@
+mixin gallery(main,numb)
+	.gallery(class= main + 'content-wrap')
+		- var gallery = 1;
+		.gallery__wrap(class= main + 'content')
+			while gallery < numb
+				.gallery__img(class= main + 'img')|
+					|
+					img(src="./images/portfolio-" + gallery++ + '.jpg', alt="our portfolio")
+					.gallery__hover(class= main + 'hover')
+						h4.gallery__hover-title(class= main + 'hover-title') Claritas Est Processus
+						.gallery__hover-designer(class= main + 'hover-designer') Graphic Designer, Photoshop
+						.gallery__btns(class= main + 'btns')
+							.gallery__btns-btn(class= main + 'btns-btn',class= main + 'btns-btn_zoom')
+								span.icon-search
+							.gallery__btns-btn(class= main + 'btns-btn', class= main + 'btns-btn_bookmark')
+								span.icon-bookmark
+			span.gallery__btn(class=main + 'btn') load more works
+
+section.project
+	.container
+		.project-wrap
+			+gallery('project-wrap__','21')
+			+gallery('project-wrap__','7')
+			+gallery('project-wrap__','9')
+			+gallery('project-wrap__','13')
+			+gallery('project-wrap__','16')
+			+gallery('project-wrap__','11')
+			+gallery('project-wrap__','10')
+			.project-wrap__bttm
+				.project-wrap__btn.project-wrap__btn-left
+					span.project-wrap__btn-title Previous Project
+					|
+					|
+					span.project-wrap__btn-txt Graphic Design
+					|
+					|
+					i.icon-arrow-left
+				|
+				|
+				span.project-wrap__square
+				.project-wrap__btn.project-wrap__btn-right
+					|
+					|
+					span.project-wrap__btn-title Next Project
+					|
+					|
+					span.project-wrap__btn-txt Graphic Design, Photoshop
+					|
+					|
+					i.icon-arrow-right

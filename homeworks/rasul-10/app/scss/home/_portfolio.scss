@@ -1,0 +1,170 @@
+@import '../var';
+@import '../mixines';
+
+.portfolio {
+	position: relative;
+	padding: 8rem 0;
+	@include flex(center,center,column);
+
+	// .portfolio__title-wrap
+
+	&__title-wrap {
+
+		&::before {
+			background-color: $darkGrey;
+		}
+	}
+
+	// .portfolio__title
+
+	&__title {
+		color: $darkGrey;
+	}
+
+	// .portfolio__title-txt
+
+	&__title-txt {
+		color: $grey;
+	}
+}
+
+.portfolio-body {
+	@include flex(center,center,column);
+
+	// .portfolio-body__item
+
+	&__item {
+		padding: 0 2rem;
+		margin: 0 0 4rem 0;
+		@include flex(space-around,center);
+		border-radius: .3rem;
+		background-color: $fafa;
+	}
+
+	// .portfolio-body__title
+
+	&__title {
+		display: block;
+		padding: 1em 2rem;
+		font-size: 1.4rem;
+		font-family: $raleway;
+		font-weight: 700;
+		color: $eightC;
+		text-align: center;
+		cursor: pointer;
+		position: relative;
+		transition: color .3s ease;
+
+		&::before {
+			content: '';
+			@include position(auto,0,0);
+			width: 100%;
+			height: 0.2rem;
+			background-color: $orange;
+			transform-origin: left;
+			transform: scaleX(0);
+			transition: transform .3s ease .5s;
+		}
+
+		// .portfolio-body__title_active
+
+		&_active {
+			color: $orange;
+
+			&::before {
+				transform: scaleX(1);
+			}
+		}
+	}
+
+	// .portfolio-body__rdo
+
+	&__rdo {
+		display: none;
+
+		&:checked + .portfolio-body__content-wrap {
+			display: block;
+	  	}
+	}
+
+	// .portfolio-body__content-wrap
+
+	&__content-wrap {
+		display: none;
+	}
+
+	// .portfolio-body__content
+
+	&__content {
+	}
+
+	// .portfolio-body__img
+
+	&__img {
+		flex: 0 0 20%;
+
+		& > img {
+			width: 100%;
+			height: 100%;
+		}
+
+		&:nth-child(10) ~ .portfolio-body__img {
+			display: none;
+	   }
+	}
+
+	// .portfolio-body__hover
+
+	&__hover {
+		padding: 10%;
+	}
+
+	// .portfolio-body__hover-title
+
+	&__hover-title {
+		margin: 0 0 1rem 0;
+	}
+
+	// .portfolio-body__hover-designer
+
+	&__hover-designer {
+		position: relative;
+		margin: 0 0 1.5em 0;
+		padding: 0 0 1.15em 0;
+	}
+
+	// .portfolio-body__btns
+
+	&__btns {
+	}
+
+	// .portfolio-body__btns-btn
+
+	&__btns-btn {
+
+		// .portfolio-body__btns-btn_zoom
+
+		&_zoom {
+		}
+
+		// .portfolio-body__btns-btn_bookmark
+
+		&_bookmark {
+			margin: 0 0 0 0.5em;
+		}
+	}
+
+	// .portfolio-body__chbx
+
+	&__chbx {
+		&:checked + .portfolio-body__btns-btn_bookmark {
+			background-color: $orange;
+	   }
+	}
+
+	// .portfolio-body__btn
+
+	&__btn {
+		margin: 4rem 0 0 0;
+	}
+}

@@ -1,0 +1,148 @@
+@import '../var';
+@import '../mixines';
+
+.themes {
+	overflow: hidden;
+	padding: 8rem 0 0;
+	background: url(../images/themes-bg.jpg) center/cover no-repeat;
+
+	// .themes__title-wrap
+
+	&__title-wrap {
+	}
+
+	// .themes__title
+
+	&__title {
+	}
+
+	// .themes__title-txt
+
+	&__title-txt {
+	}
+}
+
+.themes-wrap {
+	@include flex(space-between,center);
+
+	// .themes-wrap__images
+
+	&__images {
+		position: relative;
+		flex: 0 0 63.2478632479%;
+		padding: 0 0 580px 0;
+		overflow: hidden;
+	}
+
+	// .themes-wrap__img
+
+	&__img {
+		position: absolute;
+
+		& > img {
+			width: 100%;
+		}
+
+		// .themes-wrap__img_back
+
+		&_back {
+			top: 10rem;
+			left: 0;
+			z-index: 2;
+		}
+
+		// .themes-wrap__img_front
+
+		&_front {
+			top: 0;
+			right: 0;
+			z-index: 4;
+		}
+	}
+
+	// .themes-wrap__cards
+
+	&__cards {
+		flex: 0 0 31.6239316239%;
+	}
+
+	// .themes-wrap__card
+
+	&__card {
+		@include flex(space-between,center);
+
+		&:not(:last-child) {
+			margin-bottom: 2rem;
+		}
+		&:hover > .themes-wrap__card-img {
+			background-color: transparent;
+			border-color: $orange;
+		}
+		&:hover > .themes-wrap__card-img > span {
+			color: $orange;
+		}
+		&:hover > .themes-wrap__card-body {
+			& > .themes-wrap__title {
+				color: $orange;
+			}
+			& > .themes-wrap__txt {
+				color: $darkGrey;
+			}
+		}
+	}
+
+	// .themes-wrap__card-img
+
+	&__card-img {
+		position: relative;
+		flex: 0 0 10rem;
+		height: 10rem;
+		background-color: $fafa;
+		border: 0.3rem solid transparent;
+		border-radius: 50%;
+		transition: all 0.3s linear;
+
+		& > span {
+			@include position(50%,50%);
+			transform: translate(-50%, -50%);
+			font-size: 4rem;
+			transition: color 0.3s linear;
+	   }
+	}
+
+	// .themes-wrap__card-body
+
+	&__card-body {
+		padding: 0 0 0 3rem;
+	}
+
+	// .themes-wrap__title
+
+	&__title {
+		margin-bottom: 0.5em;
+		font-size: 2rem;
+		font-family: $raleway;
+		color: $darkGrey;
+		font-weight: 700;
+		transition: color 0.3s linear;
+	}
+
+	// .themes-wrap__txt
+
+	&__txt {
+		font-size: 1.4rem;
+		font-family: $roboto;
+		color: $grey;
+		line-height: 1.429;
+		transition: color 0.3s linear;
+	}
+}
+
+.themes-clients {
+	background-color: rgba($orange, 0.7);
+
+	// .themes-clients__item
+
+	&__item {
+	}
+}

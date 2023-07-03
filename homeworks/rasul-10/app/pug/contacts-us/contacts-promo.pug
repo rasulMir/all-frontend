@@ -1,0 +1,23 @@
+include ../mixines.pug
+
+section.contacts-promo
+	include ../layouts/header.pug
+	.container
+		.contacts-promo__promo
+			.contacts-promo__top
+				h1.contacts-promo__top-title Get In Touch
+				h2.contacts-promo__top-subtitle Contact Information
+			.contacts-promo__bttm
+				+services('contacts-promo','address', 'Address')
+					+footerLinks('contacts-promo','795 South Park Avenue, Door 6 Wonderland, CA 94107, Australia')
+				+services('contacts-promo','smartphone', 'Phones')
+					+footerLinks('contacts-promo','+440 875369208 - Office')
+					+footerLinks('contacts-promo','+440 353363114 - Fax')
+				+services('contacts-promo','chat', 'Email')
+					+footerLinks('contacts-promo','support@sitename.com')
+					+footerLinks('contacts-promo','info@sitename.com')
+				+services('contacts-promo','share', 'Follow Us')
+					each val in ['facebook','twitter','tumblr','linkedin','google','vimeo','pinterest','blogger','flickr','dribbble','stumbleupon','deviantart','rss']
+							|
+							|
+							a.contacts-promo__socials-links.socials__link(class='icon-' + val, href='#')

@@ -1,0 +1,68 @@
+
+mixin primaryTitle(clas, clas2, text)
+	h2.main__title(class= clas)= text
+		span.main__title-circle(class= clas2)
+			span
+
+
+mixin card(url,num, title)
+	.process-wrap__circle-outer
+		if block
+			block
+		else
+		.process-wrap__circle|
+			|
+			span.process-wrap__number= num
+			.process-wrap__circle-inner
+				h4.process-wrap__circle-title= title
+			|
+			|
+			img(src='images/process/' + url + '.png', alt="иллюстрации процесса")
+
+mixin hoverCard(title)
+	.process-wrap__card
+		.process-wrap__title= title
+		.process-wrap__txt
+			p В сети из 20 магазинов и 60 автоматизированных пунктов выдачи в Москве и крупных городах Подмосковья наши высококачественныеб экологически чистые продукты доступны по привлекательной цене.
+			p Держатели наших токенов <span>talon</span> смогут получить их бесплатно или с больщой скидкой.
+		.process-wrap__btns
+			a.process-wrap__btn.main__btn(href='#', data-btn='Скачать описание (WP)') Скачать описание (WP)
+			a.process-wrap__btn.main__btn(href='#',data-btn='Инвестировать') Инвестировать
+
+mixin roadmap(title, date, color, money, rubic)
+	.roadmap-wrap__card(class= color)
+		.roadmap-wrap__title= title
+		.roadmap-wrap__txt
+			block
+		.roadmap-wrap__btn Подробнее
+	.roadmap-wrap__line
+		.roadmap-wrap__circle
+	.roadmap-wrap__box(class= color)
+		.roadmap-wrap__date= date
+		.roadmap-wrap__money= money
+			span= rubic
+
+mixin blockchainCard(image, title)
+	.blockchain-wrap__card
+		.blockchain-wrap__img
+			span.blockchain-wrap__circle
+			img(src='./images/blockchain/' + image)
+		.blockchain-wrap__title= title
+		.blockchain-wrap__txt
+			block
+
+mixin teamCard(image, name, position)
+	.team-wrap__card
+		.team-wrap__img
+			img(src="./images/team/" + image, alt="our team the best in the world")
+		.team-wrap__info
+			.team-wrap__name= name
+			.team-wrap__position= position
+
+mixin faqCard(question)
+	.faq-wrap__card
+		.faq-wrap__question= question
+			span
+		.faq-wrap__answer
+			block
+		

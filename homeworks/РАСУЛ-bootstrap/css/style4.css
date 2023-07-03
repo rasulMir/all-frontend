@@ -1,0 +1,25 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container-color {
+	background-color: rgb(53, 49, 49);
+}
+
+.second-color {
+	background-color: rgb(24, 23, 23);
+}
+
+.white {
+	background-color: white;
+}
+
+.titles {
+	text-align: center;
+	font-family: sans-serif;
+	line-height: 100px;
+	text-transform: uppercase;
+	color: white;
+}

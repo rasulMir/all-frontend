@@ -1,0 +1,140 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, aactive {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  widows: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a::visited {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/* start wrapper */
+.wrapper {
+  width: 100%;
+  padding: 20px;
+}
+
+.wrapper .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+/* end wrapper */
+/* start menu-link */
+li {
+  width: 16.66%;
+  height: 50px;
+  border-right: 1px solid #635a5a;
+  overflow: hidden;
+}
+
+li > .menu-link {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  line-height: 50px;
+  text-decoration: none;
+  text-transform: capitalize;
+  background-color: blue;
+  color: white;
+  font-size: 1.2em;
+}
+
+li > .menu-link:hover {
+  background-color: orangered;
+  color: black;
+}
+
+li:last-child {
+  border-right-color: transparent;
+}
+
+/* end menu-link */
+/* start media 768px */
+@media only screen and (max-width: 768px) {
+  li {
+    width: 33.333%;
+    border: 1px solid #635a5a;
+  }
+  li:last-child {
+    border-right-color: #635a5a;
+  }
+}
+
+/* end media 768px */
+/* start media 480px */
+@media only screen and (max-width: 480px) {
+  .menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+  }
+  .menu li {
+    width: 100%;
+  }
+}
+
+/* end media 480px */
+/*# sourceMappingURL=style1.css.map */

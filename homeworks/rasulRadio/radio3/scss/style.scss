@@ -1,0 +1,72 @@
+@import "reset";
+@mixin flex($jc, $ai) {
+	display: flex;
+	justify-content: $jc;
+	align-items: $ai;
+}
+	$color: rgba(255, 255, 255, 0.7);
+
+.wrapper {
+	width: 100vw;
+	height: 100vh;
+	@include flex(center, center);
+	background: url(https://images.ru.prom.st/840966608_w500_h500_shpon-yasen-tsvetnoj.jpg) center center/cover no-repeat;
+}
+
+.center {
+	border: 1px solid red;
+	width: 200px;
+	height: auto;
+}
+
+.label {
+	position: relative;
+	display: block;
+	font-family: sans-serif;
+	text-transform: uppercase;
+	padding: 10px 35px;
+	cursor: pointer;
+	letter-spacing: 2px;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 7px;
+		left: 8px;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		background-color: transparent;
+		box-shadow: inset 0 0 10px 2px black;
+		overflow: hidden;
+		z-index: 2;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 10px;
+		left: 11px;
+		width: 14px;
+		height: 14px;
+		border-radius: 50%;
+		background: radial-gradient(circle at center center, $color 11%,transparent 11%,transparent 0),
+		radial-gradient(circle at 60% 28%, $color 6%,transparent 6%,transparent 0), blue;
+		box-shadow: inset 0 0 4px 1px black;
+		transform: scale(0);
+		-webkit-tap-highlight-color: transparent;
+		pointer-events: none;
+		opacity: 0;
+		transition: all .2s ease-in;
+		z-index: 3;
+	}
+}
+
+.radio {
+	display: none;
+	&:checked + .label::after {
+		transition: all .3s ease-in;
+		transform: scale(1);
+		opacity: 1;
+	}
+}

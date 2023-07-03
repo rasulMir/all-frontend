@@ -1,0 +1,12 @@
+@mixin background($image , $color , $size , $repeat ,$position) {
+	background-image: $image;
+	background-color: $color;
+	background-size: $size;
+	background-repeat: $repeat;
+	background-position: $position;
+}
+
+@mixin colors($text, $background) {
+	color: $text;
+	background-color: $background;
+}

@@ -1,0 +1,132 @@
+@import '../var';
+@import '../mixines';
+
+.about-us {
+	padding: 8rem 0 9.5rem;
+	background: url(../images/ab-us-bg.jpg) center/cover no-repeat;
+
+	// .about-us__title-wrap
+
+	&__title-wrap {
+		margin-bottom: 7rem;
+		&::before {
+			background-color: $orange;
+		}
+	}
+
+	// .about-us__title
+
+	&__title {
+		color: $white;
+	}
+
+	// .about-us__title-txt
+
+	&__title-txt {
+		color: $grey;
+	}
+
+	// .about-us__wrap
+
+	&__wrap {
+		@include flex(stretch,center);
+	}
+
+	// .about-us__card
+
+	&__card {
+		padding: 0 2rem;
+		flex: 0 0 25%;
+		@include flex(stretch,center,column);
+		font-family: $raleway;
+	}
+
+	// .about-us__top
+
+	&__top {
+		position: relative;
+		width: 130px;
+		margin: 0 0 3.5rem 0;
+
+		&::before {
+			content: "";
+			@include position(0,0,0,0);
+			border-radius: 50%;
+			border: 4px solid #464646;
+			z-index: 1;
+		}
+
+		& > svg {
+			position: relative;
+			z-index: 2;
+	   }
+	}
+
+	// .about-us__img-circle
+
+	&__img-circle {
+
+		&[data-aos="satisfied"] {
+			stroke-dasharray: 320 76;
+			stroke-dashoffset: 100;
+		}
+		&[data-aos="completed"] {
+			stroke-dasharray: 166 236;
+			stroke-dashoffset: 100;
+		}
+		&[data-aos="likes"] {
+			stroke-dasharray: 221 176;
+			stroke-dashoffset: 100;
+		}
+		&[data-aos="launched"] {
+			stroke-dasharray: 90 306;
+			stroke-dashoffset: 100;
+		}
+	}
+
+	// .about-us__number
+
+	&__number {
+		@include position(50%,50%);
+		transform: translate(-50%, -50%);
+		pointer-events: none;
+		font-size: 3.6rem;
+		color: $white;
+		font-weight: 700;
+	}
+
+	// .about-us__body
+
+	&__body {
+		text-align: center;
+	}
+
+	// .about-us__body-title
+
+	&__body-title {
+		margin: 0 0 2rem 0;
+		font-size: 2.4rem;
+		font-weight: 700;
+		color: $orange;
+	}
+
+	// .about-us__body-txt
+
+	&__body-txt {
+		padding: 0 0 3rem 0;
+		font-size: 1.4rem;
+		font-family: $roboto;
+		line-height: 1.429;
+		color: $grey;
+		position: relative;
+
+		&::before {
+			content: "";
+			@include position(auto,50%,0);
+			transform: translateX(-50%);
+			width: 30%;
+			height: 0.2rem;
+			background-color: $grey;
+	  }
+	}
+}

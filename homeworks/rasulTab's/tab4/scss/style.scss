@@ -1,0 +1,87 @@
+@import 'reset';
+body {
+	position: relative;
+	background: url(https://library.webconnex.com/polygon/118.jpg) center center/cover no-repeat;
+}
+.tabs {
+	position: relative;
+	margin: 50px auto;
+	width: 700px;
+	max-height: 400px;
+	display: flex;
+	justify-content: start;
+	perspective: 1000px;
+	// .tabs__item
+	&__item {
+		font-family: sans-serif;
+	}
+	// .tabs__rdo
+	&__rdo {
+		display: none;
+		&:checked ~ .tabs__content {
+			transition:
+							transform .4s linear,
+							opacity .3s linear;
+			display: block;
+			opacity: 1;
+			transform: rotateX(0);
+		}
+		&:checked + .tabs__lbl {
+			transition: background .3s linear;
+			background-color: cyan;
+		}
+	}
+	// .tabs__lbl
+	&__lbl {
+		display: block;
+		padding: 15px 10px;
+		cursor: pointer;
+		& > span {
+			-webkit-tap-highlight-color: transparent;
+			pointer-events: none;
+			color: white;
+			text-transform: capitalize;
+			text-shadow: 0 0 8px black;
+		}
+		& > span::selection {
+			background-color: transparent;
+		}
+		&:not(&:last-child) {
+			margin-right: 5px;
+		}
+		&:hover {
+			transition: background .8s linear;
+			background-color: cyan;
+		}
+	}
+	// .tabs__content
+	&__content {
+		position: absolute;
+		top: 50px;
+		left: 0;
+		padding: 20px;
+		width: 100%;
+		min-height: 350px;
+		transform-origin: top center;
+		transform: rotateX(-45deg);
+		border: 2px solid cyan;
+		opacity: 0;
+		overflow: hidden;
+		transition: opacity .1s ease;
+	}
+
+	// .tabs__title
+	&__title {
+		margin-top: 15px;
+		font-size: 1.2em;
+		color: white;
+		text-transform: capitalize;
+		font-weight: 700;
+	}
+	// .tabs__txt
+	&__txt {
+		color: white;
+		margin-top: 15px;
+		overflow: visible;
+	}
+}

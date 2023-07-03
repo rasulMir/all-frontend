@@ -1,0 +1,58 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.circle {
+	margin: 100px auto;
+	counter-reset: li;
+	list-style: none;
+	padding: 10px;
+	width: 500px;
+}
+
+.circle li {
+	position: relative;
+	margin: 0 0 5px 30px;
+	padding: 3px 20px;
+	width: 450px;
+	height: 30px;
+	border-radius: 5px;
+	background-color: rgb(238, 81, 107);
+	font-size: 20px;
+	color: white;
+}
+
+.circle li:before {
+	content: counter(li);
+	counter-increment: li;
+	position: absolute;
+	top: -5px;
+	left: -32px;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	box-sizing: border-box;
+	border-top: 5px solid white;
+	border-right: 5px solid white;
+	border-left: 5px solid white;
+	border-bottom: 5px solid white;
+	margin-bottom: 10px;
+	background-color: rgb(238, 81, 107);
+	color: white;
+	font-family: sans-serif;
+	text-align: center;
+	line-height: 30px;
+}
+
+.circle li:hover span {
+	color: black;
+	text-transform: uppercase;
+	background-color: olive;
+}
+
+.circle li:hover::before {
+	color: black;
+	background-color: olive;
+}

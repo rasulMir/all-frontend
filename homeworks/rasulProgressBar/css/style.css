@@ -1,0 +1,206 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  widows: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 20px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a::visited {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+.progress {
+  margin: 0 auto;
+  width: 700px;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.progress__circle {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.progress__circle:nth-child(1), .progress__circle:nth-child(2), .progress__circle:nth-child(3) {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.progress__circle:nth-child(4), .progress__circle:nth-child(5), .progress__circle:nth-child(6) {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.progress__circle:nth-child(7), .progress__circle:nth-child(8), .progress__circle:nth-child(9) {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.progress__circle:nth-child(7) > span,
+.progress__circle:nth-child(8) > span,
+.progress__circle:nth-child(9) > span {
+  background-color: transparent;
+}
+
+.progress__circle::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: -webkit-linear-gradient(left, #c7c0c0 50%, transparent 50%, transparent 0), -webkit-linear-gradient(57deg, #c7c0c0 55%, blue 55%, blue 0), blue;
+  background: -o-linear-gradient(left, #c7c0c0 50%, transparent 50%, transparent 0), -o-linear-gradient(57deg, #c7c0c0 55%, blue 55%, blue 0), blue;
+  background: linear-gradient(to right, #c7c0c0 50%, transparent 50%, transparent 0), linear-gradient(33deg, #c7c0c0 55%, blue 55%, blue 0), blue;
+}
+
+.progress__circle:nth-child(2)::before {
+  background: -webkit-linear-gradient(right, blue 50%, transparent 50%, transparent 0), -webkit-linear-gradient(324deg, transparent 50%, blue 50%, blue 0), #c7c0c0;
+  background: -o-linear-gradient(right, blue 50%, transparent 50%, transparent 0), -o-linear-gradient(324deg, transparent 50%, blue 50%, blue 0), #c7c0c0;
+  background: linear-gradient(to left, blue 50%, transparent 50%, transparent 0), linear-gradient(126deg, transparent 50%, blue 50%, blue 0), #c7c0c0;
+}
+
+.progress__circle:nth-child(3)::before {
+  background: -webkit-linear-gradient(right, blue 50%, transparent 50%, transparent 0), -webkit-linear-gradient(214deg, transparent 50%, blue 50%, blue 0), #c7c0c0;
+  background: -o-linear-gradient(right, blue 50%, transparent 50%, transparent 0), -o-linear-gradient(214deg, transparent 50%, blue 50%, blue 0), #c7c0c0;
+  background: linear-gradient(to left, blue 50%, transparent 50%, transparent 0), linear-gradient(-124deg, transparent 50%, blue 50%, blue 0), #c7c0c0;
+}
+
+.progress__circle:nth-child(4)::before {
+  background: -webkit-linear-gradient(left, #c7c0c0 50%, transparent 50%, transparent 0), -webkit-linear-gradient(18deg, transparent 50%, blue 50%, blue 0), #c7c0c0;
+  background: -o-linear-gradient(left, #c7c0c0 50%, transparent 50%, transparent 0), -o-linear-gradient(18deg, transparent 50%, blue 50%, blue 0), #c7c0c0;
+  background: linear-gradient(to right, #c7c0c0 50%, transparent 50%, transparent 0), linear-gradient(72deg, transparent 50%, blue 50%, blue 0), #c7c0c0;
+}
+
+.progress__circle:nth-child(5)::before {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, blue), color-stop(50%, transparent), color-stop(0, transparent)), -webkit-gradient(linear, left top, right top, color-stop(50%, transparent), color-stop(50%, blue), color-stop(0, blue)), #c7c0c0;
+  background: -webkit-linear-gradient(bottom, blue 50%, transparent 50%, transparent 0), -webkit-linear-gradient(left, transparent 50%, blue 50%, blue 0), #c7c0c0;
+  background: -o-linear-gradient(bottom, blue 50%, transparent 50%, transparent 0), -o-linear-gradient(left, transparent 50%, blue 50%, blue 0), #c7c0c0;
+  background: linear-gradient(to top, blue 50%, transparent 50%, transparent 0), linear-gradient(to right, transparent 50%, blue 50%, blue 0), #c7c0c0;
+}
+
+.progress__circle:nth-child(6)::before {
+  background: -webkit-linear-gradient(right, blue 50%, transparent 50%, transparent 0), -webkit-linear-gradient(200deg, transparent 50%, blue 50%, blue 0), #c7c0c0;
+  background: -o-linear-gradient(right, blue 50%, transparent 50%, transparent 0), -o-linear-gradient(200deg, transparent 50%, blue 50%, blue 0), #c7c0c0;
+  background: linear-gradient(to left, blue 50%, transparent 50%, transparent 0), linear-gradient(-110deg, transparent 50%, blue 50%, blue 0), #c7c0c0;
+}
+
+.progress__circle:nth-child(7)::before {
+  background: -webkit-linear-gradient(left, #c7c0c0 50%, transparent 50%, transparent 0), -webkit-linear-gradient(57deg, #c7c0c0 50%, blue 50%, blue 0), blue;
+  background: -o-linear-gradient(left, #c7c0c0 50%, transparent 50%, transparent 0), -o-linear-gradient(57deg, #c7c0c0 50%, blue 50%, blue 0), blue;
+  background: linear-gradient(to right, #c7c0c0 50%, transparent 50%, transparent 0), linear-gradient(33deg, #c7c0c0 50%, blue 50%, blue 0), blue;
+}
+
+.progress__circle:nth-child(8)::before {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, blue), color-stop(50%, transparent), color-stop(0, transparent)), -webkit-gradient(linear, left top, right top, color-stop(50%, transparent), color-stop(50%, blue), color-stop(0, blue)), #c7c0c0;
+  background: -webkit-linear-gradient(bottom, blue 50%, transparent 50%, transparent 0), -webkit-linear-gradient(left, transparent 50%, blue 50%, blue 0), #c7c0c0;
+  background: -o-linear-gradient(bottom, blue 50%, transparent 50%, transparent 0), -o-linear-gradient(left, transparent 50%, blue 50%, blue 0), #c7c0c0;
+  background: linear-gradient(to top, blue 50%, transparent 50%, transparent 0), linear-gradient(to right, transparent 50%, blue 50%, blue 0), #c7c0c0;
+}
+
+.progress__circle:nth-child(9)::before {
+  background: -webkit-linear-gradient(left, #c7c0c0 50%, transparent 50%, transparent 0), -webkit-linear-gradient(133.2deg, transparent 50%, blue 50%, blue 0), #c7c0c0;
+  background: -o-linear-gradient(left, #c7c0c0 50%, transparent 50%, transparent 0), -o-linear-gradient(133.2deg, transparent 50%, blue 50%, blue 0), #c7c0c0;
+  background: linear-gradient(to right, #c7c0c0 50%, transparent 50%, transparent 0), linear-gradient(-43.2deg, transparent 50%, blue 50%, blue 0), #c7c0c0;
+}
+
+.progress__circle > span {
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #010130;
+  border-radius: 50%;
+  color: white;
+  font-size: 2.5em;
+  font-family: sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.progress__circle > span > sup {
+  margin-bottom: .6em;
+  font-size: .5em;
+}
+/*# sourceMappingURL=style.css.map */

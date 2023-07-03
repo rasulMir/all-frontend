@@ -1,0 +1,28 @@
+@import './general/fonts';
+@import './general/variables';
+@import './general/mixixines';
+@import './general/ui';
+
+* {
+	box-sizing: border-box;
+}
+
+.container {
+	max-width: 1170px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+@import './header/header';
+@import './about-us/about-us';
+@import './services/services';
+@import './print/print';
+@import './polygraph/polygraph';
+@import './reviews/reviews';
+@import './faq/faq';
+@import './maps/maps';
+@import './footer/footer';
+@import './popup/popup';
+
+
+@import './general/media';

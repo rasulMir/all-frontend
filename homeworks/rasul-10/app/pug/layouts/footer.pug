@@ -1,0 +1,73 @@
+include ../mixines.pug
+
+section.footer
+	section.footer-top
+		.container
+			article.footer-top__wrap
+				.footer-top__col
+					.footer-top__col-top
+						a.footer-top__logo(href="#") èxe
+						span.footer-top__logo-txt Clean and Universal PSD Template
+					.footer-top__descr
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum assumenda id quidem deserunt eligendi accusantium minus iusto quos? Veniam maxime consequatur cupiditate nemo
+						a.footer-top__link.primary-link(href='#') read more
+					form(action="dldl.php", method="post").footer-top__form
+						h3.footer-top__form-title Email Newsletters
+						label.footer-top__lbl(for='userMail1')
+							input.footer-top__mail(id='userMail1' type="email", name="userMail" placeholder='Email Adress')
+						a.footer-top__privacy-police(href="#") privacy police
+				.footer-top__col
+					.footer-top__title Latest News
+					ul.footer-top__card-list
+						+footerCard('04 February 2015','1')
+						+footerCard('28 January 2015','2')
+						+footerCard('03 January 2015','3')
+				.footer-top__col
+					.footer-top__title Twitter Widget
+					ul.footer-top__card-list
+						+footerCard2('23 seconds ago','http://t.co/hVto')
+						+footerCard2('8 months ago','#iriure')
+						+footerCard2('2 years ago','@frankdoe')
+				.footer-top__col
+					.footer-top__title Twitter Widget
+					ul.footer-top__card-list
+						li.footer-top__item
+							.footer-top__item-title Adress:
+							.footer-top__item-col
+								+footerLinks('footer-top','795 South Park Avenue,')
+								+footerLinks('footer-top','Door 6 Wonderland, CA')
+								+footerLinks('footer-top','94107, Australia')
+						li.footer-top__item
+							.footer-top__item-title Phone:
+							.footer-top__item-col
+								+footerLinks('footer-top','+440 875369208 - Office')
+								+footerLinks('footer-top','+440 353363114 - Fax')
+						li.footer-top__item
+							.footer-top__item-title Email:
+							.footer-top__item-col
+								+footerLinks('footer-top','support@sitename.com')
+								+footerLinks('footer-top','info@sitename.com')
+						li.footer-top__item
+							.footer-top__item-title follow us:
+							ul.footer-top__item-socials.socials
+								each val in ['facebook','twitter','tumblr','linkedin','google','vimeo','pinterest','blogger','flickr','dribbble','stumbleupon','deviantart','rss']
+									li
+										|
+										|
+										a.footer-top__item-socials-link.socials__link(class='icon-' + val, href='#')
+				a(href='#panel').footer-top__btn-arrow.slick-arrow.slick__next
+					i.icon-arrow-right
+	section.footer-bttm
+		.container
+			article.footer-bttm__wrap
+				.footer-bttm__txt &#169; 2015 èxe, Design by <span>Rasul</span> <i>/</i>Only for <span>Envato Market</span>
+				nav.nav.footer-bttm__nav
+					ul.nav__list.footer-bttm__nav-list
+						+navFooter('footer-bttm__list-link','home.html', 'Home')
+						+navFooter('footer-bttm__list-link','about.html', 'About Us')
+						+navFooter('footer-bttm__list-link','pages.html', 'Pages')
+						+navFooter('footer-bttm__list-link','features.html', 'Features')
+						+navFooter('footer-bttm__list-link','portfolio.html', 'Portfolio')
+						+navFooter('footer-bttm__list-link','home.html', 'Blog')
+						+navFooter('footer-bttm__list-link','home.html', 'Shop')
+						+navFooter('footer-bttm__list-link','home.html', 'Contact Us')

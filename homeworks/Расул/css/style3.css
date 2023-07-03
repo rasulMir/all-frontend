@@ -1,0 +1,47 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.wrapper {
+	padding: 10px 0;
+	background-color:seagreen;
+}
+
+.wrapper .left {
+	cursor: pointer;
+	float: left;
+	font-style: oblique;
+	width: 15%;
+	height: 80px;
+	border-radius: 20px;
+	border: none;
+	font-size: 24px;
+	background-color: tomato;
+	color: rebeccapurple;
+}
+
+.wrapper .text {
+	text-align: center;
+	color: orange;
+	font-weight: 600;
+	word-spacing: 2px;
+	font-size: 18px;
+	text-transform: capitalize;
+}
+
+.wrapper .right {
+	cursor: pointer;
+	float: right;
+	font-style: oblique;
+	width: 15%;
+	height: 80px;
+	border-radius: 20px;
+	border: none;
+	font-size: 24px;
+	background-color: tomato;
+	color: rebeccapurple;
+}
+
+

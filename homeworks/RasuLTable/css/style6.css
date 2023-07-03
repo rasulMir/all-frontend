@@ -1,0 +1,23 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+table {
+	margin: 50px;
+	width: 70%;
+	border-collapse: collapse;
+	border-top: 5px solid blue;
+	border-bottom: 5px solid blue;
+}
+
+tr th, tr td {
+	color: blue;
+	width: inherit;
+	padding: 10px;
+	text-align: center;
+	background-color: cyan;
+	border-left: 2px solid rgb(135, 135, 207);
+	border-right: 2px solid rgb(135, 135, 207);
+}

@@ -1,0 +1,100 @@
+@import '../var';
+@import '../mixines';
+
+.contacts-promo {
+	@include flex(center,strecth,column);
+	padding: 5.5rem 0 16rem;
+	background: url(../images/create-us-bg.jpg) center/cover no-repeat;
+
+	& > .header {
+		margin-bottom: 13rem;
+		background-color: transparent;
+	}
+	
+	& .head-wrap__logo {
+		color: $white;
+	}
+	& .head-wrap__nav {
+		color: $white;
+	}
+	& .head-wrap__col {
+		color: $white;
+		& span {
+			color: $white;
+		}
+	}
+
+	// .contacts-promo__promo
+
+	&__promo {
+		color: $white;
+	}
+
+	// .contacts-promo__top
+
+	&__top {
+		margin: 0 0 11rem 0;
+		text-align: center;
+		font-family: $raleway;
+	}
+
+	// .contacts-promo__title
+
+	&__top-title {
+		font-size: 7rem;
+		font-weight: 200;
+	}
+
+	// .contacts-promo__subtitle
+
+	&__top-subtitle {
+		font-size: 5rem;
+		font-weight: 700;
+	}
+
+	// .contacts-promo__bttm
+
+	&__bttm {
+		@include flex(space-between,stretch);
+	}
+
+	// .contacts-promo__card
+
+	&__card {
+		padding-bottom: 4rem;
+		border-radius: .5rem;
+		background-color: $twofive;
+
+		&:hover .contacts-promo__links {
+			color: $orange;
+		}
+	}
+
+	// .contacts-promo__img
+
+	&__img {
+		background-color: $orange;
+	}
+
+	// .contacts-promo__body
+
+	&__body {
+		@include flex(center,center);
+		flex-wrap: wrap;
+		color: $grey;
+
+		&::after {
+			background-color: $orange;
+		}
+	}
+
+	// .contacts-promo__links
+
+	&__links {
+		line-height: 2;
+	}
+
+	&__socials-links {
+		margin: .3rem;
+	}
+}

@@ -1,0 +1,121 @@
+.wrapper {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 100px;
+  background-color: #f8e3e3;
+}
+
+.wrapper * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.timeline {
+  padding: 20px 0;
+  position: relative;
+  width: 700px;
+}
+
+.timeline__line {
+  position: absolute;
+  top: 0;
+  left: 5%;
+  height: 100%;
+  width: 3px;
+  background-color: blue;
+  z-index: 1;
+}
+
+.timeline__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+.timeline__year {
+  position: relative;
+  margin: 20px 0;
+  z-index: 2;
+}
+
+.timeline__year > span {
+  display: inline-block;
+  width: 70px;
+  padding: 7px;
+  background-color: blue;
+  text-align: center;
+  font-size: 1em;
+  color: white;
+}
+
+.timeline__date {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.timeline__day {
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 7px 15px;
+  width: 70px;
+  height: 60px;
+  background-color: blue;
+  line-height: 22px;
+  word-break: keep-all;
+  text-align: center;
+  font-size: 1em;
+  color: white;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+.timeline__day::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 40px;
+  height: 3px;
+  background-color: blue;
+  z-index: 1;
+}
+
+.timeline__text {
+  position: relative;
+  padding: 20px;
+  margin-top: 20px;
+  width: 85%;
+  background-color: #c7bfbf;
+  border-left: 3px solid blue;
+  z-index: 2;
+}
+/*# sourceMappingURL=style.css.map */

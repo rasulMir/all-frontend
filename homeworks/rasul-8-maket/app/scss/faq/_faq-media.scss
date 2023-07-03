@@ -1,0 +1,85 @@
+@import '../general/variables';
+@import '../general/mixixines';
+
+@media only screen and (min-width: 768px) {
+	// .faq-wrap
+	.faq-wrap {
+		padding: 100px 0;
+		// .faq-wrap__footer
+		&__footer {
+			&::before {
+				@include position(-9%,auto,auto,-7%);
+				height: 65%;
+			}
+		}
+
+		// .faq-wrap__form
+		&__form {
+			@include flex(space-between,center);
+		}
+
+		// .faq-wrap__input
+		&__input {
+			flex: 0 0 30%;
+			margin: 0;
+			&:last-of-type {
+				margin: 0;
+			}
+		}
+
+		// .faq-wrap__btn
+		&__btn {
+			flex: 0 0 30%;
+		}
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	// .faq-wrap
+	.faq-wrap {
+		padding: 130px 0 170px;
+		
+		// .faq-wrap__footer
+		&__footer {
+			padding: 50px 65px 50px 31.2%;
+			&::before {
+				@include position(50%,3%,auto,auto);
+				transform: translateY(-50%);
+				width: 250px / 994px * 100%;
+				height: 100%;
+			}
+		}
+
+		// .faq-wrap__content
+		&__content {
+			padding: 60px 0;
+			@include flex(space-between,flex-start);
+			flex-wrap: wrap;
+		}
+
+		// .faq-wrap__card
+		&__card {
+			padding: 0;
+			flex: 0 0 545px / 1140px * 100%;
+		}
+
+		// .faq-wrap__form
+		&__form {
+			@include flex(space-between,center);
+		}
+
+		// .faq-wrap__input
+		&__input {
+			flex: 0 0 30%;
+			margin: 0;
+			&:last-of-type {
+				margin: 0;
+			}
+		}
+
+		// .faq-wrap__btn
+		&__btn {
+			flex: 0 0 30%;
+		}
+	}
+}

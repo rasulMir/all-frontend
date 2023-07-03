@@ -1,0 +1,505 @@
+@import '../variables';
+@import '../mixines';
+
+// .process
+.process {
+	padding: 10rem 0;
+	position: relative;
+	font-family: $gilroy;
+	font-size: 1.8rem;
+	font-weight: 600;
+	&::before {
+		content: '';
+		@include position(0,0,0,0);
+		background-color: $processBgColor;
+		z-index: -2;
+		pointer-events: none;
+	}
+
+	.custom-shape-process {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		overflow: hidden;
+		line-height: 0;
+  }
+  
+  .custom-shape-process svg {
+		position: relative;
+		display: block;
+		width: calc(100% + 1.3px);
+		height: 250px;
+		transform: rotateY(180deg);
+  }
+  
+  .custom-shape-process .shape-fill {
+		fill: #FFFFFF;
+  }
+
+	// .process__title
+	&__title {
+	}
+
+	// .process__circle
+	&__circle {
+	}
+}
+
+// .process-wrap
+.process-wrap {
+	padding: 15rem 0;
+	@include flex(center,stretch,column);
+
+	// .process-wrap__item // circles bg colors
+	&__item {
+		padding: 0 0 3rem 0;
+		width: 857.5px / 1170px * 100%;
+		@include flex(space-between,stretch);
+		&:first-child,
+		&:last-child {
+			align-self: flex-end;
+		}
+		&:nth-child(1) {
+			& > .process-wrap__circle-outer:nth-child(1) .process-wrap__circle-inner,
+			& > .process-wrap__circle-outer:nth-child(1) .process-wrap__number {
+				background-color: $processCircleInner3;
+			}
+			& > .process-wrap__circle-outer:nth-child(2) .process-wrap__circle-inner,
+			& > .process-wrap__circle-outer:nth-child(2) .process-wrap__number {
+				background-color: $processCircleInner4;
+			}
+			& > .process-wrap__circle-outer:nth-child(2) .process-wrap__text-circle {
+				left: 50%;
+				top: 100%;
+				transform: translate(-50%,4.75rem);
+			}
+		}
+		&:nth-child(2) {
+			align-self: flex-start;
+			& > .process-wrap__circle-outer:nth-child(1) .process-wrap__circle-inner,
+			& > .process-wrap__circle-outer:nth-child(1) .process-wrap__number {
+				background-color: $processCircleInner1;
+			}
+			& > .process-wrap__circle-outer:nth-child(2) .process-wrap__circle-inner,
+			& > .process-wrap__circle-outer:nth-child(2) .process-wrap__number {
+				background-color: $processCircleInner2;
+			}
+			& > .process-wrap__circle-outer:nth-child(3) .process-wrap__circle-inner,
+			& > .process-wrap__circle-outer:nth-child(3) .process-wrap__number {
+				background-color: $processCircleInner5;
+			}
+		}
+		&:nth-child(3) {
+			padding: 0;
+			& > .process-wrap__circle-outer:nth-child(1) .process-wrap__circle-inner,
+			& > .process-wrap__circle-outer:nth-child(1) .process-wrap__number {
+				background-color: $processCircleInner3;
+			}
+			& > .process-wrap__circle-outer:nth-child(2) .process-wrap__circle-inner,
+			& > .process-wrap__circle-outer:nth-child(2) .process-wrap__number {
+				background-color: $processCircleInner1;
+			}
+		}
+	}
+
+	// .process-wrap__item // circles arrows
+	&__item {
+		&:nth-child(1) > .process-wrap__circle-outer:nth-child(2) .process-wrap__text-circle-arrow {
+			transform: rotateZ(90deg);
+			left: 33%;
+			top: -17%;
+		}
+		&:nth-child(1) > .process-wrap__circle-outer:nth-child(1) > .process-wrap__circle-outer-arrow {
+			left: 100%;
+			top: 50%;
+			transform: translateY(-50%);
+			&::before {
+				display: none;
+			}
+			&::after {
+				content: "\e901";
+				@include position(0,auto,auto,0);
+				transform: rotateZ(90deg) translate(-80%,-55%);
+				font-family: 'icomoon';
+				color: $processWrapTextCircleArrowBgColor;
+			}
+		}
+		&:nth-child(1) > .process-wrap__circle-outer:nth-child(1) > .process-wrap__circle-outer-arrow:nth-child(5) {
+			top: 105%;
+			left: 33%;
+			transform: rotate(90deg);
+			background: linear-gradient(to left, $processWrapTextCircleArrowBgColor2, $processWrapTextCircleArrowBgColor3);
+			&::after {
+				color: $processWrapTextCircleArrowBgColor2;
+			}
+		}
+		&:nth-child(2) {
+			.process-wrap__circle-outer {
+				.process-wrap__circle-outer-arrow {
+					left: 101%;
+					top: 50%;
+					transform: translateY(-50%);
+				}
+				&:nth-child(1) > .process-wrap__circle-outer-arrow {
+					background: linear-gradient(to right, $processWrapTextCircleArrowBgColor1 , $processWrapTextCircleArrowBgColor2);
+					&::before {
+						color: $processWrapTextCircleArrowBgColor1;
+					}
+					&::after {
+						content: "\e901";
+						@include position(0,auto,auto,0);
+						transform: rotateZ(90deg) translate(-80%,-55%);
+						font-family: 'icomoon';
+						color: $processWrapTextCircleArrowBgColor2;
+					}
+				}
+				&:nth-child(2) > .process-wrap__circle-outer-arrow {
+					background: linear-gradient(to right, $processWrapTextCircleArrowBgColor2, $processWrapTextCircleArrowBgColor5);
+					&::before {
+						color: $processWrapTextCircleArrowBgColor2;
+					}
+				}
+				&:nth-child(3) > .process-wrap__circle-outer-arrow {
+					background: linear-gradient(to right, $processWrapTextCircleArrowBgColor5,
+					transparent);
+					&::before {
+						color: $processWrapTextCircleArrowBgColor5;
+					}
+				}
+			}
+		}
+		&:nth-child(3) {
+			.process-wrap__circle-outer {
+				.process-wrap__circle-outer-arrow {
+					top: -10%;
+					left: 33%;
+					transform: rotateZ(-90deg);
+				}
+				&:nth-child(1) > .process-wrap__circle-outer-arrow {
+					background: linear-gradient(to right, $processWrapTextCircleArrowBgColor3, transparent, $processWrapTextCircleArrowBgColor2);
+					&::before {
+						color: $processWrapTextCircleArrowBgColor3;
+					}
+				}
+				&:nth-child(2) > .process-wrap__circle-outer-arrow {
+					background: linear-gradient(to right, $processWrapTextCircleArrowBgColor1, transparent);
+					&::before {
+						color: $processWrapTextCircleArrowBgColor1;
+					}
+				}
+			}
+		}
+	}
+
+	// .process-wrap__item // card hover
+	&__item {
+		&:nth-child(1) > .process-wrap__circle-outer:nth-child(2),
+		&:nth-child(3) > .process-wrap__circle-outer:nth-child(2) {
+			> .process-wrap__card {
+				left: 40%;
+				&::after {
+					display: none;
+				}
+			}
+		}
+		&:nth-child(2) > .process-wrap__circle-outer:nth-child(1) {
+			> .process-wrap__card {
+				left: 70%;
+				&::after {
+					display: none;
+				}
+			}
+		}
+	}
+
+	&__circle,
+	&__circle-inner {
+		border-radius: 50%;
+		@include position(50%,50%);
+		transform: translate(-50%,-50%);
+	}
+
+	// .process-wrap__circle-outer
+	&__circle-outer {
+		position: relative;
+		flex: 0 0 23.5rem;
+		height: 23.5rem;
+		background-color: rgba($processCircleOuterBgColor, .3);
+		border-radius: 50%;
+		z-index: 2;
+		span[class$='-arrow'] {
+			z-index: 3;
+			&::before,
+			&::after {
+				z-index: 4;
+			}
+		}
+		.process-wrap__circle-outer-arrow {
+			@include position(auto,auto);
+			width: 7.5rem;
+			height: .3rem;
+			background-color: $processWrapTextCircleArrowBgColor;
+			&::before {
+				content: "\e901";
+				@include position(0,0,auto,auto);
+				transform: rotateZ(-90deg) translate(70%,-64%);
+				font-family: 'icomoon';
+			}
+		}
+	}
+
+	// .process-wrap__card
+	&__card {
+		display: none;
+		width: 545px / 235px * 100%;
+		@include position(auto,50%,96%);
+		transform: translateX(-50%);
+		padding: 5.5rem 4rem;
+		border-radius: .5rem;
+		font-family: $gilroy;
+		background-color: $processWrapCardBgColor;
+		box-shadow:0px 10px 21px 0px rgba($processWrapCardBoxShadowColor, 0.38);
+		z-index: 10;
+		transition: opacity .3s linear;
+		&::before,
+		&::after {
+			content: '';
+			@include position(100%,50%);
+		}
+		&::before {
+			transform: translateX(-50%);
+			border-width: 2.2rem 1.1rem 0;
+			border-style: solid;
+			border-color: $processWrapCardBorderColor transparent transparent transparent;
+		}
+		&::after {
+			transform: translate(-50%,100%);
+			border-width: 0 1.1rem 2.2rem;
+			border-style: solid;
+			border-color: transparent transparent $processWrapCardBorderColor transparent;
+		}
+	}
+
+	// .process-wrap__title
+	&__title {
+		margin: 0 0 1.67em 0;
+		font-size: 1.8rem;
+		color: $processWrapTitleFontColor;
+		font-weight: bold;
+	}
+
+	// .process-wrap__txt
+	&__txt {
+		margin: 0 0 2.222em 0;
+		color: $processWrapTxtFontColor;
+		font-size: 1.8rem;
+		font-weight: bold;
+		line-height: 1.339;
+		& > p {
+			margin: 0;
+			& > span {
+				text-transform: uppercase;
+				color: $processWrapTxtSpanFontColor;
+			}
+		}
+	}
+
+	// .process-wrap__btns
+	&__btns {
+		@include flex(space-between,center);
+	}
+
+	// .process-wrap__btn
+	&__btn {
+		position: relative;
+		padding: .8em 2em;
+		color: $processWrapBtnFontColor;
+		background-image: linear-gradient( 142deg, $processWrapBtnGradientColor1 0%, $processWrapBtnGradientColor2 100%);
+		overflow: hidden;
+		&:hover {
+			color: transparent;
+		}
+		&:hover::after {
+			opacity: 1;
+		}
+		&:hover::before {
+			opacity: 1;
+		}
+		&::before {
+			content: attr(data-btn);
+			@include position(.8em,auto);
+			text-align: center;
+			background-image: linear-gradient( 142deg, $processWrapBtnGradientColor1 0%, $processWrapBtnGradientColor2 100%);
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+			transition: opacity .3s linear .1s;
+			opacity: 0;
+			z-index: 2;
+		}
+		&::after {
+			content: '';
+			@include position(.1rem,.1rem,.1rem,.1rem);
+			background-color: $processWrapBtnAfterBgColor;
+			border-radius: 2em;
+			transition: opacity .3s linear;
+			opacity: 0;
+			z-index: 1;
+		}
+	}
+
+	// .process-wrap__circle
+	&__circle {
+		width: 13.5rem;
+		height: 13.5rem;
+		background-color: $processCircleBgColor;
+		& > img {
+			@include position(50%,50%);
+			transform: translate(-50%,-50%);
+		}
+	}
+
+	// .process-wrap__circle-inner
+	&__circle-inner {
+		width: 8.1rem;
+		height: 8.1rem;
+	}
+
+	// .process-wrap__text-circle
+	&__text-circle {
+		@include flex(center,center);
+		position: absolute;
+		width: 20rem;
+		height: 20rem;
+		border: 1px solid rgba($processWrapTextCirclerimaryColor, .2);
+		border-radius: 50%;
+		pointer-events: none;
+		&-title {
+			position: relative;
+			text-align: center;
+			flex: 0 0 150%;
+			&::before,
+			&::after {
+				content: '';
+				@include position(50%,50%);
+				transform: translate(-50%,-50%);
+				border-radius: 50%;
+			}
+			&::before {
+				width: 14rem;
+				height: 14rem;
+				border: 1px solid rgba($processWrapTextCirclerimaryColor, .2);
+			}
+			&::after {
+				width: 6rem;
+				height: 6rem;
+				background-color: rgba($processWrapTextCirclerimaryColor, .5);
+				z-index: -1;
+			}
+		}
+		.process-wrap__circle-outer-arrow,
+		&-arrow {
+			@include position(auto,auto);
+			width: 6.5rem;
+			height: .3rem;
+			background-color: $processWrapTextCircleArrowBgColor;
+			&::before {
+				content: "\e901";
+				@include position(0,auto,auto,0);
+				transform: rotateZ(90deg) translate(-80%,-60%);
+				font-family: 'icomoon';
+				color: $processWrapTextCircleArrowBgColor;
+			}
+		}
+		&:nth-child(1) {
+			top: -15.5rem;
+			left: -14rem;
+			& > .process-wrap__text-circle-arrow {
+				transform: rotateZ(-135deg);
+				bottom: 16%;
+				right: 0;
+			}
+		}
+		&:nth-child(2) {
+			top: -15.5rem;
+			right: -14rem;
+			& > .process-wrap__text-circle-arrow {
+				transform: rotateZ(-45deg);
+				bottom: 16%;
+				left: 0;
+			}
+		}
+		&:nth-child(3) {
+			top: 50%;
+			left: 100%;
+			transform: translate(9.375rem, -50%);
+			& > .process-wrap__text-circle-arrow {
+				left: 100%;
+			}
+		}
+	}
+
+	// .process-wrap__number
+	&__number {
+		@include position(-.444em,-.444em);
+		@include flex(center,center);
+		width: 2.5em;
+		height: 2.5em;
+		font-weight: 600;
+		color: $processNumberFontColor;
+		background-color: red;
+		border: .5rem solid $processNumberBorderColor;
+		border-radius: 50%;
+	}
+
+	// .process-wrap__circle-title
+	&__circle-title {
+		text-align: center;
+		width: 350%;
+		margin: 0;
+		@include position(100%,50%);
+		transform: translateX(-50%);
+		line-height: 1.3333;
+		color: $processCircleTitleFontClor;
+	}
+
+	// .process-wrap__text
+	&__text {
+		@include position(auto,auto);
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 1.3rem;
+		line-height: 1.846;
+		color: $processWrapTextFontClor;
+		background-color: $processBgColor;
+		z-index: 5;
+
+		// .process-wrap__text_right
+		&_right {
+			bottom: 51%;
+			left: 100%;
+			transform: translateX(50%);
+		}
+
+		// .process-wrap__text_top
+		&_top {
+			left: 50%;
+			bottom: 100%;
+			transform: translateX(-50%);
+		}
+
+		// .process-wrap__text_left
+		&_left {
+			top: 51%;
+			right: 100%;
+			transform: translateX(-50%);
+		}
+
+		// .process-wrap__text_bttm
+		&_bttm {
+			left: 50%;
+			top: 100%;
+			transform: translateX(-50%);
+		}
+	}
+}

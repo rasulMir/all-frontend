@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <style>
+        * {
+            transition: all 0.5s;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        @media (min-width: 576px) {
+            .container {
+                max-width: 540px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                max-width: 720px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .container {
+                max-width: 960px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 1140px;
+            }
+        }
+
+        .container-fluid,
+        .container-sm,
+        .container-md,
+        .container-lg {
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .row {
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .row:last-child {
+            margin-bottom: 0;
+        }
+
+        .row div[class*="col"]:last-child {
+            margin-right: 0;
+        }
+
+        [class*="col"] {
+            margin-right: 20px;
+        }
+
+        @media only screen and (max-width:576px) {
+            .container {
+                max-width: 540px;
+            }
+
+            .row [class*="col"] {
+                margin-right: 0;
+            }
+
+            .col1 {
+                width: calc(((100%-(20px*11))/12)*1+20px*0);
+                height: auto;
+            }
+
+            .col2 {
+                width: calc(((100%-(20px*11))/12)*2+20px*1);
+                height: auto;
+            }
+
+            .col3 {
+                width: calc(((100%-(20px*11))/12)*3+20px*2);
+                height: auto;
+            }
+
+            .col4 {
+                width: calc(((100%-(20px*11))/12)*4+20px*3);
+                height: auto;
+            }
+
+            .col5 {
+                width: calc(((100%-(20px*11))/12)*5+20px*4);
+                height: auto;
+            }
+
+            .col6 {
+                width: calc(((100%-(20px*11))/12)*6+20px*5);
+                height: auto;
+            }
+
+            .col7 {
+                width: calc(((100%-(20px*11))/12)*7+20px*6);
+                height: auto;
+            }
+
+            .col8 {
+                width: calc(((100%-(20px*11))/12)*8+20px*7);
+                height: auto;
+            }
+
+            .col9 {
+                width: calc(((100%-(20px*11))/12)*9+20px*8);
+                height: auto;
+            }
+
+            .col10 {
+                width: calc(((100%-(20px*11))/12)*10+20px*9);
+                height: auto;
+            }
+
+            .col11 {
+                width: calc(((100%-(20px*11))/12)*11+20px*10);
+                height: auto;
+            }
+
+            .col12 {
+                width: calc(((100%-(20px*11))/12)*12+20px*11);
+                height: auto;
+            }
+
+            .offset-0 {
+                margin-left: calc(((100%-(20px*11))/12)*0+20px*0);
+            }
+
+            .offset-1 {
+                margin-left: calc(((100%-(20px*11))/12)*1+20px*1);
+            }
+
+            .offset-2 {
+                margin-left: calc(((100%-(20px*11))/12)*2+20px*2);
+            }
+
+            .offset-3 {
+                margin-left: calc(((100%-(20px*11))/12)*3+20px*3);
+            }
+
+            .offset-4 {
+                margin-left: calc(((100%-(20px*11))/12)*4+20px*4);
+            }
+
+            .offset-5 {
+                margin-left: calc(((100%-(20px*11))/12)*5+20px*5);
+            }
+
+            .offset-6 {
+                margin-left: calc(((100%-(20px*11))/12)*6+20px*6);
+            }
+
+            .offset-7 {
+                margin-left: calc(((100%-(20px*11))/12)*7+20px*7);
+            }
+
+            .offset-8 {
+                margin-left: calc(((100%-(20px*11))/12)*8+20px*8);
+            }
+
+            .offset-9 {
+                margin-left: calc(((100%-(20px*11))/12)*9+20px*9);
+            }
+
+            .offset-10 {
+                margin-left: calc(((100%-(20px*11))/12)*10+20px*10);
+            }
+
+            .offset-11 {
+                margin-left: calc(((100%-(20px*11))/12)*11+20px*11);
+            }
+
+            div[class*="offset-1"] {
+                margin-left: 0;
+            }
+
+            div[class*="offset-2"] {
+                margin-left: 0;
+                
+            }
+
+            div[class*="offset-3"] {
+                margin-left: 0;
+            }
+
+            div[class*="offset-4"] {
+                margin-left: 0;
+            }
+
+            div[class*="offset-5"] {
+                margin-left: 0;
+            }
+
+            div[class*="offset-6"] {
+                margin-left: 0;
+            }
+
+            div[class*="offset-7"] {
+                margin-left: 0;
+            }
+
+            div[class*="offset-8"] {
+                margin-left: 0;
+            }
+
+            div[class*="offset-9"] {
+                margin-left: 0;
+            }
+
+            div[class*="offset-10"] {
+                margin-left: 0;
+            }
+
+            
+            .box1 {
+                background-color: orange;
+            }
+
+            .box2 {
+                background-color: black;
+            }
+
+            .row{
+                border: 1px solid red;
+            }
+
+        }
+    </style>
+
+    <div class="container">
+        <div class="row">
+            <div class="col3 box1">Lorem ipsum dolor sit.</div>
+            <div class="col9 box2">Lorem ipsum dolor sit.</div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

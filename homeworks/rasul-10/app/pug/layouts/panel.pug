@@ -1,0 +1,26 @@
+include ../mixines.pug
+.panel#panel
+	.container
+		section.panel-wrap
+			.panel-wrap__col
+				.panel-wrap__select-lang English
+				a.panel-wrap__link.panel-wrap__link_num(href='tel:+440875369208') +440 875369208
+				a.panel-wrap__link.panel-wrap__link_mail(href='mailto:info@sitename.com') info@sitename.com
+			.panel-wrap__col
+				.panel-wrap__item.panel-wrap__item_sign Sign in / <span>Register</span>
+				.panel-wrap__item.panel-wrap__item_wishlist Wishlist:<span>3 items</span>
+					.panel-wrap__wishlist-wrap
+						ul.panel-wrap__wishlist-list
+							+wishlistCard('1')
+							+wishlistCard('2')
+							+wishlistCard('3')
+						.panel-wrap__wishlist-btns
+							button.panel-wrap__wishlist-btn(type="submit") My Wishlist
+							button.panel-wrap__wishlist-btn(type="reset") clear all
+				ul.panel-wrap__socials.socials
+					+socials('panel-wrap__socials-link','facebook')
+					+socials('panel-wrap__socials-link','twitter')
+					+socials('panel-wrap__socials-link','tumblr')
+					+socials('panel-wrap__socials-link','linkedin')
+					+socials('panel-wrap__socials-link','google')
+					+socials('panel-wrap__socials-link','rss')

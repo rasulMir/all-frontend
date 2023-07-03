@@ -1,0 +1,80 @@
+@import '../var';
+@import '../mixines';
+
+.creative {
+	padding: 8rem 0;
+	background-color: $fafa;
+
+	// .creative__title-wrap
+
+	&__title-wrap {
+	}
+
+	// .creative__title
+
+	&__title {
+	}
+
+	// .creative__title-txt
+
+	&__title-txt {
+	}
+}
+
+.creative-wrap {
+	@include flex(space-between,flex-start);
+
+	// .creative-wrap__img
+
+	&__img {
+		flex: 0 0 48.7179487179%;
+
+		& > img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	// .creative-wrap__descr
+
+	&__descr {
+		flex: 0 0 48.7179487179%;
+		font-family: $roboto;
+	}
+
+	// .creative-wrap__title-txt
+
+	&__title-txt {
+		margin-bottom: 3rem;
+		font-size: 1.8rem;
+		color: $darkGrey;
+		line-height: 1.333;
+	}
+
+	// .creative-wrap__txt
+
+	&__txt {
+		margin-bottom: 4rem;
+		font-size: 1.4rem;
+		color: $grey;
+		line-height: 1.429;
+
+		& > p:not(:last-child) {
+			margin-bottom: 2.5rem;
+	   }
+	}
+
+	// .creative-wrap__btn
+
+	&__btn {
+		display: inline-block;
+		width: 29.8245614035%;
+		padding: 1.36em;
+		font-size: 1.2rem;
+		color: $white;
+		background-color: $darkGrey;
+		border-radius: 0.25em;
+		@include btn();
+		@include btnHover(#{$darkGrey}, #{$darkGrey});
+	}
+}

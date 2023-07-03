@@ -1,0 +1,75 @@
+@import '../general/variables';
+@import '../general/mixixines';
+
+@media only screen and (min-width: 480px) {
+	// .print-wrap
+	.print-wrap {
+		padding: 70px 0 325px;
+		@include flex(flex-start,flex-start);
+		// .print-wrap__col
+		&__col {
+			flex: 0 0 555px / 720px * 100%;
+		}
+		// .print-wrap__btn
+		&__btn {
+			width: 70%;
+		}
+	}
+}
+
+@media only screen and (min-width: 768px) {
+
+	// .print
+	.print {
+		background: url(../images/print/print-sofa-320.png) 100% 70%/69% auto no-repeat;
+	}
+
+	// .print-wrap
+	.print-wrap {
+		padding: 70px 0 400px;
+
+		// .print-wrap__subtitle
+		&__subtitle {
+			padding: 0 0 60px 0;
+		}
+
+		// .print-wrap__txt
+		&__txt {
+			padding: 0 0 40px 0;
+		}
+
+		// .print-wrap__btn
+		&__btn {
+			width: 240px / 555px * 100%;
+		}
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+
+	// .print
+	.print {
+		background: url(../images/print/print-sofa.png) -20% 65%/85% auto no-repeat;
+	}
+
+	// .print-wrap
+	.print-wrap {
+		padding: 80px 0 450px;
+		@include flex(flex-end,flex-start);
+
+		// .print-wrap__col
+		&__col {
+			flex: 0 0 555px / 1140px * 100%;
+		}
+
+		// .print-wrap__txt
+		&__txt {
+			padding: 0 0 45px 0;
+		}
+
+		// .print-wrap__btn
+		&__btn {
+			width: 245px / 555px * 100%;
+		}
+	}
+}

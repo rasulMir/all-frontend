@@ -1,0 +1,271 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.wrapper {
+	max-width: 800px;
+	margin: 50px auto;
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid grey;
+}
+
+.table {
+	display: flex;
+	flex-flow: wrap;
+}
+
+.table > div {
+	flex: 1 0 50%;
+	border: 1px dashed grey;
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.white {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	font-size: 40px;
+	color: white;
+}
+.icon {
+	position: relative;
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+}
+.comments {
+	border-right-color: transparent;
+	border-bottom-color: transparent;
+}
+
+.comments > .icon {
+	background-color: green;
+}
+
+.result {
+	padding: 0 10px;
+	flex: 1 1 80%;
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+}
+
+.percents {
+	display: flex;
+	justify-content: space-between;
+}
+
+.percents > p {
+	position: relative;
+	font-size: 25px;
+	color: green;
+	padding: 0 5px 0 0;
+}
+.percents > p:last-child::after {
+	content: "\f30c";
+	position: absolute;
+	top: -1px;
+	right: -10px;
+	font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
+	font-size: 25px;
+	font-weight: 700;
+	color: green;
+}
+
+.about {
+	font-size: 25px;
+	word-spacing: 5px;
+}
+
+.followers {
+	border-left-color: transparent;
+	border-bottom-color: transparent;
+}
+
+.followers > .icon {
+	background-color: blue;
+}
+
+.followers .percents > p {
+	color: blue;
+}
+
+.followers .percents > p:last-child {
+	padding: 0 25px 0 0;
+	background-color: green;
+	color: white;
+}
+
+.followers .percents > p:last-child::after {
+	content: "\f062";
+	position: absolute;
+	top: -1px;
+	right: 0;
+	font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
+	font-size: 25px;
+	font-weight: 700;
+	color: white;
+}
+
+.orders > .icon {
+	background-color: red;
+}
+
+.orders .percents > p {
+	color: red;
+}
+
+.orders .percents > p:last-child::after {
+	content: "\f309";
+	position: absolute;
+	top: -1px;
+	right: -10px;
+	font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
+	font-size: 25px;
+	font-weight: 700;
+	color: red;
+}
+
+.experiments {
+	border-left-color: transparent;
+	border-bottom-color: transparent;
+	border-top-color: transparent;
+}
+
+.experiments > .icon {
+	background-color: red;
+}
+
+.experiments .percents > p {
+	color: red;
+}
+
+.experiments .percents > p:last-child::after {
+	content: "";
+}
+
+.pageviews {
+	border-right-color: transparent;
+	border-top-color: transparent;
+}
+
+.pageviews > .icon {
+	border-radius: 0;
+}
+
+.pageviews > .icon > .white {
+	font-size: 70px;
+	color: orangered;
+}
+
+.pageviews .percents > p {
+	color: orangered;
+}
+
+.pageviews .percents > p:last-child {
+	padding: 0 25px 0 0;
+	background-color: green;
+	color: white;
+}
+
+.pageviews .percents > p:last-child::after {
+	content: "\f062";
+	position: absolute;
+	top: -1px;
+	right: 0;
+	font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
+	font-size: 25px;
+	font-weight: 700;
+	color: white;
+}
+
+.traffic {
+	border-left-color: transparent;
+	border-top-color: transparent;
+}
+
+.traffic > .icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 25px;
+	color: blue;
+	background-color: transparent;
+}
+
+.traffic .icon > .white {
+	color: blue;
+	font-size: 70px;
+}
+
+.traffic .percents > p {
+	color: blue;
+}
+
+.traffic .percents > p:last-child::after {
+	content: "";
+}
+
+.bottom {
+	display: flex;
+	padding: 10px 5px 0;
+}
+
+.bottom-items {
+	padding: 10px;
+	flex: 1 0 33.33333%;
+	border: 1px dashed white;
+	display: flex;
+}
+
+.tasks {
+	background-color: green;
+}
+
+.bottom-icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 25px;
+	position: relative;
+	width: 70px;
+	height: 70px;
+	color: white;
+}
+
+.styles {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: white;
+	font-size: 70px;
+}
+
+.bottom-info {
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.bottom-info > p {
+	padding: 0 20px;
+	color: white;
+	font-size: 25px;
+	text-transform: capitalize;
+}
+
+.earnings {
+	background-color: blue;
+}
+
+.downloads {
+	background-color: gray;
+}

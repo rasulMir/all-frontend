@@ -1,0 +1,11 @@
+* {
+	box-sizing: border-box;
+}
+
+.first_txt {
+	text-align: left;
+}
+
+.second_txt {
+	line-height: initial;
+}

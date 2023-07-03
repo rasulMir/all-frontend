@@ -1,0 +1,21 @@
+* {
+	box-sizing: border-box;
+}
+
+p + h1 {
+	color: red;
+}
+
+[class$="e"]{
+	text-align: center;
+}
+
+.chipmunks {
+	font-size: 40px;
+	text-decoration: overline;
+	text-align: center;
+}
+p {
+	text-indent: 50px;
+	word-spacing: 15px;
+}

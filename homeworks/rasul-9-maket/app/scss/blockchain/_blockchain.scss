@@ -1,0 +1,113 @@
+@import "../variables";
+@import "../mixines";
+
+// .blockchain
+.blockchain {
+	padding: 0 0 20rem 0;
+	position: relative;
+	background: url(../images/blockchain/blockchain-bg.png) 0/cover no-repeat;
+
+
+	.custom-shape-divider-bottom-1630496983 {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		overflow: hidden;
+		line-height: 0;
+		transform: rotate(180deg);
+  }
+  
+  .custom-shape-divider-bottom-1630496983 svg {
+		position: relative;
+		display: block;
+		width: calc(140% + 1.3px);
+		height: 137px;
+  }
+  
+  .custom-shape-divider-bottom-1630496983 .shape-fill {
+		fill: $blockchainWaveBgColor;
+  }
+
+
+	// .blockchain__title
+	&__title {
+		color: $blockchainTitleColor;
+	}
+
+	// .blockchain__title-circle
+	&__title-circle {
+		background-color: $blockchainTitleCircleColor;
+		&::before,
+		&::after {
+			background-color: $blockchainTitleCircleColor;
+		}
+	}
+}
+
+// .blockchain-wrap
+.blockchain-wrap {
+	@include flex(space-between,stretch);
+	flex-wrap: wrap;
+	padding: 6.5rem 0 0 0;
+
+	// .blockchain-wrap__card
+	&__card {
+		margin: 1.5rem 0;
+		padding: 4rem 3rem;
+		flex: 0 0 380px / 1170px * 100%;
+		@include flex(flex-start,center,column);
+		font-family: $gilroy;
+		background-color: $blockchainCardBgColor;
+		border-radius: 3px;
+		box-shadow: 0px 10px 20px rgba(239, 239, 239, .6);
+	}
+
+	// .blockchain-wrap__img
+	&__img {
+		position: relative;
+		margin: 0 0 3rem 0;
+
+		& > img {
+			position: relative;
+			width: 100%;
+			z-index: 3;
+		}
+	}
+
+	// .blockchain-wrap__circle
+	&__circle {
+		@include position(50%,50%);
+		transform: translate(-50%,-50%);
+		width: 8.5rem;
+		height: 8.5rem;
+		border-radius: 50%;
+		background-image: linear-gradient( -66deg, rgb(255,255,255) 0%, rgb(182,221,248) 56%, rgb(109,186,241) 100%);
+		opacity: 0.4;
+		z-index: 2;
+	}
+
+	// .blockchain-wrap__title
+	&__title {
+		margin: 0 0 2rem 0;
+		font-size: 1.8rem;
+		font-weight: bold;
+		text-align: center;
+		color: $blockchainCardTitleFontColor;
+	}
+
+	// .blockchain-wrap__txt
+	&__txt {
+		font-size: 1.5rem;
+		color: $blockchainCardTxtFontColor;
+		line-height: 1.667;
+		text-align: center;
+		& > p {
+			margin: 0;
+
+			& > span {
+				text-transform: uppercase;
+			}
+		}
+	}
+}

@@ -1,0 +1,137 @@
+@import '../general/variables';
+@import '../general/mixixines';
+
+@media only screen and (min-width: 480px) {
+
+	// .services-wrap
+	.services-wrap {
+		padding: 70px 0 200px;
+		// .services-wrap__consult
+		&__consult {
+			@include flex(space-between,center);
+		}
+
+		// .services-wrap__consult-qa
+		&__consult-qa {
+			margin: 0;
+		}
+
+		// .services-wrap__consult-btn
+		&__consult-btn {
+			margin: 0 0 0 25px;
+			flex: 0 0 40%;
+		}
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	// .services-wrap
+	.services-wrap {
+		padding: 70px 0 330px;
+		// .services-wrap__col
+		&__col {
+			&:last-child {
+				position: relative;
+			}
+		}
+
+		// .services-wrap__consult
+		&__consult {
+			bottom: 155px;
+			padding: 40px;
+			@include flex(space-between,center);
+		}
+
+		// .services-wrap__consult-qa
+		&__consult-qa {
+			flex: 0 0 390px / 720px * 100%;
+			margin: 0;
+			@include flex(space-between,center);
+		}
+
+		// .services-wrap__consult-any
+		&__consult-any {
+			margin: 0;
+		}
+
+		// .services-wrap__consult-btn
+		&__consult-btn {
+			margin: 0;
+			flex: 0 0 250px / 720px * 100%;
+		}
+
+		// .services-wrap__content
+		&__content {
+			padding: 36px 0 0 0;
+		}
+
+		// .services-wrap__img
+		&__img {
+			box-shadow:
+							0 -15px 0 -7.5px $servicesImgFirstBoxShadowColor,
+							0 -30px 0 -15px $servicesImgSecondBoxShadowColor,
+							0 32px 20px 16px $servicesImgSecondBoxShadowColor;
+		}
+
+		// .services-wrap__street
+		&__street {
+			text-align: right;
+			padding: 45px 0 0 0;
+		}
+
+		// .services-wrap__btns
+		&__btns {
+			@include position(auto,0,-.45em,auto);
+			@include flex(flex-start,center);
+			z-index: 6;
+		}
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	// .services-wrap
+	.services-wrap {
+		padding: 100px 0 120px;
+		@include flex(space-between,center);
+
+		// .services-wrap__col
+		&__col {
+			&:first-child {
+				flex: 0 0 475px / 1140px * 100%;
+			}
+
+			&:last-child {
+				flex: 0 0 620px / 1140px * 100%;
+			}
+		}
+
+		// .services-wrap__txt
+		&__txt {
+			margin: 0 0 80px 0;
+		}
+
+		// .services-wrap__consult
+		&__consult {
+			position: static;
+			@include flex(space-between,center);
+			padding: 40px 35px;
+		}
+
+		// .services-wrap__consult-qa
+		&__consult-qa {
+			flex: 0 0 205px / 395px * 100%;
+			display: block;
+			margin: 0;
+		}
+
+		// .services-wrap__consult-any
+		&__consult-any {
+			margin: 0 0 1em 0;
+		}
+
+		// .services-wrap__consult-btn
+		&__consult-btn {
+			flex: 0 0 175px / 395px * 100%;
+		}
+	}
+}

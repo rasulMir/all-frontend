@@ -1,0 +1,54 @@
+@use 'sass:math';
+
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+	font-family: $font_name;
+	font-display: swap;
+	src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+	font-weight: #{$weight};
+	font-style: #{$style};
+	}
+}
+
+@import './var';
+@import './mixines';
+@import './fonts';
+@import './default';
+
+// layuots start
+@import './layouts/panel';
+@import './layouts/header';
+@import './layouts/footer';
+
+// layouts end
+
+// home-start
+@import './home/promo';
+@import './home/services';
+@import './home/portfolio';
+@import './home/ab-us';
+@import './home/choose';
+@import './home/blog';
+@import './home/themes';
+
+// home-end
+
+// portfolio start
+@import './about/cda';
+@import './about/statistic';
+@import './about/our-team';
+@import './about/reviews';
+
+// portfolio end
+
+// blog masonry start
+@import './blogmasonry/blog-masonry';
+
+// blog masonry end
+
+// contacts-us start
+@import './contacts-us/contacts-us-promo';
+@import './contacts-us/contacts-form';
+@import './contacts-us/contacts-map';
+
+// contacts us end

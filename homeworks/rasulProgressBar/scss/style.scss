@@ -1,0 +1,119 @@
+@import 'reset';
+$bgColor: rgb(199, 192, 192);
+$bgSpanColor: rgb(1, 1, 48);
+.progress {
+	margin: 0 auto;
+	width: 700px;
+	height: 100vh;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	// .progress__circle
+	&__circle {
+		position: relative;
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+		overflow: hidden;
+		&:nth-child(1),
+		&:nth-child(2),
+		&:nth-child(3) {
+			align-self: flex-start;
+		}
+		&:nth-child(4),
+		&:nth-child(5),
+		&:nth-child(6) {
+			align-self: center;
+		}
+		&:nth-child(7),
+		&:nth-child(8),
+		&:nth-child(9) {
+			align-self: flex-end;
+		}
+		&:nth-child(7) > span,
+		&:nth-child(8) > span,
+		&:nth-child(9) > span {
+			background-color: transparent;
+		}
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			background:
+			linear-gradient(to right, $bgColor 50%, transparent 50%, transparent 0),
+			linear-gradient(33deg, $bgColor 55%, blue 55%,blue 0),
+			blue;
+		}
+		&:nth-child(2)::before {
+			background:
+			linear-gradient(to left, blue 50%, transparent 50%, transparent 0),
+			linear-gradient(126deg, transparent 50%, blue 50%, blue 0),
+			$bgColor;
+		}
+		&:nth-child(3)::before {
+			background:
+			linear-gradient(to left, blue 50%, transparent 50%, transparent 0),
+			linear-gradient(-124deg, transparent 50%, blue 50%, blue 0),
+			$bgColor;
+		}
+		&:nth-child(4)::before {
+			background:
+			linear-gradient(to right, $bgColor 50%, transparent 50%, transparent 0),
+			linear-gradient(72deg, transparent 50%, blue 50%, blue 0),
+			$bgColor;
+		}
+		&:nth-child(5)::before {
+			background:
+			linear-gradient( to top, blue 50%, transparent 50%,transparent 0),
+			linear-gradient( to right, transparent 50%, blue 50%,blue 0)
+			,$bgColor;
+		}
+		&:nth-child(6)::before {
+			background:
+			linear-gradient(to left, blue 50%, transparent 50%, transparent 0),
+			linear-gradient(-110deg, transparent 50%, blue 50%, blue 0),
+			$bgColor;
+		}
+		&:nth-child(7)::before {
+			background:
+			linear-gradient(to right, $bgColor 50%, transparent 50%, transparent 0),
+			linear-gradient(33deg, $bgColor 50%, blue 50%,blue 0),
+			blue;
+		}
+		&:nth-child(8)::before {
+			background:
+			linear-gradient( to top, blue 50%, transparent 50%,transparent 0),
+			linear-gradient( to right, transparent 50%, blue 50%,blue 0)
+			,$bgColor;
+		}
+		&:nth-child(9)::before {
+			background:
+			linear-gradient(to right, $bgColor 50%, transparent 50%, transparent 0),
+			linear-gradient(-43.2deg, transparent 50%, blue 50%, blue 0),
+			$bgColor;
+		}
+		& > span {
+			width: 100% - 20%;
+			height: 100% - 20%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			background-color: $bgSpanColor;
+			border-radius: 50%;
+			color: white;
+			font-size: 2.5em;
+			font-family: sans-serif;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			& > sup {
+				margin-bottom: .6em;
+				font-size: .5em;
+			}
+		}
+	}
+}

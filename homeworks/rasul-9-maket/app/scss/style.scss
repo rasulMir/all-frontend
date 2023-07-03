@@ -1,0 +1,29 @@
+@import './variables';
+@import './mixines';
+@import './fonts';
+@import './ui';
+
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	font-size: 62.5%;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+@import './iso-head/iso-head';
+@import './header/header';
+@import './descr/descr';
+@import './partners/partners';
+@import './process/process';
+@import './roadmap/roadmap';
+@import './blockchain/blockchain';
+@import './team/team';
+@import './faq/faq';
+@import './footer/footer';

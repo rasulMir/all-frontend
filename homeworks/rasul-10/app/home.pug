@@ -1,0 +1,17 @@
+extends ./pug/layouts/head
+
+block vars
+	-	var title = 'Home'
+	-	var currjs = 'home'
+block content
+	include ./pug/layouts/panel.pug
+	include ./pug/layouts/header.pug
+	main.main
+		include ./pug/home/promo.pug
+		include ./pug/home/services.pug
+		include ./pug/home/portfolio.pug
+		include ./pug/home/ab-us.pug
+		include ./pug/home/choose.pug
+		include ./pug/home/blog.pug
+		include ./pug/home/themes.pug
+	include ./pug/layouts/footer.pug

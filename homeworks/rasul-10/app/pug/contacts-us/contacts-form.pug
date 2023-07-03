@@ -1,0 +1,18 @@
+include ../mixines.pug
+
+section.contacts-form
+	.container
+		+mainTitle('Get In Touch','contacts-form__title','contacts-form__txt','contacts-form__wrap')
+			p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum obcaecati facilis dolore autem nobis reprehenderit alias soluta optio vitae quia inventore tempora tempore.
+		.contacts-form-wrap
+			form.contacts-form-wrap__form(action="fjfj.php", method="post")
+				label.contacts-form-wrap__lbl.contacts-form-wrap__lbl_name(for="name")
+					input.contacts-form-wrap__input(id='name', type="text", name="userMail", placeholder='Full Name')
+				label.contacts-form-wrap__lbl.contacts-form-wrap__lbl_email(for="email")
+					input.contacts-form-wrap__input(id='email', type="email", name="userMail", placeholder='Email Address')
+				label.contacts-form-wrap__lbl.contacts-form-wrap__lbl_site(for="site")
+					input.contacts-form-wrap__input(id='site', type="text", name="userSite", placeholder='Your Website')
+				label.contacts-form-wrap__lbl.contacts-form-wrap__lbl_txt(for="message")
+					textarea#message(name="userMessage", placeholder='Type Here Message', wrap).contacts-form-wrap__input
+				.contacts-form-wrap__bttm
+					button.contacts-form-wrap__btn(type="submit") Send Message

@@ -1,0 +1,27 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+table {
+	width: 70%;
+	margin: 30px;
+}
+
+tr td {
+	width: 15%;
+	padding: 30px 0 10px;
+	color: darkslategrey;
+	text-align: start;
+}
+
+tr th {
+	display: inline-block;
+	text-align: left;
+	margin-right: 30px;
+	width: inherit;
+	text-align: start;
+	color: darkcyan;
+	border-bottom: 2px solid cyan;
+}

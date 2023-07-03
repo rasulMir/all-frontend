@@ -1,0 +1,58 @@
+$color: blue;
+
+.txt {
+	text-align: center;
+}
+
+.title {
+	width: 100%;
+	text-align: center;
+	text-transform: uppercase;
+	color: $color;
+}
+
+.card {
+	position: relative;
+	display: flex;
+	flex-flow: column;
+	.date {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: max-content;
+		padding: 3px;
+		text-transform: uppercase;
+		color: white;
+		background-color: $color;
+	}
+	.image > img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+.text {
+	padding: 10px;
+	border-left: 2px solid $color;
+	&-title, &-description {
+		margin: 15px 0;
+	}
+	.details {
+		text-align: end;
+		& > a {
+			position: relative;
+			padding: 5px 20px;
+			text-decoration: none;
+			text-transform: uppercase;
+			color: $color;
+			font-weight: 800;
+			&:after {
+				content: "+";
+				position: absolute;
+				top: 50%;
+				right: 5%;
+				transform: translateY(-50%);
+			}
+		}
+	}
+}

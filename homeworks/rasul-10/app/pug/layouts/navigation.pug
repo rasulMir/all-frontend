@@ -1,0 +1,13 @@
+mixin navPage(title,parent,home)
+	section.nav-page
+		.container
+			.nav-page__wrap
+				.nav-page__title= title
+				ul.nav-page__list
+					li.nav-page__list-item.nav-page__list-descr You Are Here:
+					li.nav-page__list-item
+						a.nav-page__list-link(href=home + '.html')= home
+					li.nav-page__list-item
+						a.nav-page__list-link(href=parent + '.html')= parent
+					li.nav-page__list-item
+						a.nav-page__list-link.nav-page__list-link_last(href='#')= title

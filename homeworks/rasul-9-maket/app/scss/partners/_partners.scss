@@ -1,0 +1,42 @@
+@import "../variables";
+@import "../mixines";
+
+// .partners
+.partners {
+}
+
+// .partners-wrap
+.partners-wrap {
+	padding: 0 0 10rem 0;
+	@include flex(stretch,center);
+    // .partners-wrap__title
+    &__title {
+		 margin: 0;
+		font-size: 2rem;
+		font-family: $gilroy;
+		color: $partnersWrapTitleFontColor;
+		font-weight: bold;
+		text-shadow: -.05em .05em 0 rgba($partnersWrapTitleFontColor, .5);
+    }
+
+    // .partners-wrap__body
+    &__body {
+		 flex: 1 0;
+		 @include flex(stretch,stretch);
+    }
+
+    // .partners-wrap__img
+    &__img {
+		 flex: 105px / 1067.69px * 100%;
+		 padding: 0 0 10% 0;
+		 overflow: hidden;
+		 position: relative;
+    }
+
+	 // .partners-wrap__link
+	 &__link {
+		 display: block;
+		@include position(50%,50%);
+		transform: translate(-50%,-50%);
+	}
+}

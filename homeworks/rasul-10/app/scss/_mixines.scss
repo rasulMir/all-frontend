@@ -1,0 +1,86 @@
+@mixin flex($jc: flex-start, $ai: stretch, $fd:row) {
+	display: flex;
+	justify-content: $jc;
+	align-items: $ai;
+    	flex-direction: $fd;
+}
+
+@mixin position($top, $left,$bottom: auto,$right: auto) {
+	position: absolute;
+	top: $top;
+	left: $left;
+	bottom: $bottom;
+	right: $right;
+}
+
+@mixin perc($wdth, $maxWidth: 1170px) {
+	width: math.div($wdth, $maxWidth) * 100%;
+}
+
+@mixin percfl($flwdth,$flmaxWidth: 1170px) {
+	flex: 0 0 math.div($flwdth,$flmaxWidth) * 100%;
+}
+
+@mixin icon($icon) {
+	&::before {
+		content: "#{$icon}";
+		@include position(50%,0);
+		transform: translateY(-50%);
+		font-family: "icomoon";
+		font-size: 1.6rem;
+		color: inherit;
+		transition: all 0.3s linear;
+	}
+}
+
+@mixin arrow() {
+	&::after {
+		content: "\e919";
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translateY(-50%);
+		transition: all 0.3s linear;
+		font-family: "icomoon";
+		font-size: 0.4rem;
+		color: inherit;
+	}
+}
+
+@mixin btn {
+	font-family: $raleway;
+	font-weight: 800;
+	text-transform: uppercase;
+	text-align: center;
+	transition: all 0.3s linear;
+	cursor: pointer;
+}
+
+@mixin btnHover($brdcolor: #{$white}, $color: inherit) {
+	border: 0.1rem solid transparent;
+	transition: background-color 0.3s linear, border-color 0.2s linear, color 0.3s linear;
+	&:hover {
+		background-color: transparent;
+		border-color: $brdcolor;
+		color: $color;
+	}
+}
+
+@mixin hover($ras: true, $fontcolor: #{$orange}) {
+	$check: $ras;
+
+	@if $check == '1' {
+		transition: color 0.3s ease;
+		&:hover {
+			color: $fontcolor;
+		}
+		&:hover:before {
+			color: $fontcolor;
+		}
+	} @else {
+		transition: color 0.3s ease;
+		&:hover {
+			color: $fontcolor;
+		}
+	}
+}

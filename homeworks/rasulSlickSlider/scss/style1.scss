@@ -1,0 +1,114 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 20px;
+}
+.wrapper {
+	height: 100vh;
+}
+.slider {
+	position: relative;
+	padding: 20px;
+	// .slider__item
+	&__item {
+		display: flex;
+		align-items: flex-start;
+		margin: 0 5px;
+	}
+	// .slider__img
+	&__img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	/* Слайдер */
+	.slick-slider{
+	}
+	/* Слайдер запущен */
+	.slick-slider.slick-initialized{}
+	/* Слайдер с точками */
+	.slick-slider.slick-dotted{}
+	/* Ограничивающая оболочка */
+	.slick-list {
+		overflow: hidden;
+	}
+	/* Лента слайдов */
+	.slick-track{
+		display: flex;
+	}
+	/* Слайд */
+	.slick-slide{}
+	/* Слайд активный (показывается) */
+	.slick-slide.slick-active{}
+	/* Слайд основной */
+	.slick-slide.slick-current{}
+	/* Слайд по центру */
+	.slick-slide.slick-center{}
+	/* Клонированный слайд */
+	.slick-slide.slick-cloned{}
+	/* Стрелка */
+	.slick-arrow{
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		font-size: 0;
+		z-index: 11;
+	}
+	/* Стрелка влево */
+	.slick-prev{
+		left: 2px;
+		&::before {
+			content: '\f137';
+			font-family: "Font Awesome 5 Free",
+			"Font Awesome 5 Brands";
+			font-size: 20px;
+			font-weight: 600;
+			border-radius: 50%;
+			color: blue;
+			background-color: white;
+		}
+	}
+	/* Стрелка вправо */
+	.slick-next{
+		right: 2px;
+		&::before {
+			content: '\f138';
+			font-family: "Font Awesome 5 Free",
+			"Font Awesome 5 Brands";
+			font-size: 20px;
+			font-weight: 600;
+			border-radius: 50%;
+			color: blue;
+			background-color: white;
+		}
+	}
+	/* Стрелка не активная */
+	.slick-arrow.slick-disabled{}
+	/* Точки (булиты) */
+	.slick-dots{
+		margin-top: 20px;
+		display: flex;
+		justify-content: center;
+		list-style-type: none;
+	}
+	.slick-dots li{
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		background-color: grey;
+		&:not(:last-child) {
+			margin-right: 5px;
+		}
+	}
+	/* Активная точка */
+	.slick-dots li.slick-active{
+		background-color: rgb(70, 67, 67);
+	}
+	/* Элемент точки */
+	.slick-dots li button{
+		font-size: 0;
+	}
+}

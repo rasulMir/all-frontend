@@ -1,0 +1,22 @@
+
+@media only screen and (min-width: 768px) {
+	.container {
+		padding: 0 30px;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.container {
+		padding: 0 15px;
+	}
+}
+
+@import '../header/header-media';
+@import '../about-us/about-us-media';
+@import '../services/services-media';
+@import '../print/print-media';
+@import '../polygraph/polygraph-media';
+@import '../reviews/reviews-media';
+@import '../faq/faq-media';
+@import '../maps/maps-media';
+@import '../footer/footer-media';

@@ -1,0 +1,22 @@
+mixin reviewsCard()
+	.reviews__item-inner-wrap
+		.reviews__client-review
+			p 'Lorem ipsum dolor <span class='reviews__client-review_pink'>sit amet consectetur,</span> ullam nisi sapiente, et corporis voluptatibus ea in distinctio ab <span class='reviews__client-review_bold'>deserunt fuga</span>'
+		.reviews__client-card
+			.reviews__client-top
+				img(src="./images/review-client-img.jpg", alt="client photo")
+			.reviews__client-name Jonathan Smith
+			.reviews__client-company Company Inc.
+
+section.reviews
+	.container
+		+mainTitle('What People Say About Us','reviews__title',r2,'reviews__title-wrap')
+		.reviews__slider
+			.reviews__item
+				+reviewsCard()
+			.reviews__item
+				+reviewsCard()
+			.reviews__item
+				+reviewsCard()
+			.reviews__item
+				+reviewsCard()

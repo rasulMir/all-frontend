@@ -1,0 +1,109 @@
+@import './variables';
+@import './mixines';
+
+// .wrapper
+.wrapper {
+	overflow: hidden;
+}
+
+// .main
+.main {
+
+	// .main__iso-txt
+	&__iso-txt {
+		position: relative;
+		font-size: 1.8rem;
+		font-family: $gilroy;
+		line-height: 1.556;
+		&::before {
+			content: '\e904';
+			@include position(0,44%,auto,auto);
+			font-family: 'icomoon';
+			color: $mainIsoTxtIconImageColor;
+		}
+	}
+
+	// .main__iso-end
+	&__iso-end {
+	}
+
+	// .main__iso-timer
+	&__iso-timer {
+		font-weight: 600;
+	}
+
+	// .main__btn
+	&__btn {
+		padding: .8em;
+		font-size: 1.5rem;
+		font-family: $seravek;
+		text-align: center;
+		border-radius: 2em;
+	}
+
+	// .main__title
+	&__title {
+		position: relative;
+		margin: 0;
+		padding: 0 0 40px 0;
+		font-size: 2.8rem;
+		font-family: $seravek;
+		font-weight: bold;
+		text-align: center;
+		text-transform: uppercase;
+		color: $mainTitlePrimryColor;
+	}
+
+	// .main__title-circle
+	&__title-circle {
+		@include position(auto,50%,0);
+		transform: translateX(-50%);
+		font-size: 1rem;
+		width: 1em;
+		height: 1em;
+		background-color: $mainTitlePrimryColor;
+		border-radius: 50%;
+		& > span {
+			&::before,
+			&::after {
+				content: '';
+				@include position(50%,auto);
+				transform: translateY(-50%);
+				width: .5em;
+				height: .5em;
+				background-color: $mainTitlePrimryColor;
+				border-radius: 50%;
+			}
+			&::before {
+				left: -1.2em;
+			}
+			&::after {
+				right: -1.2em;
+			}
+		}
+		
+		&::before,
+		&::after {
+			content: '';
+			@include position(50%,auto);
+			transform: translateY(-50%);
+			width: 4em;
+			height: .1em;
+			background-color: $mainTitlePrimryColor;
+		}
+		&::before {
+			left: -4.7em;
+		}
+		&::after {
+			right: -4.7em;
+		}
+	}
+}
+
+// custom-shape
+div[class^='custom-shape'] {
+	z-index: -1;
+	pointer-events: none;
+}
+
+// custom-shape

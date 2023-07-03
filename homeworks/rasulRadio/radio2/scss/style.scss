@@ -1,0 +1,138 @@
+@import 'reset';
+
+.wrapper {
+	width: 100vw;
+	height: 100vh;
+	background: linear-gradient(315deg, black 10%, transparent 10%,transparent 90%,black 90%),
+	linear-gradient(125deg, rgba(255, 241, 241, 0.692) 11%, rgba(255, 241, 241, 0.692) 11%,transparent 0),
+	linear-gradient(225deg, black 10%, transparent 10%,transparent 90%,black 90%),
+	linear-gradient(235deg, rgba(255, 241, 241, 0.692) 10%, rgba(255, 241, 241, 0.692) 10%,transparent 0);
+	background-size: 10px 10px;
+	background-color: rgba(19, 18, 18, 0.678);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: sans-serif;
+}
+.center {
+	display: flex;
+	flex-flow: column;
+	width: 300px;
+	height: auto;
+	background-color: black;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.settings {
+	position: relative;
+	align-self: flex-end;
+	& > span {
+		display: inline-block;
+		color: white;
+		padding: 5px 10px;
+		margin-right: 10px;
+		transform-origin: right;
+		transform: scale(0,0);
+		transition: all 1s ease-in;
+	}
+	&::before {
+		content: '';
+		position: absolute;
+		top: 5px;
+		right: 0;
+		width: 1em;
+		height: 1em;
+		background: radial-gradient(center, black 25%, transparent 0) ,
+		radial-gradient(top left, black 25%, transparent 0) ,
+		radial-gradient(top right, black 25%, transparent 0) ,
+		radial-gradient(left bottom, black 25%, transparent 0) ,
+		radial-gradient(right bottom, black 25%, transparent 0) , grey;
+		border-radius: 50%;
+	}
+	&:hover span {
+		transition: all 1s ease-in;
+		transform: scale(1,1);
+	}
+}
+
+.menu {
+	list-style: none;
+}
+li {
+
+	.label {
+		position: relative;
+		display: block;
+		padding: 5px 25px;
+		cursor: pointer;
+		color: gray;
+	}
+}
+
+.inner-label {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 1em;
+	height: 1em;
+	border: 1px solid grey;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: all .3s ease-in;
+	&::before {
+		content: '';
+		position: absolute;
+		top: -1px;
+		left: -1px;
+		width: 0;
+		height: 0;
+		background: transparent;
+		border: 1px solid transparent;
+		border-radius: 50%;
+		transition: all .3s ease-in;
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: -1px;
+		right: -1px;
+		width: 0;
+		height: 0;
+		background: transparent;
+		border: 1px solid transparent;
+		border-radius: 50%;
+		transition: all .3s ease-in;
+	}
+	.span {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%) scale(0);
+		width: 6px;
+		height: 6px;
+		background-color: red;
+		border-radius: 50%;
+		-webkit-tap-highlight-color: transparent;
+		pointer-events: none;
+		opacity: 0;
+		transition: all .3s ease-in;
+	}
+}
+
+.radio {
+	display: none;
+	&:checked + .inner-label::before {
+		animation: border1 .2s linear forwards;
+		border-color: red;
+	}
+	&:checked + .inner-label::after {
+		animation: border2 .2s linear .2s forwards;
+		border-color: red;
+	}
+	&:checked + .inner-label > .span {
+		animation: span1 .5s linear .4s forwards;
+	}
+}
+
+@import 'keyframes';

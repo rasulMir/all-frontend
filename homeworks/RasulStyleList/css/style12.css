@@ -1,0 +1,51 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.pink-list {
+	counter-reset: li;
+	margin: 100px auto;
+	padding: 5px;
+	width: 300px;
+	list-style-type: none;
+	z-index: 9;
+}
+
+.pink-list li {
+	position: relative;
+	margin-bottom: 10px;
+	padding: 10px;
+	background-color: rgb(223, 191, 154);
+	font-family: sans-serif;
+	font-size: 12px;
+}
+
+.pink-list li::before {
+	position: absolute;
+	content: counter(li);
+	counter-increment: li;
+	top: 0;
+	left: -18px;
+	width: 30px;
+	height: 34px;
+	box-sizing: border-box;
+	border-radius: 45%;
+	background-color: rgb(255, 139, 139);
+	color: white;
+	padding-left: 4px;
+	line-height: 34px;
+	z-index: -3;
+}
+
+.pink-list li:hover {
+	background-color: rgb(255, 139, 139);
+}
+
+.pink-list li:hover::before {
+	top: 0;
+	left: -30px;
+	transition-duration: 0.5s;
+	z-index: 15;
+}

@@ -1,0 +1,95 @@
+@import '../var';
+@import '../mixines';
+
+.services-home {
+}
+.services-txt-boxes {
+	padding: 4rem 0 5.5rem;
+	background-color: $darkGrey;
+
+		// .services-txt-boxes__txt
+
+		&__txt {
+			font-size: 3.2rem;
+			font-weight: 700;
+			font-family: $raleway;
+			color: $grey;
+			text-align: center;
+
+			// .services-txt-boxes__txt_opacity
+
+			&_opacity {
+				font-size: 2.4rem;
+				color: $sixfour;
+			}
+		}
+}
+
+.services-outer-wrap {
+	position: relative;
+	background-color: $fafa;
+
+	&::before {
+		content: "";
+		@include position(0,50%);
+		transform: translate(-50%, -100%);
+		border-width: 0 1.65rem 1.6rem 1.65rem;
+		border-style: solid;
+		border-color: transparent transparent $fafa transparent;
+	}
+}
+
+.services-wrap {
+	padding: 11.5rem 0 8rem;
+	@include flex(space-between,center);
+
+		// .services-wrap__card
+
+		&__card {
+			background-color: $white;
+			padding-bottom: 3rem;
+
+			&:hover .services-wrap__body::after {
+				background-color: $orange;
+			}
+			&:hover > .services-wrap__img {
+				background-color: $orange;
+			}
+			&:hover > .services-wrap__title {
+					color: $orange;
+			}
+			&:hover > .services-wrap__txt {
+					color: $darkGrey;
+			}
+		}
+
+		// .services-wrap__img
+
+		&__img {
+			background-color: $darkGrey;
+		}
+
+		// .services-wrap__title
+
+		&__title {
+			color: $darkGrey;
+		}
+
+		// .services-wrap__body
+
+		&__body {
+			&::after {
+				background-color: $darkGrey;
+			}
+		}
+
+		// .services-wrap__txt
+
+		&__txt {
+			font-size: 1.4rem;
+			font-family: $roboto;
+			color: $grey;
+			line-height: 1.429;
+			transition: color 0.3s linear;
+		}
+}

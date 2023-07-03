@@ -1,0 +1,92 @@
+@import './variables';
+
+@font-face {
+	font-family: $openSans;
+	src: url('../fonts/OpenSans-Regular.eot');
+	src: local('../fonts/Open Sans Regular'), local('OpenSans-Regular'),
+		url('../fonts/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/OpenSans-Regular.woff') format('woff'),
+		url('../fonts/OpenSans-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: $openSans;
+	src: url('../fonts/OpenSans-SemiBold.eot');
+	src: local('../fonts/Open Sans SemiBold'), local('OpenSans-SemiBold'),
+		url('../fonts/OpenSans-SemiBold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/OpenSans-SemiBold.woff') format('woff'),
+		url('../fonts/OpenSans-SemiBold.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: $openSans;
+	src: url('../fonts/OpenSans-Italic.eot');
+	src: local('../fonts/Open Sans Italic'), local('OpenSans-Italic'),
+		url('../fonts/OpenSans-Italic.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/OpenSans-Italic.woff') format('woff'),
+		url('../fonts/OpenSans-Italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: $openSans;
+	src: url('../fonts/OpenSans-ExtraBold.eot');
+	src: local('../fonts/Open Sans ExtraBold'), local('OpenSans-ExtraBold'),
+		url('../fonts/OpenSans-ExtraBold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/OpenSans-ExtraBold.woff') format('woff'),
+		url('../fonts/OpenSans-ExtraBold.ttf') format('truetype');
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: $openSans;
+	src: url('../fonts/OpenSans-Bold.eot');
+	src: local('../fonts/Open Sans Bold'), local('OpenSans-Bold'),
+		url('../fonts/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/OpenSans-Bold.woff') format('woff'),
+		url('../fonts/OpenSans-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: $muller;
+	src: url('../fonts/MullerMedium.eot');
+	src: local('../fonts/Muller Medium'), local('MullerMedium'),
+		 url('../fonts/MullerMedium.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/MullerMedium.woff2') format('woff2'),
+		 url('../fonts/MullerMedium.woff') format('woff'),
+		 url('../fonts/MullerMedium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: $muller;
+	src: url('../fonts/MullerExtraBold.eot');
+	src: local('../fonts/Muller ExtraBold'), local('MullerExtraBold'),
+		 url('../fonts/MullerExtraBold.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/MullerExtraBold.woff2') format('woff2'),
+		 url('../fonts/MullerExtraBold.woff') format('woff'),
+		 url('../fonts/MullerExtraBold.ttf') format('truetype');
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: $muller;
+	src: url('../fonts/MullerRegular.eot');
+	src: local('../fonts/Muller Regular'), local('MullerRegular'),
+		 url('../fonts/MullerRegular.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/MullerRegular.woff2') format('woff2'),
+		 url('../fonts/MullerRegular.woff') format('woff'),
+		 url('../fonts/MullerRegular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}

@@ -1,0 +1,88 @@
+@import '../general/variables';
+@import '../general/mixixines';
+
+.about-us {
+	// .about-us__col
+	&__col {
+		
+	}
+
+	// .about-us__col-card
+	&__col-card {
+		padding: 20px 0 0 0;
+		margin: 0 auto;
+		width: 290px;
+		@include flex(center,center,column);
+		background: url(../images/about-us/animate-arrow-320.svg) 80px 100px/auto no-repeat;
+
+		// .about-us__txt
+		.about-us__txt {
+			font-size: 13px;
+		}
+	}
+
+	// .about-us__card
+	&__card {
+		width: 130px;
+		text-align: center;
+		position: relative;
+
+		&:nth-child(1) {
+			margin: 0 0 -40px 0;
+		}
+		&:nth-child(2) {
+			align-self: flex-end;
+			padding: 40px 0 0 0;
+		}
+		&:nth-child(3) {
+			align-self: flex-start;
+			margin: -110px 0 40px 0;
+		}
+		&:nth-child(4) {
+			margin: -10px 0 0 0;
+		}
+	}
+
+	// .about-us__img
+	&__img {
+		display: inline-block;
+		margin: 0 12px;
+		position: relative;
+		width: 108px;
+		height: 108px;
+		background-color: $aboutUsImgBgColor;
+		border-radius: 50%;
+		& > img {
+			@include position(50%,50%);
+			transform: translate(-50%,-50%);
+			width: 60px / 108px * 100%;
+			height: auto;
+		}
+		&::before {
+			content: '';
+			@include position(0,0,0,0);
+			border-radius: 50%;
+			border: 5px solid #fff;
+		}
+	}
+
+
+	// .about-us__txt
+	&__txt {
+	}
+
+	// .about-us__title
+	&__title {
+		margin: 0 0 30px 0;
+	}
+
+	// .about-us__subtile
+	&__subtile {
+		margin: 0 0 35px 0;
+	}
+}
+
+// .about-us-wrap
+.about-us-wrap {
+	padding: 40px 0 0 0;
+}

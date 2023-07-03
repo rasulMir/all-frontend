@@ -1,0 +1,47 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.points {
+	margin: 100px auto;
+	width: 200px;
+	padding: 10px;
+	list-style: none;
+	background-color: rgb(238, 224, 224);
+}
+
+.points li {
+	position: relative;
+	color: orangered;
+	padding: 5px 0 5px 30px;
+}
+
+.points li:nth-child(even) {
+	margin: 2px;
+	padding: 13px;
+	border-left: 1px dotted black;
+	border-right: 1px dotted transparent;
+	border-top: 1px dotted transparent;
+	border-bottom: 1px dotted transparent;
+}
+
+.points li:nth-child(odd) {
+	border: 1px dotted transparent;
+}
+
+.points li:nth-child(odd)::before {
+	position: absolute;
+	content: " ";
+	top: 10px;
+	left: -1px;
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	background-color: black;
+}
+
+.points li:nth-of-type(odd):hover {
+	border-color: tomato;
+}

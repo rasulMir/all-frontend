@@ -1,0 +1,54 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.green_square {
+	margin: 50px auto;
+	counter-reset: li;
+	list-style: none;
+	width: 400px;
+}
+
+.green_square li {
+	position: relative;
+	box-sizing: border-box;
+	margin: 0 0 5px 35px;
+	padding: 5px 10px;
+	background-color:green;
+	font-family: sans-serif;
+	color: white;
+	text-transform: capitalize;
+	transition: .3s linear;
+}
+
+.green_square li:last-child {
+	margin-bottom: 0;
+ }
+
+ .green_square li:before {
+	content: counter(li);
+	counter-increment: li;
+	position: absolute;
+	top: -0em;
+	left: -35px;
+	width: 30px;
+	box-sizing: border-box;
+	background: green;
+	color: white;
+	font-family: sans-serif;
+	text-align: center;
+	line-height: 28px;
+	transition: .3s linear;
+ }
+
+ .green_square li:hover {
+	background-color: wheat;
+	color: black;
+ }
+
+ .green_square li:hover::before {
+	background-color: wheat;
+	color: black;
+ }

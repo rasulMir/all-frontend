@@ -1,0 +1,129 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+/*----------------------------head-start----------------*/
+.head {
+	height: 80px;
+}
+
+.head .main {
+	padding: 20px 0;
+	width: 70%;
+	height: inherit;
+	background-color: blue;
+}
+
+.head .main .main_text {
+	text-align: center;
+	color: orangered;
+}
+
+.head .data {
+	position: absolute;
+	top: 0;
+	left: 70%;
+	width: 30%;
+	height: inherit;
+	background-color: green;
+}
+
+.head .data .data_login {
+	text-align: center;
+	margin: 0 0 15px;
+	color: orangered;
+	font-family: sans-serif;
+}
+
+.head .data .usermail {
+	float: right;
+	width: 60%;
+	
+}
+
+.head .data .data_pass {
+	text-align: center;
+	color: orangered;
+	font-family: sans-serif;
+} 
+
+.head .data .userpass {
+	float: right;
+	width: 60%;
+}
+
+.enter_btn {
+	position: absolute;
+	bottom: 1px;
+	right: 1px;
+	width: 35%;
+	cursor: pointer;
+}
+
+/*-------------------head-end--------------------------*/
+
+/*-------------------nav-start--------------------------*/
+
+.nav {
+	height: 40px;
+	background-color: grey;
+	padding: 0 100px;
+}
+
+.nav li {
+	display: inline-block;
+	float: left;
+	text-align: center;
+	list-style-type: none;
+	padding: 10px 0;
+	width: 20%;
+	height: 40px;
+	background-color: yellow;
+	border: 1px solid red;
+}
+
+/*-------------------nav-end--------------------------*/
+
+/*------------------content-start---------------------*/
+
+.content {
+	height: 240px;
+}
+
+.content .left_cyan {
+	display: inline-block;
+	width: 50%;
+	height: inherit;
+	background-color: cyan;
+}
+
+.content .right_orange {
+	display: inline-block;
+	float: right;
+	width: 50%;
+	height: inherit;
+	background-color: orange;
+}
+
+/*------------------content-end---------------------*/
+
+/*------------------footer-start---------------------*/
+
+.footer {
+	min-height: 360px;
+	background-color: green;
+	overflow: hidden;
+}
+
+.footer .footer_text {
+	text-align: left;
+	color: gold;
+	text-transform: capitalize;
+	word-spacing: 30px;
+	letter-spacing: 10px;
+	font-size: 18px;
+	line-height: 25px;
+}
+
+/*------------------footer-end---------------------*/

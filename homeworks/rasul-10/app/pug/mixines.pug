@@ -1,0 +1,257 @@
+mixin wishlistCard(image)
+		li.panel-wrap__wishlist-card
+			.panel-wrap__wishlist-img
+				img(src="./images/panel-wish-" + image + '.jpg', alt="cart image")
+			.panel-wrap__wishlist-body
+				.panel-wrap__wishlist-title Claritas Etiam Processus
+				.panel-wrap__wishlist-price $ 259.95
+				.panel-wrap__wishlist-flag in stock
+			.panel-wrap__wishlist-remove
+				i.icon-remove
+				
+mixin socials(link,i)
+	li
+		a.socials__link(class=link class= 'icon-' + i, href='#')
+
+mixin hover()
+	ul.blog-masonry-wrap-hover
+		li.blog-masonry-wrap-hover__link
+			i.blog-masonry-wrap-hover__link_icon.icon-search
+		li.blog-masonry-wrap-hover__link
+			i.blog-masonry-wrap-hover__link_icon.icon-bookmark
+
+mixin sliderItem
+	.promo-slider__item
+		.promo-slider__card
+			h3.promo-slider__title= 'Clean & Unique'
+			h3.promo-slider__subtitle Everything You Need is Here
+			.promo-slider__txt
+				p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore ullam officiis nam doloremque non quibusdam.
+			.promo-slider__card-footer
+				a.promo-slider__btn(href="#") Buy This Now
+				a.promo-slider__btn(href="#") screeenshots
+
+
+mixin services(cl,name, title)
+	.services(class=cl + '__card')
+		.services__img(class=cl + '__img')
+			span(class='icon-' + name)
+		h3.services__title(class=cl + '__title')= title
+		.services__body(class=cl + '__body')
+			block
+
+mixin mainTitle(c1,r1,r2,r3)
+	.title__wrap(class= r3)
+		h2(class= r1).title= c1
+		.title__txt(class= r2)
+			block
+
+mixin img(main,num,x,ras)
+	- var n = 1;
+	input.portfolio-body__rdo(type="radio", name="portfolio", id='key-' + x,checked=ras)
+	.gallery(class= main + 'content-wrap')
+		.gallery__wrap(class= main + 'content')
+			while n < num
+				.gallery__img(class= main + 'img')
+					img(src="./images/portfolio-" + n++ + '.jpg', alt="our portfolio")
+					.gallery__hover(class= main + 'hover')
+						h4.gallery__hover-title(class= main + 'hover-title') Claritas Est Processus
+						.gallery__hover-designer(class= main + 'hover-designer') Graphic Designer, Photoshop
+						.gallery__btns(class= main + 'btns')
+							.gallery__btns-btn(class= main + 'btns-btn',class= main + 'btns-btn_zoom')
+								span.icon-search
+							input.gallery__chbx(class= main + 'chbx',id='bookmark-' + n , type="checkbox", name="userBookmark", value= n )
+							label.gallery__btns-btn(for='bookmark-' + n ,class= main + 'btns-btn', class= main + 'btns-btn_bookmark')
+								span.icon-bookmark
+			block
+
+
+mixin abUsCard(num,circle,titl,aos)
+	.about-us__card(data-aos= aos)
+		.about-us__top
+			svg( xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="130" height="130" viewBox="0 0 130 130")
+				defs
+					linearGradient( id="gradient")
+						stop( offset="0%", stop-color="#e5493a")
+						stop( offset="50%", stop-color="#fecb16")
+				circle.about-us__img-circle(data-aos= circle, cx='65', cy='65', r='63', fill='none', stroke-width='4', stroke=' url(#gradient)' id='svgpath')
+			.about-us__number= num
+		.about-us__body
+			.about-us__body-title= titl
+			.about-us__body-txt
+				block
+
+mixin faqCard(question,descr, active)
+	.choose-wrap__card
+		.choose-wrap__top(class= active)
+			h3.choose-wrap__question= question
+			h4.choose-wrap__descr= descr
+			|
+			|
+			.choose-wrap__arrow
+				span.icon-arrow-right
+		.choose-wrap__answer
+			p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas ullam autem cupiditate aspernatur, consectetur doloremque necessitatibus obcaecati inventore magni sed, perferendis quae et. Maiores porro enim ducimus velit eligendi provident consequatur fuga corporis distinctio, ipsa doloremque ipsam officia, qui natus fugit ad nobis! Quidem, non.
+			p Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quibusdam, unde repellendus et qui cumque!
+	
+mixin reviewsSlider(name,name2)
+	.choose-wrap__item
+		.choose-wrap__item-card
+			.choose-wrap__img
+				img(src="./images/choose-1.jpg", alt="review userphoto")
+			.choose-wrap__body
+				.choose-wrap__item-top
+					.choose-wrap__name= name
+					a(href="#").choose-wrap__user-mail www.themeforest.net
+				.choose-wrap__review
+					block
+		.choose-wrap__item-card
+			.choose-wrap__img
+				img(src="./images/choose-2.jpg", alt="review userphoto")
+			.choose-wrap__body
+				.choose-wrap__item-top
+					.choose-wrap__name= name2
+					a(href="#").choose-wrap__user-mail www.themeforest.net
+				.choose-wrap__review
+					block
+
+mixin blogSlider()
+	.blog-wrap__item
+		.blog-wrap__card
+			.blog-wrap__img
+				img(src="./images/blog-1.jpg", alt="user profil image")
+				.blog-wrap__hover
+					span.blog-wrap__icon.blog-wrap__icon_search
+						span.icon-search
+					span.blog-wrap__icon.blog-wrap__icon_flag
+						span.icon-bookmark
+				span.blog-wrap__icon.blog-wrap__icon_flag-corner
+					span.icon-images
+					span.icon-camera
+			.blog-wrap__body
+				.blog-wrap__date 04 February 2015 <span>/</span> 26 Comments
+				.blog-wrap__title Claritas est processus dynamicus mutationem
+				.blog-wrap__txt
+					p Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum reiciendis aliquid quo quibusdam voluptatem delectus maiores omnis quaerat officia illo!
+				a.blog-wrap__link.primary-link(href='#') read more
+	.blog-wrap__item
+		.blog-wrap__card
+			.blog-wrap__img
+				img(src="./images/blog-2.jpg", alt="user profil image")
+				.blog-wrap__hover
+					span.blog-wrap__icon.blog-wrap__icon_search
+						span.icon-search
+					span.blog-wrap__icon.blog-wrap__icon_flag
+						span.icon-bookmark
+				span.blog-wrap__icon.blog-wrap__icon_flag-corner
+					span.icon-images
+					span.icon-camera
+			.blog-wrap__body
+				.blog-wrap__date 28 January 2015 <span>/</span> No Comments
+				.blog-wrap__title Eodem modo typi, qui nunc nobis videntur parum
+				.blog-wrap__txt
+					p Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum reiciendis aliquid quo quibusdam voluptatem delectus maiores omnis quaerat officia illo!
+				a.blog-wrap__link.primary-link(href='#') read more
+
+mixin themes(name, title, delay)
+	.themes-wrap__card
+		.themes-wrap__card-img
+			span(class='icon-' + name)
+		.themes-wrap__card-body
+			h3.themes-wrap__title= title
+			.themes-wrap__txt
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores magni numquam
+mixin footerCard(date,num)
+	li.footer-top__item
+		.footer-top__img
+			img(src="./images/footer-news-" + num +".jpg", alt="footer image")
+			.footer-top__hover
+				span.icon-search
+		.footer-top__body
+			.footer-top__txt
+				p Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dolorum rerum assumenda fuga, ab voluptatum?
+			.footer-top__date= date
+
+mixin footerCard2(date,link)
+	li.footer-top__item
+		.footer-top__icon
+			span.icon-twitter
+		.footer-top__body
+			.footer-top__txt
+				p Lorem ipsum dolor sit amet, consectetur <a href='#' class='footer-top__txt-link'>#{link}</a> elit. Rem, vero.
+			.footer-top__date= date
+
+mixin navFooter(link,src, txt)
+	li
+		|
+		|
+		a.nav__list-link(class= link, href='./' + src,)= txt
+
+mixin clientsCard(clients,clItem,white)
+	-
+		var url = white;
+	section.clients(class= clients)
+		.container
+			.clients__slider
+				-	var pl = 1;
+				while pl < 6
+					.clients__item(class= clItem)
+						if url == 'white'
+							img(src="./images/clients-slider-" + pl++ + ".png", alt="our clients logo")
+						else
+							img(src="./images/clients-slider-black-" + pl++ + ".png", alt="our clients logo")
+				-	var rl = 1;
+				while rl < 6
+					.clients__item(class= clItem)
+						if url == 'white'
+							img(src="./images/clients-slider-" + rl++ + ".png", alt="our clients logo")
+						else
+							img(src="./images/clients-slider-black-" + rl++ + ".png", alt="our clients logo")
+
+mixin projectPreview()
+	section.business-project
+		.container
+			.business-project__wrap
+				.business-project__descr
+					h3.business-project__descr_top The Best Solution for Your Business Projects
+					h3.business-project__descr_bttm Qualitative PSD Template With Unlimited Possibilities
+				|
+				|
+				a.business-project__btn(href='#') Live Preview
+
+mixin mansoryCard(qa,titl,author)
+	-	var qw = '2';
+	.blog-masonry-wrap__card
+		if qw < qa
+			.blog-masonry-wrap__top
+				block
+		else if qw == qa
+			.blog-masonry-wrap__body
+				h3.blog-masonry-wrap__title= titl
+				.blog-masonry-wrap__admin By Admin
+					|
+					|
+					span.blog-masonry-wrap__author= author
+				.blog-masonry-wrap__txt
+					p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum rem ab quis distinctio perspiciatis vel ullam voluptas saepe, deleniti voluptates harum consectetur veritatis incidunt eveniet vero nisi beatae placeat, ducimus iure laborum amet, totam fugit. Quos, incidunt aspernatur pariatur iure at reiciendis libero animi debitis, consectetur quaerat placeat quas possimus.
+				|
+				|
+				a.primary-link.blog-masonry-wrap__link read more
+		else
+			.blog-masonry-wrap__top
+				block
+			.blog-masonry-wrap__body
+				h3.blog-masonry-wrap__title= titl
+				.blog-masonry-wrap__admin By Admin
+					|
+					|
+					span.blog-masonry-wrap__author= author
+				.blog-masonry-wrap__txt
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates aliquid aliquam et?
+				|
+				|
+				a.primary-link.blog-masonry-wrap__link read more
+
+
+mixin footerLinks(sl,cont)
+	a.footer__links(class= sl + '__links', href='#')= cont

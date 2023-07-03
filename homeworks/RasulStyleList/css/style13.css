@@ -1,0 +1,31 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.square {
+	margin: 100px auto;
+	width: 300px;
+	list-style-type: none;
+}
+
+.square li:nth-child(odd) {
+	box-sizing: border-box;
+	padding-left: 10px;
+	background-color: aquamarine;
+	border-left: 10px solid red;
+	line-height: 40px;
+}
+
+.square li:nth-child(even) {
+	box-sizing: border-box;
+	padding-left: 10px;
+	border-left: 10px solid red;
+	line-height: 40px;
+}
+
+.square li:hover {
+	background-color: rgb(140, 127, 255);
+	border-left: 10px dotted red;
+}

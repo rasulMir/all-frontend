@@ -1,0 +1,135 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.wrapper {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.836);
+}
+
+.sun {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 200px;
+	height: 200px;
+	transform: translate(-50%, -50%);
+	background-color: yellow;
+	box-shadow: 0 0 10px 10px yellow;
+	border-radius: 50%;
+}
+
+.mercury {
+	position: relative;
+	top: 27.5%;
+	left: 38.3%;
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	background-color: transparent;
+	border: 1px dashed white;
+	animation-name: mercury;
+	animation-duration:4s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+.mercury::after {
+	content: " ";
+	position: absolute;
+	bottom: 50%;
+	left: -7%;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: orangered;
+	box-shadow: inset 0 0 10px 1px orange;
+}
+
+@keyframes mercury {
+	0% {
+		
+	}
+	50% {
+	}
+	100% {
+		transform:rotate(360deg);
+	}
+}
+
+.earth {
+	position: relative;
+	top: -33%;
+	left: 30.5%;
+	width: 500px;
+	height: 500px;
+	border-radius: 50%;
+	background-color: transparent;
+	border: 1px dashed white;
+	animation-name: earth;
+	animation-duration: 365s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+@keyframes earth {
+	0% {
+		
+	}
+	50% {
+	}
+	100% {
+		transform:rotate(360deg);
+	}
+}
+
+.orbit {
+	position: relative;
+	top: -13.9%;
+	left: 30.5%;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	background-color: transparent;
+	border: 1px dashed white;
+	animation-name: orbit;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+@keyframes orbit {
+	0% {
+		
+	}
+	50% {
+	}
+	100% {
+		transform:rotate(360deg);
+	}
+}
+
+.orbit::after {
+	content: " ";
+	position: absolute;
+	bottom: 50%;
+	left: -7%;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background: linear-gradient(to left, grey 60%, rgb(70, 69, 69) 60%);
+}
+
+img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}

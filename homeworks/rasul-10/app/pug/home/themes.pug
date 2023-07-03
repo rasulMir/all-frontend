@@ -1,0 +1,18 @@
+include ../mixines.pug
+
+section.themes
+	.container
+		+mainTitle('Many Theme Options','themes__title','themes__title-txt','themes__title-wrap')
+			p Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum modi, commodi, dolorem optio id maiores error quaerat rem sapiente sunt perferendis.
+		article.themes-wrap
+			.themes-wrap__images
+				.themes-wrap__img.themes-wrap__img_back
+					img(src="./images/themes-screen-2.jpg", alt="our themes")
+				.themes-wrap__img.themes-wrap__img_front
+					img(src="./images/themes-screen-1.jpg", alt="our themes")
+			.themes-wrap__cards
+				+themes('feather', 'Clean Design')
+				+themes('bag', 'Multipurpose','200')
+				+themes('smartphone', 'Ultra Responsive','300')
+				+themes('chat', 'Online Support','400')
+	+clientsCard('themes-clients','themes-clients__item','white')

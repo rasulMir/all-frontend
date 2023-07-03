@@ -1,0 +1,180 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+	text-transform: capitalize;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+.wrapper {
+	margin: 50px auto;
+	padding: 15px;
+	width: 550px;
+	border: 1px solid gray;
+	border-radius: 2px;
+}
+
+.top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 5px;
+	overflow: hidden;
+}
+
+.add {
+	background-color: violet;
+	border: 0.5px solid grey;
+}
+
+.add > a {
+	position: relative;
+	display: block;
+	padding: 2px 5px 2px 20px;
+}
+
+.add > a::before {
+	content: "\f067";
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 2px 5px 2px;
+	color: inherit;
+	font-weight: 900;
+	font-size: inherit;
+	font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
+}
+
+.garbage , .point {
+	position: relative;
+	visibility: hidden;
+}
+
+.point::before,.garbage:before {
+	content: "\f06a";
+	padding: 2px 4px;
+	position: absolute;
+	top: -2px;
+	left: 0;
+	color: inherit;
+	font-weight: 900;
+	font-size: inherit;
+	font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
+	border: 1px solid rgba(128, 128, 128, 0.644);
+	visibility: visible;
+	cursor: pointer;
+}
+
+.garbage:before {
+	content: "\f2ed";
+	padding: 2px 5px;
+	left: 55%;
+}
+
+.point:checked::before,
+.garbage:checked:before {
+	border-color: black;
+	transition: all .4s ease;
+}
+
+.search {
+	padding: 2px 2px 2px 5px;
+}
+
+.settings {
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+}
+
+.settings > select {
+	text-align: center;
+	max-width: 50px;
+	padding: 2px 0;
+}
+
+.settings::after {
+	content: "\f013";
+	position: absolute;
+	top: 50%;
+	left: 5px;
+	transform: translateY(-50%);
+	font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
+	color: black;
+	font-size: .8em;
+	font-weight: 700;
+}
+
+.table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+tr td {
+	padding: 7px;
+}
+
+td > a {
+	text-align: center;
+	padding: 2px 20px;
+	display: inline-block;
+	background-color: green;
+}
+
+tr > td:first-child {
+	color: cyan;
+}
+
+tr > td {
+	border: 1px solid transparent;
+	border-bottom-color: rgba(128, 128, 128, 0.3);
+}
+
+tr:nth-child(even) {
+	background-color: rgb(247, 245, 245);
+}
+
+tr:first-child > td {
+	color: black;
+	border: 1px solid transparent;
+	border-bottom-color: grey;
+}
+
+.pen , .iks {
+	position: relative;
+	visibility: hidden;
+}
+
+.pen::before,.iks:before {
+	content: "\f304";
+	padding: 2px 4px;
+	position: absolute;
+	top: -2px;
+	left: 0;
+	color: inherit;
+	background-color: white;
+	font-weight: 900;
+	font-size: inherit;
+	font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
+	border: 1px solid rgba(128, 128, 128, 0.644);
+	visibility: visible;
+	cursor: pointer;
+}
+
+.iks:before {
+	content: "\f00d";
+	padding: 2px 6px;
+	left: 55%;
+}
+
+.iks:checked::before,
+.pen:checked:before {
+	background-color: orangered;
+	color: white;
+	transition: all .4s ease;
+}

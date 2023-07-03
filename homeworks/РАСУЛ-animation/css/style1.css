@@ -1,0 +1,229 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.wrapper {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(253, 253, 10, 0.529);
+}
+
+.rc-rope {
+	position: absolute;
+	top: 37.5%;
+	left: 57%;
+	width: 5px;
+	height: 30px;
+	background-color: rgb(82, 19, 3);
+}
+
+.right-candle {
+	position: absolute;
+	top: 42%;
+	left: 54%;
+	width: 80px;
+	height: 195px;
+	background: linear-gradient(to right, white 95%, cyan 95%);
+	border: 5px solid rgb(82, 19, 3);
+	border-radius: 5px;
+	z-index: 2;
+}
+
+.rc-eye {
+	position: absolute;
+	top: 10%;
+	left: 20%;
+	width: 10px;
+	height: 10px;
+	border-radius: 40%;
+	background: rgb(82, 19, 3);
+	animation-name: eyes;
+	animation-duration: .3s;
+}
+
+.rc-eye:nth-of-type(2) {
+	left: 70%;
+	animation-name: eye;
+	animation-duration: .6s;
+	animation-timing-function: step-end;
+}
+
+@keyframes eye {
+	0% {
+		background-color: transparent;
+	}
+	100% {
+		transform: translateX(-5px);
+	}
+}
+
+@keyframes eyes {
+	0% {
+		background-color: transparent;
+	}
+	100% {
+		transform: translateX(-25px);
+	}
+}
+
+.rc-mouth {
+	position: absolute;
+	top: 20%;
+	left: 15%;
+	border-radius: 40%;
+	background-color: transparent;
+	animation-name: mouth;
+	animation-duration: .1s;
+	animation-iteration-count: infinite;
+	animation-timing-function: steps(10%);
+	animation-direction: alternate-reverse;
+}
+
+@keyframes mouth {
+	0% {
+		transform: translateY(-1px);
+		background: rgb(82, 19, 3);
+		width: 20px;
+		height: 20px;
+	}
+	25% {
+		background: rgb(82, 19, 3);
+		width: 23px;
+		height: 23px;
+		border-radius: 45%;
+	}
+	50% {
+		background: rgb(82, 19, 3);
+		width: 26px;
+		height: 26px;
+		border-radius: 50%;
+	}
+	75% {
+		background: rgb(82, 19, 3);
+		width: 29px;
+		height: 29px;
+		border-radius: 50%;
+	}
+	100% {
+		background: rgb(82, 19, 3);
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+	}
+}
+
+.circle {
+	position: absolute;
+	top: 17%;
+	left: 30%;
+	width: 400px;
+	height: 400px;
+	z-index: 1;
+	animation: circle;
+	animation-duration: .5s;
+	animation-iteration-count: infinite;
+	animation-timing-function:ease-in;
+}
+
+@keyframes circle {
+	0%{
+		background: radial-gradient(circle , transparent 30%, rgba(255, 255, 255, 0.6) 30%, rgba(255, 255, 255, 0.6) 32%,transparent 32% );
+	}
+	25%{
+		background: radial-gradient(circle , transparent 40%, rgba(255, 255, 255, 0.6) 40%, rgba(255, 255, 255, 0.6) 42%,transparent 42% );
+	}
+	50%{
+		background: radial-gradient(circle , transparent 50%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0.6) 52%,transparent 52% );
+	}
+	75%{
+		background: radial-gradient(circle , transparent 60%, rgba(255, 255, 255, 0.6) 60%, rgba(255, 255, 255, 0.6) 62%,transparent 62% );
+	}
+	100%{
+		background: radial-gradient(circle , transparent 65%, rgba(255, 255, 255, 0.6) 65%, rgba(255, 255, 255, 0.6) 68%,transparent 68% );
+	}
+}
+
+.fire {
+	position: absolute;
+	top: 43%;
+	left: 44.1%;
+	width: 40px;
+	height: 55px;
+	background-color: rgb(255, 169, 10);
+	border-radius: 50%;
+	box-shadow:inset 0 6px 0 3px rgb(254,254,125);
+	z-index: 2;
+	animation-name: fire;
+	animation-duration: .5s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes fire {
+	0%{
+		transform: skewY(.9);
+		background-color: yellow;
+		transition-duration: 0.01s;
+	}
+	
+	50% {
+		transform: translateX(-1px);
+		background-color: rgb(255, 169, 10);
+	}
+
+	100%{
+		transform: translateX(1px);
+		background-color: yellow;
+		transition-duration: 0.01s;
+	}
+}
+
+.left-candle {
+	position: absolute;
+	top: 53%;
+	left: 42%;
+	width: 90px;
+	height: 120px;
+	background: linear-gradient(to right, white 95%, cyan 95%);
+	border: 5px solid rgb(82, 19, 3);
+	border-radius: 5px;
+	z-index: 2;
+}
+
+.lc-eye {
+	position: absolute;
+	top: 15%;
+	left: 15%;
+	width: 10px;
+	height: 10px;
+	border-radius: 40%;
+	background: rgb(82, 19, 3);
+}
+
+.lc-eye:nth-of-type(2) {
+	left: 70%;
+}
+
+.lc-rope {
+	position: absolute;
+	top: 51%;
+	left: 45.5%;
+	width: 5px;
+	height: 18px;
+	background-color: rgb(82, 19, 3);
+	z-index: 1;
+}
+
+.floor {
+	position: absolute;
+	top: 70%;
+	left: 50%;
+	width: 600px;
+	height: 15px;
+	background-color: rgb(82, 19, 3);
+	box-shadow: 0 5px 6px 2px rgb(58, 16, 5);
+	transform: translateX(-50%);
+	z-index: 2;
+}

@@ -1,0 +1,101 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 20px;
+}
+
+.wrapper {
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  padding: 1.5em;
+}
+
+.slider {
+  position: relative;
+  /* Ограничивающая оболочка */
+  /* Лента слайдов */
+  /* Стрелка */
+  /* Стрелка влево */
+  /* Стрелка вправо */
+  /* Точки (булиты) */
+  /* Активная точка */
+}
+
+.slider__item {
+  padding: 10px;
+  margin: 5px;
+  -webkit-box-shadow: 0 0 5px #000;
+          box-shadow: 0 0 5px #000;
+}
+
+.slider__title {
+  font-size: 1.5em;
+  text-transform: capitalize;
+}
+
+.slider .slick-list {
+  overflow: hidden;
+}
+
+.slider .slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.slider .slick-arrow {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  z-index: 11;
+}
+
+.slider .slick-arrow.fa-chevron-circle-left {
+  left: -1em;
+}
+
+.slider .slick-arrow.fa-chevron-circle-right {
+  right: -1em;
+}
+
+.slider .slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.slider .slick-dots li {
+  list-style-type: none;
+}
+
+.slider .slick-dots li:not(:last-child) {
+  margin-right: 20px;
+}
+
+.slider .slick-dots li > button {
+  font-size: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: grey;
+}
+
+.slider .slick-dots .slick-active > button {
+  background-color: #292626;
+}
+/*# sourceMappingURL=style2.css.map */

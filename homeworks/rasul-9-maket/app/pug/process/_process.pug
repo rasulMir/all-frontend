@@ -1,0 +1,57 @@
+include ../_mixines.pug
+
+section.process
+	.custom-shape-process
+		svg(data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none")
+			path(d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill")
+	.container
+		+primaryTitle('process__title','process__circle','Процесс производства')
+		article.process-wrap
+			.process-wrap__item
+				+card('3-top', '3', 'Закупка коров')|
+					|
+					span.process-wrap__text-circle
+						span.process-wrap__text-circle-title Ветеринария
+						span.process-wrap__text-circle-arrow
+					|
+					|
+					span.process-wrap__text-circle
+						span.process-wrap__text-circle-title Кормление и выпас
+						span.process-wrap__text-circle-arrow
+					|
+					|
+					span.process-wrap__text-circle
+						span.process-wrap__text-circle-title Сырое молоко
+						span.process-wrap__text-circle-arrow
+					span.process-wrap__circle-outer-arrow
+					span.process-wrap__circle-outer-arrow
+					+hoverCard('Закупка коров')
+				+card('4', '4', 'Молочное производство')|
+					|
+					span.process-wrap__text-circle
+						span.process-wrap__text-circle-title Пастер. молоко, сметана, творог, кефир, йогурт и сыр
+						span.process-wrap__text-circle-arrow
+					+hoverCard('Молочное производство')
+			.process-wrap__item
+				+card('1', '1', 'Инвестор')
+					span.process-wrap__text.process-wrap__text_right rubin
+					span.process-wrap__circle-outer-arrow
+					+hoverCard('Инвестор')
+				+card('2', '2', 'Смарт контракт')
+					span.process-wrap__text.process-wrap__text_top rubin
+					span.process-wrap__text.process-wrap__text_left talon
+					span.process-wrap__text.process-wrap__text_right rubin
+					span.process-wrap__text.process-wrap__text_bttm rubin
+					span.process-wrap__circle-outer-arrow
+					+hoverCard('Смарт контракт')
+				+card('5', '5', 'Розничная продажа')
+					span.process-wrap__circle-outer-arrow
+					+hoverCard('Розничная продажа')
+			.process-wrap__item
+				+card('3-bttm', '3','Розничная продажа')
+					span.process-wrap__circle-outer-arrow
+					+hoverCard('Розничная продажа')
+				+card('1', '5', 'Инвестор')
+					span.process-wrap__text.process-wrap__text_top talon &#37;
+					span.process-wrap__circle-outer-arrow
+					+hoverCard('Инвестор')

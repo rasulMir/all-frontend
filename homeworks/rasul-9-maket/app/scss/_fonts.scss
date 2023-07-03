@@ -1,0 +1,94 @@
+@import './variables';
+
+@font-face {
+	font-family: $gilroy;
+	src: url('../fonts/Gilroy-Regular.eot');
+	src: local('Gilroy Regular'), local('Gilroy-Regular'),
+		 url('../fonts/Gilroy-Regular.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Gilroy-Regular.woff2') format('woff2'),
+		 url('../fonts/Gilroy-Regular.woff') format('woff'),
+		 url('../fonts/Gilroy-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: $gilroy;
+	src: url('../fonts/Gilroy-Bold.eot');
+	src: local('Gilroy Bold'), local('Gilroy-Bold'),
+		 url('../fonts/Gilroy-Bold.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Gilroy-Bold.woff2') format('woff2'),
+		 url('../fonts/Gilroy-Bold.woff') format('woff'),
+		 url('../fonts/Gilroy-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: $gilroy;
+	src: url('../fonts/Gilroy-Semibold.eot');
+	src: local('Gilroy Semibold'), local('Gilroy-Semibold'),
+		 url('../fonts/Gilroy-Semibold.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Gilroy-Semibold.woff2') format('woff2'),
+		 url('../fonts/Gilroy-Semibold.woff') format('woff'),
+		 url('../fonts/Gilroy-Semibold.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: $seravek;
+	src: url('../fonts/Seravek.eot');
+	src: local('Seravek'),
+		 url('../fonts/Seravek.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Seravek.woff') format('woff'),
+		 url('../fonts/Seravek.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: $seravek;
+	src: url('../fonts/Seravek-Bold.eot');
+	src: local('Seravek Bold'), local('Seravek-Bold'),
+		 url('../fonts/Seravek-Bold.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Seravek-Bold.woff') format('woff'),
+		 url('../fonts/Seravek-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: $seravek;
+	src: url('../fonts/Seravek-Medium.eot');
+	src: local('Seravek Medium'), local('Seravek-Medium'),
+		 url('../fonts/Seravek-Medium.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Seravek-Medium.woff') format('woff'),
+		 url('../fonts/Seravek-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: $proxima;
+	src: url('../fonts/ProximaNova-Light.eot');
+	src: local('Proxima Nova Light'), local('ProximaNova-Light'),
+		 url('../fonts/ProximaNova-Light.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/ProximaNova-Light.woff2') format('woff2'),
+		 url('../fonts/ProximaNova-Light.woff') format('woff'),
+		 url('../fonts/ProximaNova-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: $proxima;
+	src: url('../fonts/ProximaNova-Regular.eot');
+	src: local('Proxima Nova Regular'), local('ProximaNova-Regular'),
+		 url('../fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/ProximaNova-Regular.woff2') format('woff2'),
+		 url('../fonts/ProximaNova-Regular.woff') format('woff'),
+		 url('../fonts/ProximaNova-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}

@@ -1,0 +1,161 @@
+@import '../variables';
+@import '../mixines';
+
+// .faq
+.faq {
+	background: url(../images/faq/faq-bg.png) center/cover no-repeat;
+
+	// .main__title
+	.main__title {
+		color: $faqTitleFontColor;
+	}
+
+	// .main__title-circle
+	.main__title-circle {
+		background-color: $faqTitleCircleBgColor;
+		&::before,
+		&::after {
+			background-color: $faqTitleCircleBgColor;
+		}
+	}
+}
+
+// .faq-wrap
+.faq-wrap {
+	padding: 4rem 0 0;
+
+	// .faq-wrap__card
+	&__card {
+		font-family: $gilroy;
+	}
+
+	// .faq-wrap__question
+	&__question {
+		margin: 0 0 .5rem 0;
+		padding: 2.5rem 6rem;
+		border-radius: .3rem;
+		background-color: $faqCardBgColor;
+		box-shadow: 0px 8px 18px 0px rgba(239, 239, 239, 0.6);
+		font-size: 1.8rem;
+		color: $faqCardQuestionFontColor;
+		font-weight: bold;
+		position: relative;
+		& > span {
+			@include position(2.5rem,auto,auto,6rem);
+			transform: rotateZ(45deg);
+			width: .7em;
+			height: .7em;
+			overflow: hidden;
+			cursor: pointer;
+			pointer-events: none;
+			transition: transform .3s linear;
+			&::before,
+			&::after {
+				content: '';
+				@include position(50%,50%);
+				width: 150%;
+				height: .13em;
+				background-color: $faqCardQuestionSpanBgColor;
+			}
+			&::before {
+				transform: translate(-50%,-50%) rotateZ(45deg);
+			}
+			&::after {
+				transform: translate(-50%,-50%) rotateZ(-45deg);
+			}
+		}
+	}
+
+	// .faq-wrap__answer
+	&__answer {
+		display: none;
+		padding: 1rem 6rem 1.5rem;
+		font-size: 1.5rem;
+		color: $faqCardAnswerFontColor;
+		line-height: 1.733;
+		& > p {
+			margin: 0;
+			padding: 0 0 0 3.5rem;
+			border-left: .2rem solid $faqAnswerBorderColor;
+			& > span {
+				text-transform: uppercase;
+				color: $faqCardAnswerSpanFontColor;
+			}
+		}
+	}
+}
+
+
+// .faq-any-qa
+.faq-any-qa {
+	padding: 11.5rem 0 5rem;
+	@include flex(center,center,column);
+
+	// .faq-any-qa__title
+	&__title {
+		margin: 0 0 5rem 0;
+	}
+
+	// .faq-any-qa__title-circle
+	&__title-circle {
+	}
+
+	// .faq-any-qa__form-wrap
+	&__form-wrap {
+		width: 655px / 1170px * 100%;
+	}
+
+	// .faq-any-qa__form-wrap-top
+	&__form-wrap-top {
+		@include flex(space-between,center);
+		flex-wrap: wrap;
+		margin: 0 0 4.5rem 0;
+	}
+
+	// .faq-any-qa__input
+	&__input {
+		margin: 0 0 6.5rem 0;
+		padding: 1em 0;
+		flex: 0 0 305px / 655px * 100%;
+		font-size: 1.5rem;
+		font-family: $seravek;
+		color: $faqAnyQaInputFontColor;
+		outline: none;
+		border-color: transparent;
+		border-bottom-color: $faqAnyQaInputBorderColor;
+		&::placeholder {
+			color: $faqAnyQaInputPlaceholderFontColor;
+		}
+
+		// .faq-any-qa__input_text
+		&_text {
+			flex: 0 0 100%;
+			margin: 0;
+		}
+	}
+
+	// .faq-any-qa__btns
+	&__btns {
+		@include flex(flex-end,center);
+	}
+	
+	// .faq-any-qa__btn
+	&__btn {
+		flex: 0 0 185px / 655px * 100%;
+		position: relative;
+		border: none;
+		outline: none;
+		color: $faqAnyQaBtnFontColor;
+		background: linear-gradient( 142deg, rgb(254,132,72) 0%, rgb(238,62,111) 100%);
+		box-shadow: 0px 8px 13px 0px rgba(252, 65, 87, 0.28);
+		cursor: pointer;
+		&::before {
+			content: '';
+			@include position(50%,auto,auto,20%);
+			transform: translateY(-50%);
+			border-width: 4.5px 0 4.5px 8px;
+			border-style: solid;
+			border-color: transparent transparent transparent $faqAnyQaBtnFontColor;
+		}
+	}
+}

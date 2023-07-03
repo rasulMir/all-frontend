@@ -1,0 +1,89 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.planets {
+	margin: 100px auto;
+	padding: 0 0 0 25px;
+	list-style-type: none;
+	width: 400px;
+	border-radius: 5px;
+	background-color: rgba(253, 251, 92, 0.692);
+	overflow: hidden;
+}
+
+.planets li {
+	position: relative;
+	padding: 10px 0 10px 0;
+	border-top: 1px solid transparent;
+	border-left: 1px solid transparent;
+	border-right: 1px solid transparent;
+	border-bottom: 1px solid rgb(161, 146, 146);
+}
+
+li a {
+	text-decoration: none;
+	font-family: sans-serif;
+	color: rgb(43, 41, 41);
+	text-transform: uppercase;
+}
+
+.planets li:last-child {
+	border-bottom-color: transparent;
+}
+
+.planets li::before {
+	content: "";
+	position: absolute;
+	top: 3px;
+	left: -15px;
+	padding: 3px;
+	border-radius: 50%;
+	background-color: orange;
+}
+
+.planets li::after {
+	content: "";
+	position: absolute;
+	top: 13px;
+	left: -17px;
+	padding: 5px;
+	border-radius: 50%;
+	background-color: orangered;
+}
+
+li a::before {
+	content: "";
+	position: absolute;
+	top: 28px;
+	left: -15px;
+	padding: 3px;
+	border-radius: 50%;
+	background-color: orange;
+}
+
+.planets li:hover,a:hover{
+	color: blueviolet;
+	border-color: rgb(161, 146, 146);
+	border-top-color: transparent;
+	border-left-color: transparent;
+}
+
+.planets li:first-child:hover {
+	border-top-color: rgb(161, 146, 146);
+	border-top-right-radius: 5px;
+}
+
+.planets li:last-child:hover {
+	border-bottom-color: rgb(161, 146, 146);
+	border-bottom-right-radius: 5px;
+}
+
+.planets li:hover::after {
+	background-color: blueviolet;
+	top: 8px;
+	left: -22px;
+	padding: 10px;
+}

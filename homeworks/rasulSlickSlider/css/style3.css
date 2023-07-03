@@ -1,0 +1,65 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.wrapper {
+  height: 100vh;
+}
+
+.slider {
+  width: 100vw;
+  padding: 50px 0;
+  position: relative;
+  background-color: #424141;
+  /* Стрелка */
+  /* Стрелка влево */
+  /* Стрелка вправо */
+}
+
+.slider__item {
+  background-color: white;
+  margin: 10px 40px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.slider__inner-item {
+  text-align: center;
+  line-height: 200px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.slider .slick-list {
+  overflow: hidden;
+}
+
+.slider .slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.slider .slick-arrow {
+  display: block;
+  position: absolute;
+  bottom: 1.5em;
+  background-color: #383030;
+  color: white;
+  padding: 3px 5px;
+}
+
+.slider .slick-arrow.fa-chevron-left {
+  left: 4em;
+}
+
+.slider .slick-arrow.fa-chevron-right {
+  right: 4em;
+}
+/*# sourceMappingURL=style3.css.map */

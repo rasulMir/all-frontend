@@ -1,0 +1,155 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, :active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  widows: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a::visited {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: url(https://images.ru.prom.st/840966608_w500_h500_shpon-yasen-tsvetnoj.jpg) center center/cover no-repeat;
+}
+
+.center {
+  border: 1px solid red;
+  width: 200px;
+  height: auto;
+}
+
+.label {
+  position: relative;
+  display: block;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  padding: 10px 35px;
+  cursor: pointer;
+  letter-spacing: 2px;
+}
+
+.label::before {
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: 8px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: transparent;
+  -webkit-box-shadow: inset 0 0 10px 2px black;
+          box-shadow: inset 0 0 10px 2px black;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.label::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 11px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: -webkit-radial-gradient(center center, circle, rgba(255, 255, 255, 0.7) 11%, transparent 11%, transparent 0), -webkit-radial-gradient(60% 28%, circle, rgba(255, 255, 255, 0.7) 6%, transparent 6%, transparent 0), blue;
+  background: -o-radial-gradient(center center, circle, rgba(255, 255, 255, 0.7) 11%, transparent 11%, transparent 0), -o-radial-gradient(60% 28%, circle, rgba(255, 255, 255, 0.7) 6%, transparent 6%, transparent 0), blue;
+  background: radial-gradient(circle at center center, rgba(255, 255, 255, 0.7) 11%, transparent 11%, transparent 0), radial-gradient(circle at 60% 28%, rgba(255, 255, 255, 0.7) 6%, transparent 6%, transparent 0), blue;
+  -webkit-box-shadow: inset 0 0 4px 1px black;
+          box-shadow: inset 0 0 4px 1px black;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-tap-highlight-color: transparent;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+  z-index: 3;
+}
+
+.radio {
+  display: none;
+}
+
+.radio:checked + .label::after {
+  -webkit-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+}
+/*# sourceMappingURL=style.css.map */

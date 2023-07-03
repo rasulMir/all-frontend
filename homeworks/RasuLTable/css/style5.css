@@ -1,0 +1,32 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+table {
+	margin: 30px;
+	border-collapse: collapse;
+	width: 70%;
+}
+
+table:nth-child(1) th {
+	background-color: indigo;
+}
+
+tr th, tr td {
+	background-color:burlywood;
+	color: blueviolet;
+	padding: 20px;
+	text-align: left;
+	border-bottom: 5px solid white;
+}
+
+th + th, td +td {
+	width: 20%;
+}
+
+tr:hover > td, tr:hover > th {
+	color: white;
+	background-color: indigo;
+}

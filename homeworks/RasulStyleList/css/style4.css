@@ -1,0 +1,66 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.salads {
+	padding-left: 10px;
+	color: rgb(3, 111, 212);
+	font-size: 20px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.name {
+	position: absolute;
+	left: 5px;
+	color: darkolivegreen;
+}
+
+.price {
+	position: absolute;
+	right: 5px;
+	color: saddlebrown;
+	font-weight: 900;
+}
+
+.menu {
+	position: relative;
+	list-style-type: none;
+	margin: 100px auto;
+	width: 300px;
+	border: 1px solid grey;
+	background-color: white;
+	overflow: hidden;
+}
+
+.menu li {
+	position: relative;
+	height: 40px;
+	padding: 10px 0 10px;
+}
+
+.menu li:first-child {
+	height: 50px;
+	padding: 20px 0 5px 25px;
+	box-shadow: 0 4px 5px rgba(12, 13, 14, 0.212);
+}
+
+.menu li:first-child::before {
+	content: "\274B";
+	position: absolute;
+	top: 16px;
+	left: 12px;
+	font-size: 20px;
+	color: rgb(3, 111, 212);
+}
+
+.menu li:hover, span:hover {
+	background-color: rgb(224, 158, 15);
+	color: white;
+}
+
+.menu li:first-child:hover{
+	background-color: white;
+}

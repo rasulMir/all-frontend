@@ -1,0 +1,200 @@
+@import "../variables";
+@import "../mixines";
+
+// .description
+.description {
+	position: relative;
+	&::before {
+		content: '';
+		@include position(0,0,0,0);
+		background-color: $descriptionBgColor;
+		z-index: -2;
+		pointer-events: none;
+	}
+	.custom-shape {
+		position: absolute;
+		top: 0;
+		left: -30%;
+		width: 220%;
+		overflow: hidden;
+		line-height: 0;
+		transform: rotate(180deg);
+  }
+  
+  .custom-shape svg {
+		position: relative;
+		display: block;
+		width: calc(100% + 1.3px);
+		height: 870px;
+  }
+  
+  .custom-shape .shape-fill {
+		fill: #FFFFFF;
+  }
+    // .description__title
+    &__title {
+        color: $descriptionTitleFontColor;
+    }
+    // .description__title-circle
+    &__title-circle {
+        background-color: $descriptionTitleCircleBgColor;
+        & > span {
+            &::before,
+            &::after {
+                background-color: $descriptionTitleCircleSpanBgColor;
+            }
+        }
+        &::before,
+        &::after {
+            background-color: $descriptionTitleCircleSpanBgColor;
+        }
+    }
+}
+
+// .descr
+.descr {
+    // .descr__wrap
+    &__wrap {
+		 padding: 7.5rem 0 10rem 0;
+        @include flex(stretch, center);
+    }
+
+    // .descr__col
+    &__col {
+		 flex: 1 0;
+		 padding: 0 0 0 6rem;
+    }
+
+    // .descr__col-artwork
+    &__col-artwork {
+			padding: 0;
+   		flex: 0 0 530px / 1170px * 100%;
+    }
+
+    // .descr__col-card
+    &__col-card {
+        padding: 60px 40px;
+        background-color: $descriptionColCardBgColor;
+        box-shadow: 0px 10px 32px 0px
+            rgba($descriptionColCardBoxShadowColor, 0.8);
+    }
+
+    // .descr__col-img
+    &__col-img {
+		 position: relative;
+		 padding: 0 0 27% 0;
+		 overflow: hidden;
+		 &:not(:last-child) {
+			 margin: 0 0 35px 0;
+		 }
+		 & > img {
+			 @include position(0,0);
+			 width: 100%;
+			 height: 100%;
+		 }
+		 &::before {
+			 content: '\e902 \e902 \e902';
+			 @include position(0,auto);
+			 font-family: 'icomoon';
+			 font-size: 1.8rem;
+			 color: $descriptionColArrowIconFontColor;
+		 }
+    }
+
+    // .descr__col-first
+    &__col-first {
+		&::before {
+			right: 0;
+		}
+    }
+
+    // .descr__col-second
+    &__col-second {
+		&::before {
+			left: 0;
+			transform: rotateZ(180deg);
+		}
+    }
+
+    // .descr__col-third
+    &__col-third {
+		&::before {
+			right: 0;
+		}
+    }
+
+    // .descr__col-title
+    &__col-title {
+		font-size: 2.8rem;
+		font-family: $seravek;
+		color: $descriptionColTitleFontColor;
+		font-weight: bold;
+		text-transform: uppercase;
+		line-height: 1.429;
+		margin: 0 0 3.2rem 0;
+    }
+
+    // .descr__col-body
+    &__col-body {
+		position: relative;
+		margin: 0 0 4rem 0;
+		&::before {
+			content: '';
+			@include position(50%,0);
+			transform: translateY(-50%);
+			width: .2rem;
+			height: 200px / 260px * 100%;
+			background-color: $descriptionColBodyLineBgColor;
+		}
+    }
+
+    // .descr__col-body-txt
+    &__col-body-txt {
+		padding: 0 0 0 3rem;
+		position: relative;
+		font-size: 1.8rem;
+		font-weight: normal;
+		font-family: $gilroy;
+		line-height: 1.333;
+		&:not(:last-child) {
+			margin: 0 0 1.666em 0;
+		}
+		& > h4 {
+			margin: 0;
+			font-size: 1.1em;
+			font-weight: bold;
+			color: $descriptionColBodyTxtTitle;
+		}
+		&::before,
+		&::after {
+			content: '';
+			@include position(50%,0);
+			transform: translate(calc(-50% + .1rem), -50%);
+			background-color: $descriptionColBodyTxtCircleBgColor;
+			border-radius: 50%;
+		}
+		&::before {
+			width: 1.8rem;
+			height: 1.8rem;
+			border: .1rem solid $descriptionColBodyTxtCircleBorderColor;
+		}
+		&::after {
+			width: .4rem;
+			height: .4rem;
+			background-color: $descriptionColBodyTxtCircleBorderColor;
+		}
+    }
+
+    // .descr__col-footer-txt
+    &__col-footer-txt {
+		 padding: 0;
+		margin: 0;
+		& > h4 {
+			color: $descriptionColBodyFooterTxt;
+		}
+		&::before,
+		&::after {
+			display: none;
+		}
+    }
+}

@@ -1,0 +1,18 @@
+extends ./pug/layouts/head
+
+block vars
+	-	var title = 'About'
+	-	var currjs = 'about'
+block content
+	include ./pug/layouts/panel.pug
+	include ./pug/layouts/header.pug
+	main.main
+		include ./pug/layouts/navigation.pug
+		+navPage('About Us First Version','pages','home')
+		include ./pug/about/cda.pug
+		include ./pug/about/statistic.pug
+		include ./pug/about/our-team.pug
+		include ./pug/about/reviews.pug
+		include ./pug/about/happy-clients.pug
+
+	include ./pug/layouts/footer.pug

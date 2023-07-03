@@ -1,0 +1,233 @@
+@import "../var";
+@import "../mixines";
+
+.panel {
+	font-family: $roboto;
+	color: $lightGrey;
+	background-color: $darkGrey;
+}
+
+.panel-wrap {
+	font-size: 1.3rem;
+	padding: 2rem 0;
+	@include flex(space-between,center);
+
+    // .panel-wrap__col
+
+    &__col {
+		@include flex(space-between,center);
+
+		&:first-child {
+			@include percfl(450px);
+		}
+
+		&:last-child {
+			@include percfl(500px);
+		}
+    }
+
+    // .panel-wrap__select-lang
+
+    &__select-lang {
+		position: relative;
+		padding: 0 1.6rem 0 2.5rem;
+		cursor: pointer;
+
+		@include icon(\e918);
+		@include arrow();
+		@include hover();
+    }
+
+    // .panel-wrap__link
+
+    &__link {
+		 position: relative;
+		 @include hover();
+        // .panel-wrap__link_num
+
+        &_num {
+			  padding: 0 0 0 2.2rem;
+			  @include icon(\e922);
+        }
+
+        // .panel-wrap__link_mail
+
+        &_mail {
+				padding: 0 0 0 2.9rem;
+				@include icon(\e920);
+        }
+    }
+
+    // .panel-wrap__item
+
+    &__item {
+		position: relative;
+		padding: 0 0 0 2.9rem;
+		cursor: pointer;
+		@include hover();
+        // .panel-wrap__item_sign
+
+        &_sign {
+			  @include icon(\e913);
+			  & > span {
+				color: $lightGreen;
+				cursor: pointer;
+			  }
+        }
+
+        // .panel-wrap__item_wishlist
+
+        &_wishlist {
+			@include icon(\e917);
+				& > span {
+					position: relative;
+					padding: 0 1.9rem 0 0.5rem;
+					color: $lightGrey;
+					@include arrow();
+				}
+			
+			&:hover > .panel-wrap__wishlist-wrap {
+				display: block;
+			}
+			&:hover > span::after {
+				color: $orange;
+				transform: translateY(-50%) rotateZ(180deg);
+			}
+        }
+    }
+
+    // .panel-wrap__wishlist-wrap
+
+    &__wishlist-wrap {
+		display: none;
+		padding: 2rem 0 0 0;
+		width: 392px;
+		z-index: 99;
+		color: $white;
+		@include position(100%,-50%);
+    }
+
+    // .panel-wrap__wishlist-list
+
+    &__wishlist-list {
+		 padding: 1rem 3rem;
+		 font-family: $roboto;
+		 background-color: $dark;
+    }
+
+    // .panel-wrap__wishlist-card
+
+    &__wishlist-card {
+		 padding: 2rem 0;
+		 @include flex(space-between,center);
+		 
+		 &:not(::last-child) {
+			border-bottom: 1px solid $lightGrey;
+		 }
+
+		 &:hover .panel-wrap__wishlist-title {
+			color: $orange;
+	  	}
+    }
+
+    // .panel-wrap__wishlist-img
+
+    &__wishlist-img {
+		 position: relative;
+		 flex: 0 0 70px;
+		 padding: 0 0 70px 0;
+		 overflow: hidden;
+		 border-radius: .3rem;
+		 & > img {
+			 @include position(0,0);
+			 width: 100%;
+			 height: 100%;
+		 }
+    }
+
+    // .panel-wrap__wishlist-body
+
+    &__wishlist-body {
+		 flex: 0 0 210px;
+    }
+
+    // .panel-wrap__wishlist-title
+
+    &__wishlist-title {
+		 margin: 0 0 .8em 0;
+		 font-size: 1.4rem;
+		 color: $lightGrey;
+		 transition: color .3s ease-in-out;
+    }
+
+    // .panel-wrap__wishlist-price
+
+    &__wishlist-price {
+		margin: 0 0 0.75em 0;
+		font-size: 1.6rem;
+		font-weight: bold;
+    }
+
+    // .panel-wrap__wishlist-flag
+
+    &__wishlist-flag {
+		display: inline-block;
+		padding: 0.5em 1em;
+		font-size: 0.8rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		text-align: center;
+		text-shadow: -1px 0 0 rgba($lightGreen, 0.5);
+		background-color: $lightGreen;
+		border-radius: 0.25em;
+    }
+
+    // .panel-wrap__wishlist-remove
+
+    &__wishlist-remove {
+		flex: 0 0 2.8rem;
+		font-size: 1.8rem;
+		position: relative;
+		transition: color 0.3s linear;
+		&:hover {
+			color: $orange;
+		}
+    }
+
+    // .panel-wrap__wishlist-btns
+
+    &__wishlist-btns {
+		 padding: 3rem;
+		 @include flex(space-between,center);
+		 background-color: $black;
+    }
+
+    // .panel-wrap__wishlist-btn
+
+    &__wishlist-btn {
+		 padding: 1em;
+		 flex: 0 0 154px;
+		 font-size: 1.2rem;
+		 color: $white;
+		 background-color: $orange;
+		 border: none;
+		 outline: none;
+		 @include btn();
+		 &:hover {
+			 background-color: $dark2;
+			 color: $grey;
+		 }
+    }
+
+    // .panel-wrap__socials
+
+    &__socials {
+		 flex: 0 0 24.2%;
+    }
+
+    // .panel-wrap__socials-link
+
+    &__socials-link {
+		
+    }
+}

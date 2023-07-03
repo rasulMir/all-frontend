@@ -1,0 +1,52 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: repeat(5,100px);
+	gap: 10px;
+	grid-template-areas:
+	"header header"
+	"menu menu"
+	"sidebar1 sidebar2"
+	"contentt contentt"
+	"footer footer";
+}
+
+.font {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-transform: uppercase;
+	font-family: sans-serif;
+	color: blue;
+	background-color: yellow;
+}
+
+.header {
+	grid-area: header;
+}
+
+.menu {
+	grid-area: menu;
+}
+
+.sidebar1 {
+	grid-area: sidebar1;
+}
+
+.sidebar2 {
+	grid-area: sidebar2;
+}
+
+.contentt {
+	grid-area: contentt;
+}
+
+.footer {
+	grid-area: footer;
+}

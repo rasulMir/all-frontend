@@ -1,0 +1,80 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.wrapper {
+	display: flex;
+	justify-content: center;
+	margin: 100px auto;
+	padding: 10px;
+	max-width: 1000px;
+	border: 1px solid rgb(221, 217, 217);
+	border-radius: 5px;
+}
+
+.menu li {
+	flex: 1 0 12.5%;
+	list-style-type: none;
+}
+
+li a {
+	text-decoration: none;
+}
+
+.menu {
+	width: 100%;
+	display: flex;
+	background-color: rgb(216, 216, 216);
+	border: 1px solid black;
+}
+
+.menu-items {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.menu-items::before {
+	content: "\f1eb";
+	display: block;
+	font-family: "Font Awesome 5 Free" , "Font Awesome 5 Brands";
+	font-size: 20px;
+	font-weight: 700;
+	color: black;
+	text-align: center;
+	padding: 10px 0;
+}
+
+li:nth-child(1) > .menu-items::before {
+	transform: rotateZ(45deg);
+}
+li:nth-child(2) > .menu-items::before {
+	content: "\f099";
+}
+li:nth-child(3) > .menu-items::before {
+	content: "\f39e";
+}
+li:nth-child(4) > .menu-items::before {
+	content: "\f0d5";
+}
+li:nth-child(5) > .menu-items::before {
+	content: "\f16d";
+}
+li:nth-child(6) > .menu-items::before {
+	content: "\f1ca";
+}
+li:nth-child(7) > .menu-items::before {
+	content: "\f0e1";
+}
+li:nth-child(8) > .menu-items::before {
+	content: "\f1e0";
+}
+
+.menu-items:hover {
+	background-color: red;
+}
+
+li:hover > .menu-items::before {
+	color: white;
+}

@@ -1,0 +1,14 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.wrapper {
+	margin: 0 auto;
+	max-width: 1200px;
+	background-color: gray;
+}
+.btn:hover {
+	background-color: yellow;
+}

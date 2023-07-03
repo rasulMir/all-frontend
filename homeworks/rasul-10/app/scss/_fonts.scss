@@ -1,0 +1,12 @@
+@import './var';
+
+@include font($raleway , "Raleway-Bold", "700", "normal");
+@include font($raleway , "Raleway-ExtraBold", "800", "normal");
+@include font($raleway, "Raleway-Light", "200", "normal");
+@include font($raleway, "Raleway-Regular", "400", "normal");
+@include font($raleway, "Raleway-Medium", "500", "normal");
+@include font($roboto, "Roboto-Regular", "400", "normal");
+@include font($axis, "axis", "400", "normal");
+@include font($raleway, "Raleway-SemiBold", "600", "normal");
+@include font($roboto, "Roboto-Bold", "700", "normal");
+@include font($roboto, "Roboto-Black", "900", "normal");

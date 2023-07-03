@@ -1,0 +1,163 @@
+/* --------general-start--------- */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+li {
+	position: relative;
+	list-style-type: none;
+}
+
+li a {
+	text-decoration: none;
+}
+
+/* --------general-end--------- */
+/* ------------wrapper-start----------- */
+.wrapper {
+	margin: 50px auto;
+	padding: 10px;
+	width: 400px;
+	border: 1px solid grey;
+	border-radius: 5px;
+}
+/* ------------wrapper-end----------- */
+/* ------------menu-start----------- */
+.menu {
+	background-color: whitesmoke;
+}
+/* ------------menu-end----------- */
+/* -------------menu-items-start-------- */
+.menu-items {
+	position: relative;
+	width: 100%;
+	display: inline-block;
+	padding: 7px 20px 7px 30px;
+	color: black;
+	text-transform: capitalize;
+	border: 1px solid transparent;
+	border-bottom-color: gray;
+}
+
+li:first-child > .menu-items {
+	color: rgb(57, 185, 185);
+	border-top-color: grey;
+	border-right: 3px solid darkblue;
+}
+
+li > .menu-items::before {
+	content: "\f3fd";
+	position: absolute;
+	top: 7px;
+	left: 5px;
+	font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
+	font-size: inherit;
+	color: inherit;
+	font-weight: 800;
+}
+
+li:nth-child(2) > .menu-items::before {
+	content: "\f26c";
+}
+li:nth-child(3) > .menu-items::before {
+	content: "\f03a";
+}
+li:nth-child(4) > .menu-items::before {
+	content: "\f044";
+}
+li:nth-child(5) > .menu-items::before {
+	content: "\f1ea";
+}
+li:nth-child(6) > .menu-items::before {
+	content: "\f073";
+}
+li:nth-child(7) > .menu-items::before {
+	content: "\f03e";
+}
+li:nth-child(8) > .menu-items::before {
+	content: "\f02b";
+}
+li:nth-child(9) > .menu-items::before {
+	content: "\f15b";
+}
+
+li:first-child > .menu-items::after {
+	content: " ";
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+	border-top: 14px solid transparent;
+	border-bottom: 14px solid transparent;
+	border-right: 7px solid darkblue;
+}
+.menu > li:hover .menu-items {
+	color: cyan;
+}
+.menu > li:hover .label::after {
+	color: cyan;
+}
+/* -------------menu-items-end-------- */
+/* ------------sub-menu-start----------- */
+.sub-menu {
+	display: none;
+	position: relative;
+	top: 100%;
+	left: 0;
+}
+
+.sub-menu-items {
+	position: relative;
+	width: 100%;
+	display: inline-block;
+	padding: 7px 10px 7px ;
+	color: darkblue;
+	text-transform: capitalize;
+}
+
+.sub-menu-items::after {
+	content: "\f118";
+	position: absolute;
+	top: 7px;
+	right: calc(75% - 10px);
+	font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
+	font-size: inherit;
+	color: inherit;
+	font-weight: 800;
+}
+.sub-menu-items:hover {
+	color: cyan;
+}
+/* ------------sub-menu-end----------- */
+/* ---------------checkbpoks-start--------- */
+.checkk {
+	width: 0;
+	height: 0;
+	visibility: hidden;
+	position: absolute;
+}
+
+.label::after {
+	content: "\f107";
+	position: absolute;
+	top: 0;
+	right: 20px;
+	font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
+	font-size: 1.5em;
+	color: inherit;
+	font-weight: 900;
+	padding: 5px 10px;
+}
+.checkk:checked ~ .label::after {
+	transform: rotateX(180deg);
+}
+.checkk:checked ~ .sub-menu {
+	display: block;
+}
+.checkk:checked ~ .menu-items {
+	border-bottom-color: transparent;
+}
+/* ---------------checkbpoks-end--------- */

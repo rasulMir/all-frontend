@@ -1,0 +1,33 @@
+@import '../general/variables';
+@import '../general/mixixines';
+
+// .footer
+.footer {
+	background-color: $footerBgColor;
+}
+
+// .footer-wrap
+.footer-wrap {
+	padding: 50px 0;
+	@include flex(center,center,column-reverse);
+
+	// .footer-wrap__item
+	&__item {
+		font-size: 13px;
+		font-family: $openSans;
+		color: rgba($FooterPrimaryFontColor, 0.702);
+	}
+
+	// .footer-wrap__confid
+
+	&__confid {
+		text-decoration: underline;
+		margin: 0 0 40px 0;
+	}
+
+	// .footer-wrap__designed
+
+	&__designed {
+		display: none;
+	}
+}

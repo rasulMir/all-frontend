@@ -1,0 +1,79 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.wrapper {
+	background-color: blue;
+	padding: 10px;
+	display: grid;
+	gap: 10px;
+	grid-template-columns: 2fr 5fr 5fr 2fr;
+	grid-template-rows: 2fr 2fr 7fr;
+	grid-template-areas:
+	"a b c d"
+	"e f g h"
+	"i i j j";
+}
+
+.images1 {
+	min-width: 100px;
+	min-height: 100px;
+	background: url(../images/piramid.jpeg) center center /cover no-repeat;
+	grid-area: a;
+}
+.images2 {
+	min-width: 100px;
+	min-height: 100px;
+	background: url(../images/valley-sa.jpg) center center /cover no-repeat;
+	grid-area: b;
+}
+.images3 {
+	min-width: 100px;
+	min-height: 100px;
+	background: url(../images/valley-sa.jpg) center center /cover no-repeat;
+	grid-area: c;
+}
+.images4 {
+	min-width: 100px;
+	min-height: 100px;
+	background: url(../images/piramid.jpeg) center center /cover no-repeat;
+	grid-area: d;
+}
+.images5 {
+	min-width: 100px;
+	min-height: 100px;
+	background: url(../images/piramid.jpeg) center center /cover no-repeat;
+	grid-area: e;
+}
+.images6 {
+	min-width: 100px;
+	min-height: 100px;
+	background: url(../images/valley-sa.jpg) center center /cover no-repeat;
+	grid-area: f;
+}
+.images7 {
+	min-width: 100px;
+	min-height: 100px;
+	background: url(../images/valley-sa.jpg) center center /cover no-repeat;
+	grid-area: g;
+}
+.images8 {
+	min-width: 100px;
+	min-height: 100px;
+	background: url(../images/piramid.jpeg) center center /cover no-repeat;
+	grid-area: h;
+}
+.images9 {
+	min-width: 100px;
+	min-height: 100px;
+	background: url(../images/piramid.jpeg) center center /cover no-repeat;
+	grid-area: i;
+}
+.images10 {
+	min-width: 100px;
+	min-height: 100px;
+	background: url(../images/piramid.jpeg) center center /cover no-repeat;
+	grid-area: j;
+}

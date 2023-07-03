@@ -1,0 +1,28 @@
+* {
+	box-sizing: border-box;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.lowercase {
+	text-transform: lowercase;
+}
+
+.capitalize {
+	text-transform: capitalize;
+}
+
+.yellow {
+	width: 600px;
+	height: 200px;
+	background-color: orange;
+}
+
+.overline {
+	text-align: center;
+	text-decoration: line-through;
+	word-spacing: 15px;
+	letter-spacing: 3px;
+}

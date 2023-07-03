@@ -1,0 +1,182 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  widows: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 20px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a::visited {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+body {
+  position: relative;
+  background: url(https://library.webconnex.com/polygon/118.jpg) center center/cover no-repeat;
+}
+
+.tabs {
+  position: relative;
+  margin: 50px auto;
+  width: 700px;
+  max-height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+.tabs__item {
+  font-family: sans-serif;
+}
+
+.tabs__rdo {
+  display: none;
+}
+
+.tabs__rdo:checked ~ .tabs__content {
+  -webkit-transition: opacity .3s linear, -webkit-transform .4s linear;
+  transition: opacity .3s linear, -webkit-transform .4s linear;
+  -o-transition: transform .4s linear, opacity .3s linear;
+  transition: transform .4s linear, opacity .3s linear;
+  transition: transform .4s linear, opacity .3s linear, -webkit-transform .4s linear;
+  display: block;
+  opacity: 1;
+  -webkit-transform: rotateX(0);
+          transform: rotateX(0);
+}
+
+.tabs__rdo:checked + .tabs__lbl {
+  -webkit-transition: background .3s linear;
+  -o-transition: background .3s linear;
+  transition: background .3s linear;
+  background-color: cyan;
+}
+
+.tabs__lbl {
+  display: block;
+  padding: 15px 10px;
+  cursor: pointer;
+}
+
+.tabs__lbl > span {
+  -webkit-tap-highlight-color: transparent;
+  pointer-events: none;
+  color: white;
+  text-transform: capitalize;
+  text-shadow: 0 0 8px black;
+}
+
+.tabs__lbl > span::-moz-selection {
+  background-color: transparent;
+}
+
+.tabs__lbl > span::selection {
+  background-color: transparent;
+}
+
+.tabs__lbl:not(.tabs__lbl:last-child) {
+  margin-right: 5px;
+}
+
+.tabs__lbl:hover {
+  -webkit-transition: background .8s linear;
+  -o-transition: background .8s linear;
+  transition: background .8s linear;
+  background-color: cyan;
+}
+
+.tabs__content {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  padding: 20px;
+  width: 100%;
+  min-height: 350px;
+  -webkit-transform-origin: top center;
+      -ms-transform-origin: top center;
+          transform-origin: top center;
+  -webkit-transform: rotateX(-45deg);
+          transform: rotateX(-45deg);
+  border: 2px solid cyan;
+  opacity: 0;
+  overflow: hidden;
+  -webkit-transition: opacity .1s ease;
+  -o-transition: opacity .1s ease;
+  transition: opacity .1s ease;
+}
+
+.tabs__title {
+  margin-top: 15px;
+  font-size: 1.2em;
+  color: white;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.tabs__txt {
+  color: white;
+  margin-top: 15px;
+  overflow: visible;
+}
+/*# sourceMappingURL=style.css.map */

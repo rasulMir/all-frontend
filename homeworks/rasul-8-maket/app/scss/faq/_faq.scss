@@ -1,0 +1,86 @@
+@import '../general/variables';
+@import '../general/mixixines';
+
+// .faq
+.faq {
+}
+
+// .faq-wrap
+.faq-wrap {
+	position: relative;
+	padding: 60px 0;
+	// .faq-wrap__title
+	&__title {
+	}
+
+	// .faq-wrap__content
+	&__content {
+		padding: 40px 0 0 0;
+	}
+
+	// .faq-wrap__card
+	&__card {
+		padding: 0 0 16px 0;
+	}
+
+	// .faq-wrap__question
+	&__question {
+		padding: 0 0 16px 0;
+		font-size: 20px;
+		font-family: $openSans;
+		color: $faqQuestionFontColor;
+		font-weight: bold;
+		line-height: 1.505;
+	}
+
+	// .faq-wrap__txt
+	&__txt {
+	}
+
+	// .faq-wrap__footer
+	&__footer {
+		padding: 45px 25px;
+		background-color: $faqFooterBgColor;
+		border-radius: 10px;
+		box-shadow: 0px 23px 32px 0px rgba($faqFooterBoxShadowColor, 0.33);
+		position: relative;
+		overflow: hidden;
+		&::before {
+			content: '';
+			@include position(-9%,auto,auto,-11%);
+			width: 95px / 290px * 100%;
+			height: 35%;
+			background: url(../images/faq/faq.png) 0/100% no-repeat;
+			z-index: 5;
+		}
+	}
+
+	// .faq-wrap__qa
+	&__qa {
+		color: $faqFooterPrimaryFontColor;
+	}
+
+	// .faq-wrap__consult
+	&__consult {
+		color: $faqFooterPrimaryFontColor;
+	}
+
+	// .faq-wrap__form
+	&__form {
+	}
+
+	// .faq-wrap__input
+	&__input {
+		border-bottom-color: $faqFooterPrimaryFontColor;
+		&::placeholder {
+			color: $faqFooterPrimaryFontColor;
+		}
+		&:focus {
+			outline-color: $faqFooterPrimaryFontColor;
+		}
+	}
+
+	// .faq-wrap__btn
+	&__btn {
+	}
+}

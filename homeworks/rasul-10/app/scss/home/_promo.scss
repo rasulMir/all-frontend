@@ -1,0 +1,72 @@
+@import '../var';
+@import '../mixines';
+
+.promo {
+	background: url(../images/promo-bg.jpg) center/cover no-repeat;
+}
+.promo-slider {
+	position: relative;
+
+	// .promo-slider__item
+
+	&__item {
+		min-height: 924px;
+		position: relative;
+	}
+
+	// .promo-slider__card
+
+	&__card {
+		@include position(50%,50%);
+		transform: translate(-50%,-50%);
+		@include flex(center,center,column);
+		width: 756px;
+		text-align: center;
+		font-family: $raleway;
+		color: $white;
+	}
+
+	// .promo-slider__title
+
+	&__title {
+		margin: 0 0 2rem 0;
+		font-size: 6.8rem;
+		font-weight: 800;
+	}
+
+	// .promo-slider__subtitle
+
+	&__subtitle {
+		margin: 0 0 2rem 0;
+		font-size: 5.1rem;
+		font-weight: 800;
+	}
+
+	// .promo-slider__txt
+
+	&__txt {
+		margin: 0 0 4rem 0;
+		font-size: 2.7rem;
+		line-height: 1.111;
+	}
+
+	// .promo-slider__card-footer
+
+	&__card-footer {
+		@include flex(space-between,center);
+		width: 49.2063492063%;
+	}
+
+	// .promo-slider__btn
+
+	&__btn {
+		flex: 0 0 45.6989247312%;
+		font-size: 1.4rem;
+		background-color: $darkGrey;
+		border-radius: 0.356em;
+		@include btn();
+		padding: 2rem;
+
+		@include btnHover();
+	}
+}

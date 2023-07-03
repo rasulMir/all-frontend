@@ -1,0 +1,31 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.wrapper {
+	margin: 0 auto;
+	padding: 10px 0;
+	max-width: 1000px;
+	background-color: grey;
+}
+
+.bg-image {
+	height: 300px;
+	background: url(../images/piramid.jpeg) center center/cover no-repeat;
+}
+
+.valley {
+	max-width: inherit;
+}
+
+.txt-ar {
+	margin-bottom: 10px;
+}
+.txt-ar:last-child {
+	margin-bottom: 0;
+}
+.mrgn {
+	margin-left: 30px;
+}

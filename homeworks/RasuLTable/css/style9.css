@@ -1,0 +1,30 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+table {
+	margin: 50px;
+	border-collapse: collapse;
+	border: 2px solid cyan;
+	width: 70%;
+	color: rgb(45, 8, 146);
+}
+
+table tr td {
+	padding: 20px;
+}
+
+tr td:first-of-type {
+	width: 40%;
+}
+
+tr:hover td {
+	background-color: rgba(35, 18, 182, 0.2);
+}
+
+tr + tr {
+	border-bottom: 1px dashed white;
+	background-color: cyan;
+}

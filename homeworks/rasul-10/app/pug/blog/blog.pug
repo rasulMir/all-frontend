@@ -1,0 +1,63 @@
+include ../mixines.pug
+
+section.blog-masonry
+	.container
+		.blog-masonry-wrap
+			.blog-masonry-wrap__item
+				+mansoryCard('1','Standard Post With Preview Image','In Photography')
+					img(src="./images/blog-masonry-1.jpg", alt="blog masonry user")
+					+hover()
+			.blog-masonry-wrap__item
+				+mansoryCard('1','Standard Post With Preview Image','in Creative and Design')
+					img(src="./images/blog-masonry-2.jpg", alt="blog masonry user")
+					+hover()
+			.blog-masonry-wrap__item
+				+mansoryCard('1','Zhu – Cocaine Model','In Music')
+					audio.blog-masonry-wrap-audio(controls, preload='metadata')
+						source.blog-masonry-wrap-audio__src(src="./other-content/ZHU-Cocaine-Model.ogg", type="audio/ogg")
+						source.blog-masonry-wrap-audio__src(src="./other-content/ZHU-Cocaine-Model.mp3", type="audio/mp3")
+			.blog-masonry-wrap__item
+				+mansoryCard('1','Standard Post With Preview Image','in Creative and Design')
+					img(src="./images/blog-masonry-3.jpg", alt="blog masonry user")
+					+hover()
+			.blog-masonry-wrap__item
+				+mansoryCard('3',' ')
+					img(src="./images/blog-masonry-6.jpg", alt="blog masonry user")
+					article.blog-masonry-wrap-rubric
+						p.blog-masonry-wrap-rubric__txt Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea sunt in vero!
+						.blog-masonry-wrap-rubric__author Frank Smith, Company Inc.
+					+hover()
+			.blog-masonry-wrap__item
+				+mansoryCard('1','Standard Post With Preview Image','In Photography')
+					-	var sli = 0;
+					.blog-masonry-wrap-slider
+						while sli < 5
+							.blog-masonry-wrap-slider__item(data-item= sli++)
+								img(src="./images/blog-masonry-5.jpg", alt="blog masonry user")
+			.blog-masonry-wrap__item
+				+mansoryCard('1','YouTube Video Post','In Video')
+					iframe(width="100%" height="180" src="https://www.youtube.com/embed/eKZNKA-jAYY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+			.blog-masonry-wrap__item
+				+mansoryCard('1','Video Format Post','In Video')
+					video.blog-masonry-wrap-video(controls,mute, preload='metadata', poster='./images/blog-masonry-4.jpg')
+						source.blog-masonry-wrap-video__src(src="./other-content/cat.webm" type='video/webm; codecs="vp8, vorbis"')
+						source.blog-masonry-wrap-video__src(src="./other-content/cat.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"')
+			.blog-masonry-wrap__item
+				+mansoryCard('2','Claritas est etiam processus dynamicus, qui sequitur mutationem','in Creative and Design','in Creative and Design')
+			.blog-masonry-wrap__item
+				+mansoryCard('1','Standard Post With Preview Image','in Creative and Design')
+					img(src="./images/blog-masonry-8.jpg", alt="blog masonry user")
+					+hover()
+			.blog-masonry-wrap__item
+				+mansoryCard('1','Slideshow Post','In Photography')
+					-	var slit = 0;
+					.blog-masonry-wrap-slider-second
+						while slit < 5
+							.blog-masonry-wrap-slider-second__item(data-item= slit++)
+								img(src="./images/blog-masonry-7.jpg", alt="blog masonry user")
+			.blog-masonry-wrap__item
+				.blog-masonry-wrap-home
+					.blog-masonry-wrap-home__logo <span>exe</span>- Clean and Unigue PSD Template
+					a.blog-masonry-wrap-home__link(href="http://themeforest.net") http://themeforest.net
+	button.blog-masonry__btn Load More Posts
++projectPreview()

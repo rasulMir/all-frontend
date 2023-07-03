@@ -1,0 +1,15 @@
+extends ./pug/layouts/head
+
+block vars
+	-	var title = 'Blog'
+	-	var currjs = 'blog'
+block content
+	include ./pug/layouts/panel.pug
+	include ./pug/layouts/header.pug
+	main.main
+		include ./pug/layouts/navigation.pug
+		+navPage('Blog Masonry 04 Columns','Blog','Home')
+		include ./pug/blog/blog.pug
+		
+
+	include ./pug/layouts/footer.pug

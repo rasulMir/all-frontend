@@ -1,0 +1,48 @@
+
+mixin navigation(link,src, txt, active)
+	if active < 2
+		li.head-wrap__nav-link_active
+			a.nav__list-link(class= link href='./' + src,)= txt
+			block
+	else
+		li
+			a.nav__list-link(class= link href='./' + src,)= txt
+			block
+
+mixin navPages(num,pages)
+	- var q = 1;
+	while q < num
+		li(data-a= q++)
+			a.head-wrap__list-sublink(href="#")= pages
+
+header.header
+	.container
+		section.head-wrap|
+			|
+			a.head-wrap__logo(href='./home.html') èxe
+			nav.nav.head-wrap__nav
+				ul.nav__list.head-wrap__nav-list
+					+navigation('head-wrap__nav-link head-wrap__nav-link_arrow','home.html', 'Home', '1')
+						ul.head-wrap__nav-sublist
+							+navPages('4','Home')
+					+navigation('head-wrap__nav-link','index.html', 'About Us')
+					+navigation('head-wrap__nav-link head-wrap__nav-link_arrow','index.html', 'Pages')
+						ul.head-wrap__nav-sublist
+							+navPages('4','Pages')
+					+navigation('head-wrap__nav-link head-wrap__nav-link_arrow','index.html', 'Features')
+						ul.head-wrap__nav-sublist
+							+navPages('4','Features')
+					+navigation('head-wrap__nav-link','index.html', 'Portfolio')
+					+navigation('head-wrap__nav-link','index.html', 'Blog')
+					+navigation('head-wrap__nav-link head-wrap__nav-link_arrow','index.html', 'Shop')
+						ul.head-wrap__nav-sublist
+							+navPages('4','Shop')
+					+navigation('head-wrap__nav-link','index.html', 'Contact us')
+			.head-wrap__col|
+				|
+				a.head-wrap__cart(href="#") Cart:
+					span.icon-cart(data-cart-sum='2')
+				.head-wrap__search
+					button.head-wrap__btn(type="submit")
+						span.icon-search.head-wrap__icon
+					input.head-wrap__search-input(type="search", name="user-searching")

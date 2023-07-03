@@ -1,0 +1,125 @@
+@import '../general/variables';
+@import '../general/mixixines';
+
+@media only screen and (min-width: 480px) {
+	
+	// .poly-wrap
+	.poly-wrap {
+		padding: 75px 0 60px;
+		@include flex(flex-start,center);
+		flex-wrap: wrap;
+
+		// .poly-wrap__col
+		&__col {
+			&:nth-child(1) {
+				flex: 0 0 100%;
+			}
+			&:nth-child(2) {
+				order: 3;
+				flex: 0 0 50%;
+			}
+			&:nth-child(3) {
+				order: 2;
+				flex: 0 0 50%;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	// .polygraph
+	.polygraph {
+		background: url(../images/polygraph/papers-768.png) 0 90%/100% auto no-repeat $polygraphBgColor;
+	}
+	// .poly-wrap
+	.poly-wrap {
+		padding: 110px 0 120px;
+
+		// .poly-wrap__col
+		&__col {
+			&:nth-child(2) {
+				display: none;
+			}
+			&:nth-child(3) {
+				order: 3;
+				flex: 0 0 245px / 720px * 100%;
+			}
+		}
+
+		// .poly-wrap__subtitle
+		&__subtitle {
+			padding: 0 0 55px 0;
+		}
+
+		// .poly-wrap__txt
+		&__txt {
+			& > p:nth-child(odd) {
+				margin-bottom: 3em;
+			}
+		}
+
+		// .poly-wrap__qa
+		&__qa {
+			margin-top: 65px;
+		}
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	// .polygraph
+	.polygraph {
+		background-image: none;
+		background-color: $polygraphBgColor;
+		position: relative;
+		&::before {
+			content: '';
+			@include position(5%,50%);
+			width: 665px;
+			height: 709px;
+			background: url(../images/polygraph/papers-all.png) -20px 0/auto no-repeat;
+			z-index: 4;
+			pointer-events: none;
+		}
+	}
+	// .poly-wrap
+	.poly-wrap {
+		padding: 140px 0 160px;
+		align-items: stretch;
+
+		// .poly-wrap__col
+		&__col {
+			&:nth-child(1) {
+				flex: 0 0 560px / 1140px * 100%;
+			}
+			&:nth-child(3) {
+				flex: 0 0 770px / 1140px * 100%;
+			}
+		}
+
+		// .poly-wrap__qa
+		&__qa {
+			margin-top: 65px;
+		}
+
+		// .poly-wrap__form
+		&__form {
+			@include flex(space-between,center);
+			
+		}
+		// .poly-wrap__input
+		&__input {
+			flex: 0 0 30%;
+			margin: 0;
+			&:last-of-type {
+				margin: 0;
+			}
+		}
+
+		// .poly-wrap__btn
+		&__btn {
+			flex: 0 0 30%;
+			position: relative;
+			z-index: 5;
+		}
+	}
+}

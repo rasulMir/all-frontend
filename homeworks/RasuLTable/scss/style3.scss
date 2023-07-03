@@ -1,0 +1,48 @@
+@import "reset";
+
+.container {
+	&, &-fluid, &-sm, &-md, &-lg {
+		width: 100%;
+		padding: 0 15px;
+		margin: 0 auto
+	}
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 1em;
+	height: auto;
+	&:last-child {
+		margin-bottom: 0;
+	}
+	& > div[class*="col"]:first-child {
+		padding-right: 10px;
+	}
+	& > div[class*="col"]:last-child {
+		padding-left: 10px;
+	}
+}
+
+.offset {
+	@for $offset from 0 through 11 {
+		&-#{$offset} {
+			margin-left: calc(((100% - 220px) / 12) * #{$offset});
+		}
+	}
+}
+
+.margin {
+	@for $margin from 1 through 5 {
+		&-top#{$margin} {
+			margin-top: calc(.5em * #{$margin});
+		}
+	}
+	@for $margin from 1 through 5 {
+		&-bottom#{$margin} {
+			margin-bottom: calc(.5em * #{$margin});
+		}
+	}
+}
+@import "main3";
+@import "media3";

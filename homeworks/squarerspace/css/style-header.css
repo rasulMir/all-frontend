@@ -1,0 +1,128 @@
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+:focus,:active{
+	outline: none;
+}
+a:focus,aactive{
+	outline: none;
+}
+nav,footer,header,aside{
+	display: block;
+}
+html,body{
+	height: 100%;
+	widows: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{
+	font-family: inherit;
+}
+input::-ms-clear{
+	display: none;
+}
+button{
+	cursor: pointer;
+}
+button::-moz-focus-inner{
+	padding: 0;
+	border: 0;
+}
+a,a::visited{
+	text-decoration: none;
+}
+ul li{
+	list-style: none;
+}
+img{
+	vertical-align: top;
+}
+h1,h2,h3,h4,h5,h6{
+	font-size: inherit;
+	font-weight: 400;
+}
+
+/*  font-family: 'Roboto', sans-serif;  */
+
+.head-item {
+	height: 800px;
+	background: url(../bg-images/Rectanglebg-img-1.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.head-item .about {
+	display: flex;
+	flex-direction: row;
+	position: sticky;
+	top: 0;
+	height: 85px;
+	padding: 20px 50px 0 50px;
+	background-color: black;
+}
+
+.about .logo {
+	width: 206px;
+	height: 30px;
+	margin-right: 255px;
+}
+
+.about .products {
+	display: flex;
+	justify-content: center;
+	margin-right: 255px;
+}
+
+.about .products li {
+	display: flex;
+	list-style: none;
+	margin-right: 45px;
+}
+
+.about .products li:last-child {
+	margin-right: 0;
+}
+
+.products li a{
+	align-items: center;
+	text-decoration: none;
+	font-family: 'Roboto', sans-serif;
+	font-size: 15px;
+	font-weight: 700;
+	font-weight: normal;
+	line-height: 30px;
+	text-transform: uppercase;
+	color: #FFFFFF;
+}
+
+.about .usermail {
+	width: 150px;
+	height: 50px;
+	border-radius: 5px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	text-align: center;
+}
+
+.head .about .usermail::before {
+	content: "login";
+	color: #FFFFFF;
+	font-family: "Roboto", sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15.05px;
+	line-height: 15px;
+}

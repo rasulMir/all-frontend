@@ -1,0 +1,16 @@
+
+
+<svg id="animateLine" data-name="animateLine" xmlns="http://www.w3.org/2000/svg" width="164.25" height="455" viewBox="0 0 164.25 455">
+	<path id="line" data-name="line" style='
+        fill: none;
+        stroke: #d695b3;
+        stroke-width: 1px;
+        stroke-dasharray: 4 2;
+		  fill-rule: evenodd;' d="M213,1605s54,46.07,54,100c0,49.93-69,79.07-107,99s-53,28.4-53,72c0,53.93,73,99.07,82,132s-4,51-4,51" transform="translate(-105.5 -1604.5)"/>
+	
+	<path transform='translate(-3,1)' stroke="null" fill=" #d695b3" d="m106.41,-3.28l4.143,9.84l4.693,-9.59s-2.146,2.89 -4.493,2.53s-4.343,-2.78 -4.343,-2.78z" id="arrow">
+			<animateMotion href="#arrow" calcMode="linear" begin='0s' dur="10s" repeatCount="indefinite"
+				path='m0,0s54,46.07 54,100c0,49.93 -69,79.07 -107,99s-53,28.4 -53,72c0,53.93 73,99.07 82,132s-4,51 -4,51'>
+			</animateMotion>
+	</path>
+</svg>

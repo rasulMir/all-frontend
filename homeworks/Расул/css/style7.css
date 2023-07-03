@@ -1,0 +1,27 @@
+* {
+	box-sizing: initial;
+}
+
+p {
+	font-size: 30px;
+}
+
+.underline {
+	color: red;
+	text-decoration: underline;
+}
+
+.overline {
+	color: green;
+	text-decoration: overline;
+}
+
+.line_through {
+	color: blue;
+	text-decoration: line-through;
+}
+
+.underline_overline {
+	color: yellow;
+	text-decoration: underline overline;
+}
